@@ -2,13 +2,14 @@
   <nav class="navbar" aria-label="Main">
     <a href="/" class="logo" aria-label="E&W Trading Group">
       <img
+        class="logo-img"
         src="/assets/logo/lockup-horizontal-reverse.svg"
         alt="E&W Trading Group"
         onerror="this.replaceWith(document.createTextNode('E&W Trading Group'))"
       />
     </a>
 
-    <!-- Hamburger Toggle (Axen-style) -->
+    <!-- Hamburger Toggle -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle" />
     <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -16,40 +17,15 @@
 
     <!-- Nav Links -->
     <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/alkyds.html">Alkyds</a></li>
-      <li><a href="/products.html">Products</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/" {{ if .IsHome }}aria-current="page"{{ end }}>Home</a></li>
+      <li><a href="/alkyds/" {{ if eq .RelPermalink "/alkyds/" }}aria-current="page"{{ end }}>Alkyds</a></li>
+      <li><a href="/products/" {{ if eq .RelPermalink "/products/" }}aria-current="page"{{ end }}>Products</a></li>
+      <li><a href="/about/" {{ if eq .RelPermalink "/about/" }}aria-current="page"{{ end }}>About</a></li>
 
-      <!-- Blog/Articles (Hugo) -->
-      <li><a href="/insights/">Insights</a></li>
+      <!-- Non-negotiable: keep contact.html -->
+      <li><a class="pill" href="/contact.html">Contact</a></li>
+
+      <li><a href="/insights/" {{ if eq .RelPermalink "/insights/" }}aria-current="page"{{ end }}>Insights</a></li>
     </ul>
   </nav>
-
-  <script>
-    (function () {
-      // Active link highlight (works with both .html and folder routes)
-      var path = (location.pathname || "/").replace(/\/+$/, "") || "/";
-      document.querySelectorAll(".nav-links a").forEach(function (a) {
-        var href = a.getAttribute("href");
-        if (!href) return;
-        var norm = href.replace(/\/+$/, "") || "/";
-        if (norm === path) {
-          a.setAttribute("aria-current", "page");
-          a.classList.add("is-active");
-        }
-      });
-
-      // Close menu on link click (mobile UX)
-      var toggle = document.getElementById("menu-toggle");
-      if (toggle) {
-        document.querySelectorAll(".nav-links a").forEach(function (a) {
-          a.addEventListener("click", function () {
-            toggle.checked = false;
-          });
-        });
-      }
-    })();
-  </script>
 </header>
