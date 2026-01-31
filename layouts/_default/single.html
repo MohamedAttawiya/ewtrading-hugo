@@ -1,9 +1,3 @@
 {{ define "main" }}
-  <section class="container">
-    <article class="prose">
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
-      {{ .Content }}
-    </article>
-  </section>
+  {{ .Content }}
 {{ end }}
