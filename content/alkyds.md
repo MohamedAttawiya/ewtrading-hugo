@@ -3,7 +3,7 @@ title: "Alkyds — E&W Trading Group"
 description: "PACHIN alkyd resin export portfolio with grades, documentation, and Africa-focused logistics."
 ---
 
-<!-- Hero -->
+{{< html >}}
 <section class="hero hero-alkyd">
   <div class="container hero-inner">
     <div class="hero-copy">
@@ -32,20 +32,11 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
     <aside class="badge" aria-label="Exclusive Distributor: PACHIN Egypt">
       <div class="badge-inner">
         <span class="eyebrow">Exclusive Distributor</span>
-        <img
-          src="/assets/partners/pachin-logo.svg"
-          alt="PACHIN Egypt"
-          class="pachin-logo"
-        />
+        <img src="/assets/partners/pachin-logo.svg" alt="PACHIN Egypt" class="pachin-logo" />
         <p class="badge-copy">
           Alkyd resins engineered for adhesion, gloss, durability &amp; chemical resistance.
         </p>
-        <a
-          class="badge-link"
-          href="https://www.pachin.net/en/"
-          target="_blank"
-          rel="noopener"
-        >
+        <a class="badge-link" href="https://www.pachin.net/en/" target="_blank" rel="noopener">
           About PACHIN
         </a>
       </div>
@@ -61,7 +52,7 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
       <article class="card">
         <h3>Long Oil Alkyd</h3>
         <p class="muted">
-          High oil content (~56–70%). Flexible films, excellent gloss and retention.
+          High oil content (~56&ndash;70%). Flexible films, excellent gloss and retention.
           Typical uses: exterior enamels, wood, marine.
         </p>
         <ul class="chips" role="list">
@@ -74,7 +65,7 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
       <article class="card">
         <h3>Medium Oil Alkyd</h3>
         <p class="muted">
-          Balanced dry, hardness and flexibility (~46–55%).
+          Balanced dry, hardness and flexibility (~46&ndash;55%).
           Typical uses: architectural enamels, varnishes, interior/exterior.
         </p>
         <ul class="chips" role="list">
@@ -143,7 +134,7 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
             <th>PA %</th>
             <th>Polyol</th>
             <th>Form</th>
-            <th>Viscosity (25&nbsp;°C)</th>
+            <th>Viscosity (25&nbsp;&deg;C)</th>
             <th>Color max</th>
             <th>Acid max</th>
             <th>NV %</th>
@@ -158,10 +149,10 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
             <td>27</td>
             <td>PE + Glycerol</td>
             <td>70% in white spirit</td>
-            <td>Gardner Z6–Z7</td>
+            <td>Gardner Z6&ndash;Z7</td>
             <td>5</td>
             <td>7 mg KOH/g</td>
-            <td>70 ± 1</td>
+            <td>70 &plusmn; 1</td>
             <td>High-build interior/exterior enamels</td>
           </tr>
         </tbody>
@@ -169,3 +160,4 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
     </div>
   </div>
 </section>
+{{< /html >}}
