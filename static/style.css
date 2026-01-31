@@ -401,3 +401,8 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 @media (max-width: 520px){
   .navbar .logo-img{ height: 40px; }
 }
+
+.prose { max-width: 72ch; }
+.prose > * + * { margin-top: .85rem; }
+.prose a { color: #0b4aa2; text-decoration: underline; text-underline-offset: 3px; }
+.prose pre, .prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
