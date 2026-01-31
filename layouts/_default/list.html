@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <section class="container">
+    <header class="page-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ $p := .Paginator }}
+    {{ if $p.Pages }}
+      <div class="cards">
+        {{ range $p.Pages }}
+          <article class="card">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+            <p><a class="link" href="{{ .RelPermalink }}">Read →</a></p>
+          </article>
+        {{ end }}
+      </div>
+
+      <nav class="pagination" aria-label="Pagination">
+        {{ if $p.HasPrev }}<a class="btn secondary" href="{{ $p.Prev.URL }}">← Newer</a>{{ end }}
+        {{ if $p.HasNext }}<a class="btn secondary" href="{{ $p.Next.URL }}">Older →</a>{{ end }}
+      </nav>
+    {{ else }}
+      <p>No articles yet.</p>
+    {{ end }}
+  </section>
+{{ end }}

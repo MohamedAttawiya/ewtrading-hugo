@@ -1,34 +1,55 @@
-<header class="header" role="banner">
-  <div class="container header-inner">
-    <div class="brand-row">
-      <a href="/" class="logo" aria-label="E&W Trading Group">
-        <img src="/assets/logo/lockup-horizontal-reverse.svg" alt="E&W Trading Group" class="logo-img"
-             onerror="this.replaceWith(document.createTextNode('E&W Trading Group'))" />
-      </a>
-    </div>
+<header class="site-header header" role="banner">
+  <nav class="navbar" aria-label="Main">
+    <a href="/" class="logo" aria-label="E&W Trading Group">
+      <img
+        src="/assets/logo/lockup-horizontal-reverse.svg"
+        alt="E&W Trading Group"
+        onerror="this.replaceWith(document.createTextNode('E&W Trading Group'))"
+      />
+    </a>
 
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/alkyds/">Alkyds</a></li>
-        <li><a href="/products/">Products</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-    <script>
-(function () {
-  var path = location.pathname.replace(/\/+$/,'') || '/';
-  document.querySelectorAll('.nav a').forEach(function(a){
-    var href = a.getAttribute('href');
-    if (!href) return;
-    var norm = href.replace(/\/+$/,'') || '/';
-    if (norm === path) {
-      a.setAttribute('aria-current','page');
-      a.classList.add('is-active');
-    }
-  });
-})();
-    </script>
-  </div>
+    <!-- Hamburger Toggle (Axen-style) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <!-- Nav Links -->
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/alkyds.html">Alkyds</a></li>
+      <li><a href="/products.html">Products</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+
+      <!-- Blog/Articles (Hugo) -->
+      <li><a href="/insights/">Insights</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    (function () {
+      // Active link highlight (works with both .html and folder routes)
+      var path = (location.pathname || "/").replace(/\/+$/, "") || "/";
+      document.querySelectorAll(".nav-links a").forEach(function (a) {
+        var href = a.getAttribute("href");
+        if (!href) return;
+        var norm = href.replace(/\/+$/, "") || "/";
+        if (norm === path) {
+          a.setAttribute("aria-current", "page");
+          a.classList.add("is-active");
+        }
+      });
+
+      // Close menu on link click (mobile UX)
+      var toggle = document.getElementById("menu-toggle");
+      if (toggle) {
+        document.querySelectorAll(".nav-links a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            toggle.checked = false;
+          });
+        });
+      }
+    })();
+  </script>
 </header>
