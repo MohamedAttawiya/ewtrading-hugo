@@ -1,0 +1,19 @@
+<footer id="contact" class="footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/assets/logo/lockup-horizontal-reverse.svg" alt="E&W Trading Group"
+           onerror="this.replaceWith(document.createTextNode('E&W Trading Group'))" />
+      <p>Ac <span id="year"></span> E&W Trading Group. All rights reserved.</p>
+    </div>
+    <div class="footer-cta">
+      <h3>Contact</h3>
+      <p>Send your RFQ with required specs, quantity, port and incoterms.</p>
+      <a href="mailto:sales@ewtradingco.com" class="btn secondary">sales@ewtradingco.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var yearEl = document.getElementById('year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+</script>

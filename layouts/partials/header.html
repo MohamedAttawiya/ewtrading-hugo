@@ -1,0 +1,34 @@
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <div class="brand-row">
+      <a href="/" class="logo" aria-label="E&W Trading Group">
+        <img src="/assets/logo/lockup-horizontal-reverse.svg" alt="E&W Trading Group" class="logo-img"
+             onerror="this.replaceWith(document.createTextNode('E&W Trading Group'))" />
+      </a>
+    </div>
+
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/alkyds/">Alkyds</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <script>
+(function () {
+  var path = location.pathname.replace(/\/+$/,'') || '/';
+  document.querySelectorAll('.nav a').forEach(function(a){
+    var href = a.getAttribute('href');
+    if (!href) return;
+    var norm = href.replace(/\/+$/,'') || '/';
+    if (norm === path) {
+      a.setAttribute('aria-current','page');
+      a.classList.add('is-active');
+    }
+  });
+})();
+    </script>
+  </div>
+</header>

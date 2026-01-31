@@ -1,0 +1,260 @@
+---
+title: "Products — E&W Trading Group"
+description: "Bulk export focus on alkyd resins plus sourced coatings from leading Egyptian manufacturers."
+---
+
+<main id="content">
+  <section class="hero hero-tight">
+    <div class="container">
+      <div class="hero-inner">
+        <h1 class="h1">Products for Bulk Export (B2B)</h1>
+        <p class="lead">
+          Our <strong>primary focus is Alkyd Resin export to Africa</strong>. In addition, we can source and supply
+          <strong>bulk lots</strong> of finished paints and coatings from leading Egyptian manufacturers through our distribution network.
+        </p>
+        <div class="cta">
+          <a href="/alkyds/" class="btn primary">Explore Alkyd Resins</a>
+          <a href="#catalog" class="btn secondary">Browse Bulk Catalog</a>
+        </div>
+        <ul class="trust-list" role="list">
+          <li><strong>B2B only:</strong> no retail sales via website</li>
+          <li>Minimum Order Quantities (MOQs) apply</li>
+          <li>FOB / CFR / CIF terms available</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-emph">
+    <div class="container">
+      <div class="grid two">
+        <div>
+          <h2 class="h2">Core Export: Alkyd Resins</h2>
+          <p>
+            We specialize in <strong>long-, medium-, and short-oil alkyds</strong>, including <em>modified grades</em> suitable for
+            architectural coatings, industrial enamels, and printing inks. Full documentation (TDS, COA, compliance) provided.
+          </p>
+          <div class="cta">
+            <a href="/alkyds/#grades" class="btn primary">View Grades &amp; Specs</a>
+            <a href="/contact.html" class="btn">Get a Bulk Quote</a>
+          </div>
+        </div>
+        <div class="card note">
+          <p class="eyebrow">Why us</p>
+          <ul class="list-check" role="list">
+            <li>20+ years in paints &amp; raw materials</li>
+            <li>Technical guidance on resin selection</li>
+            <li>Established distribution network in Egypt</li>
+            <li>Africa-focused export logistics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog" class="section">
+    <div class="container">
+      <h2 class="h2">Bulk Product Catalog (Sourced)</h2>
+      <p class="muted">
+        Below are representative <strong>product categories</strong> we can source in bulk from Egyptian manufacturers.
+        Brand names are the property of their respective owners. Availability, specs, and MOQs may vary by destination.
+      </p>
+
+      <span class="brand-badge">Manufacturer</span>
+      <article class="brand-block">
+        <header class="brand-head">
+          <h3 class="brand-title">
+            PACHIN ƒ?" Paints &amp; Chemical Industries
+          </h3>
+          <p class="muted">Decorative paints, industrial coatings, printing inks, and alkyd resins.</p>
+        </header>
+
+        <div class="grid three cards">
+          <div class="card">
+            <h4 class="h4">Decorative Paints</h4>
+            <ul class="list-bullets" role="list">
+              <li>Interior/Exterior emulsions &amp; enamels</li>
+              <li>Primers, undercoats &amp; putties</li>
+              <li>Weather-resistant topcoats</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+          <div class="card">
+            <h4 class="h4">Industrial Coatings</h4>
+            <ul class="list-bullets" role="list">
+              <li>Protective &amp; anti-corrosion systems</li>
+              <li>Epoxy, alkyd &amp; polyurethane finishes</li>
+              <li>Floor &amp; metal coatings</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+          <div class="card">
+            <h4 class="h4">Printing Inks &amp; Alkyds</h4>
+            <ul class="list-bullets" role="list">
+              <li>Packaging &amp; publication inks</li>
+              <li>Resin intermediates for coatings/inks</li>
+              <li>Custom specs on request</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+        </div>
+      </article>
+
+      <span class="brand-badge">Manufacturer</span>
+      <article class="brand-block">
+        <header class="brand-head">
+          <h3 class="brand-title">
+            SCIB Paints (Asian Paints Egypt)
+          </h3>
+          <p class="muted">Decorative coatings portfolio for interior/exterior, waterproofing, wood &amp; metal.</p>
+        </header>
+        <div class="grid three cards">
+          <div class="card">
+            <h4 class="h4">Interior Wall Paints</h4>
+            <ul class="list-bullets" role="list">
+              <li>Matte &amp; washable emulsions</li>
+              <li>Low-odor / low-VOC options</li>
+              <li>Primers &amp; putties</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+          <div class="card">
+            <h4 class="h4">Exterior &amp; Waterproofing</h4>
+            <ul class="list-bullets" role="list">
+              <li>Weather-resistant finishes</li>
+              <li>Elastomeric &amp; anti-carbonation</li>
+              <li>Sealants &amp; systems</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+          <div class="card">
+            <h4 class="h4">Wood &amp; Metal Enamels</h4>
+            <ul class="list-bullets" role="list">
+              <li>Solvent-based enamels</li>
+              <li>Anti-rust primers</li>
+              <li>Topcoats in bulk</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+        </div>
+      </article>
+
+      <span class="brand-badge">Manufacturer</span>
+      <article class="brand-block">
+        <header class="brand-head">
+          <h3 class="brand-title">
+            GLC Paints
+          </h3>
+          <p class="muted">Decorative finishes and systems for interior/exterior applications.</p>
+        </header>
+
+        <div class="grid three cards">
+          <div class="card">
+            <h4 class="h4">Decorative Finishes</h4>
+            <ul class="list-bullets" role="list">
+              <li>Luxurious matt &amp; silk finishes</li>
+              <li>Crack-bridging &amp; flexible systems</li>
+              <li>UV &amp; weathering resistance</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+          <div class="card">
+            <h4 class="h4">Primers &amp; Putties</h4>
+            <ul class="list-bullets" role="list">
+              <li>Acrylic putties &amp; undercoats</li>
+              <li>Substrate preparation systems</li>
+              <li>Large pack sizes</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+          <div class="card">
+            <h4 class="h4">Exterior Systems</h4>
+            <ul class="list-bullets" role="list">
+              <li>Anti-carbonation systems</li>
+              <li>High durability topcoats</li>
+              <li>Project supply &amp; color tools</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+        </div>
+      </article>
+
+      <span class="brand-badge">Manufacturer</span>
+      <article class="brand-block">
+        <header class="brand-head">
+          <h3 class="brand-title">
+            KAPCI Coatings
+          </h3>
+          <p class="muted">Automotive refinish systems and wood coatings for professional applications.</p>
+        </header>
+
+        <div class="grid three cards">
+          <div class="card">
+            <h4 class="h4">Automotive Refinish</h4>
+            <ul class="list-bullets" role="list">
+              <li>Primers, fillers, putties</li>
+              <li>Basecoat &amp; 2K acrylic systems</li>
+              <li>Clearcoats, hardeners, thinners, polishes</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+          <div class="card">
+            <h4 class="h4">Waterborne Systems</h4>
+            <ul class="list-bullets" role="list">
+              <li>Low-VOC refinish solutions</li>
+              <li>Color mixing systems</li>
+              <li>Workshop supply programs</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+          <div class="card">
+            <h4 class="h4">Wood Coatings</h4>
+            <ul class="list-bullets" role="list">
+              <li>Nitrocellulose &amp; PU ranges</li>
+              <li>Polyester sealers &amp; stains</li>
+              <li>Water-based options</li>
+            </ul>
+            <a href="/contact.html" class="link">Bulk inquiry ƒ+'</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-emph">
+    <div class="container">
+      <div class="grid two">
+        <div>
+          <h2 class="h2">Distributor Partnerships</h2>
+          <p>
+            We are actively <strong>seeking distributor partners across Africa</strong> for Alkyd Resins and bulk paints/coatings.
+            If you operate regional warehousing, industrial supply, or project distribution, letƒ?Ts talk.
+          </p>
+        </div>
+        <div class="card note">
+          <p class="eyebrow">B2B Only</p>
+          <ul class="list-check" role="list">
+            <li>MOQs &amp; palletized shipments</li>
+            <li>FOB Alexandria ƒ?› CFR/CIF on request</li>
+            <li>Documentation: TDS, COA, SDS (where applicable)</li>
+            <li>Payment: bank transfer (details on proforma)</li>
+          </ul>
+          <div class="cta" style="margin-top:.5rem">
+            <a href="/contact.html" class="btn primary">Start a Partnership</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <p class="small muted">
+          Notes: Product availability, branding, and specifications depend on manufacturer production and export approvals.
+          E&amp;W Trading Group does not sell to consumers via this website. All trademarks belong to their respective owners.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>

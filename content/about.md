@@ -1,66 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link rel="icon" type="image/png" href="/assets/emblem.png" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>E&W Trading Group — Alkyd Resin Export</title>
-  <meta name="description" content="E&W Trading Group exports alkyd resins across Africa as an exclusive distributor of PACHIN Egypt. Other paint raw materials are supplied locally to major manufacturers." />
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-<header class="header" role="banner">
-  <div class="container header-inner">
-    <!-- Row 1: brand (left on desktop; centered on small) -->
-    <div class="brand-row">
-      <a href="/" class="logo" aria-label="E&W Trading Group">
-        <img src="/assets/logo/lockup-horizontal-reverse.svg" alt="E&W Trading Group" class="logo-img"
-             onerror="this.replaceWith(document.createTextNode('E&W Trading Group'))" />
-      </a>
-    </div>
-
-    <!-- Row 2: nav (wraps; centered on small, right-aligned on desktop) -->
-    <nav aria-label="Main">
-      <ul class="nav">
-        <li><a href="/alkyds.html">Alkyds</a></li>
-        <li><a href="/products.html">Products</a></li>
-        <li><a href="/about.html">About</a></li>
-		<li><a href="/contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-	<script>
-(function () {
-  // normalize current path (no trailing slash)
-  var path = location.pathname.replace(/\/+$/,'');
-  if (!path) path = '/';
-  // find matching nav link
-  document.querySelectorAll('.nav a').forEach(function(a){
-    var href = a.getAttribute('href');
-    if (!href) return;
-    var norm = href.replace(/\/+$/,'');
-    // exact match for pages like /alkyds.html, /products.html, /about.html, /contact.html
-    if (norm === path) {
-      a.setAttribute('aria-current','page');
-      a.classList.add('is-active');
-    }
-  });
-})();
-</script>
-
-  </div>
-</header>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — E&W Trading Group</title>
-  <meta name="description" content="E&W Trading Group: 20+ years in paints and raw materials with a focused B2B export program for alkyd resins across Africa." />
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
+---
+title: "About — E&W Trading Group"
+description: "E&W Trading Group: 20+ years in paints and raw materials with a focused B2B export program for alkyd resins across Africa."
+---
 
 <main id="content">
-  <!-- Hero / Intro -->
   <section class="section hero hero-tight">
     <div class="container">
       <h1 class="h1">About E&amp;W Trading Group</h1>
@@ -70,25 +13,24 @@
         backed by deep technical know-how and an established supply network in Egypt.
       </p>
       <div class="cta">
-        <a href="/alkyds.html" class="btn primary">Explore Alkyd Grades</a>
+        <a href="/alkyds/" class="btn primary">Explore Alkyd Grades</a>
         <a href="/contact.html" class="btn">Request a Bulk Quote</a>
       </div>
     </div>
   </section>
 
-  <!-- Credibility / Background -->
   <section class="section">
     <div class="container">
       <div class="grid two">
         <div class="card">
           <h2 class="h2">Our Story</h2>
           <p>
-            Founded by a veteran of Egypt’s paint industry, E&amp;W grew from hands-on manufacturing expertise into a
-            trusted supplier of both <em>raw materials</em> and <em>finished coatings</em>. Over nearly two decades we’ve worked closely
-            with materials, formulations, and plant operations—bridging the gap between technical decisions and reliable supply.
+            Founded by a veteran of Egyptƒ?Ts paint industry, E&amp;W grew from hands-on manufacturing expertise into a
+            trusted supplier of both <em>raw materials</em> and <em>finished coatings</em>. Over nearly two decades weƒ?Tve worked closely
+            with materials, formulations, and plant operationsƒ?"bridging the gap between technical decisions and reliable supply.
           </p>
           <p>
-            As our network expanded, we developed a focused export program for <strong>Alkyd Resins</strong>—leveraging long-standing supplier
+            As our network expanded, we developed a focused export program for <strong>Alkyd Resins</strong>ƒ?"leveraging long-standing supplier
             relationships and logistics experience to serve African markets efficiently.
           </p>
         </div>
@@ -99,14 +41,13 @@
             <li>20+ years across manufacturing, raw materials, and distribution</li>
             <li>Practical, technical guidance on resin selection &amp; application</li>
             <li>Established sourcing &amp; export logistics from Egypt to Africa</li>
-            <li>Documentation readiness: TDS • COA • (SDS where applicable)</li>
+            <li>Documentation readiness: TDS ƒ?› COA ƒ?› (SDS where applicable)</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Focus / Scope -->
   <section class="section section-emph">
     <div class="container">
       <div class="grid two">
@@ -118,15 +59,15 @@
             palletized shipments, and standard INCOTERMS (FOB/CFR/CIF).
           </p>
           <div class="cta">
-            <a href="/alkyds.html#grades" class="btn primary">View Grades &amp; Specs</a>
+            <a href="/alkyds/#grades" class="btn primary">View Grades &amp; Specs</a>
             <a href="/contact.html" class="btn">Start an RFQ</a>
           </div>
         </div>
         <div class="card note">
           <p class="eyebrow">B2B Only</p>
           <ul class="list-check" role="list">
-            <li>MOQs apply • Bulk packaging options</li>
-            <li>FOB Alexandria • CFR/CIF on request</li>
+            <li>MOQs apply ƒ?› Bulk packaging options</li>
+            <li>FOB Alexandria ƒ?› CFR/CIF on request</li>
             <li>Africa-focused lanes &amp; timelines</li>
           </ul>
         </div>
@@ -134,14 +75,13 @@
     </div>
   </section>
 
-  <!-- Breadth / Network (without retail details) -->
   <section class="section">
     <div class="container">
       <div class="grid two">
         <div class="card">
           <h2 class="h2">Depth in the Value Chain</h2>
           <p>
-            Beyond resin export, our background spans the entire coatings value chain—from <em>raw material sourcing</em> and
+            Beyond resin export, our background spans the entire coatings value chainƒ?"from <em>raw material sourcing</em> and
             <em>plant processes</em> to <em>finished product distribution</em>. This breadth helps us anticipate constraints, align specs,
             and keep lead times predictable for our partners.
           </p>
@@ -153,7 +93,7 @@
         <div class="card">
           <h2 class="h2">Sourcing &amp; Relationships</h2>
           <p>
-            We maintain active relationships across Egypt’s coatings ecosystem. We have supplied <em>raw materials</em> used in
+            We maintain active relationships across Egyptƒ?Ts coatings ecosystem. We have supplied <em>raw materials</em> used in
             large-scale manufacturing and also procure <em>finished products in bulk</em> when projects require a combined solution.
             Brand ownership remains with respective manufacturers.
           </p>
@@ -162,7 +102,6 @@
     </div>
   </section>
 
-  <!-- How we work -->
   <section class="section">
     <div class="container">
       <div class="grid three cards">
@@ -182,7 +121,6 @@
     </div>
   </section>
 
-  <!-- Values / Reliability -->
   <section class="section section-emph">
     <div class="container">
       <div class="grid two">
@@ -199,7 +137,7 @@
           <h3 class="h3">Distributor Partnerships</h3>
           <p>
             We welcome <strong>distributor partners across Africa</strong> for Alkyd Resins and, where relevant, bulk coatings supply.
-            If you operate warehousing or project distribution, we’d like to connect.
+            If you operate warehousing or project distribution, weƒ?Td like to connect.
           </p>
           <a href="/contact.html" class="btn primary">Start a Partnership</a>
         </div>
@@ -207,7 +145,6 @@
     </div>
   </section>
 
-  <!-- Contact CTA -->
   <section class="section">
     <div class="container">
       <div class="card">
@@ -218,36 +155,9 @@
         </p>
         <div class="cta">
           <a href="/contact.html" class="btn">Contact Form</a>
-          <a href="/alkyds.html" class="btn secondary">Alkyd Grades</a>
+          <a href="/alkyds/" class="btn secondary">Alkyd Grades</a>
         </div>
       </div>
     </div>
   </section>
 </main>
-
-</body>
-
- <footer id="contact" class="footer" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img class="footer-logo" src="/assets/logo/lockup-horizontal-reverse.svg" alt="E&W Trading Group"
-             onerror="this.replaceWith(document.createTextNode('E&W Trading Group'))" />
-        <p>© <span id="year"></span> E&W Trading Group. All rights reserved.</p>
-      </div>
-      <div class="footer-cta">
-        <h3>Contact</h3>
-        <p>Send your RFQ with required specs, quantity, port and incoterms.</p>
-        <a href="mailto:sales@ewtradingco.com" class="btn secondary">sales@ewtradingco.com</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>

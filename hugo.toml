@@ -1,0 +1,11 @@
+baseURL = "https://example.com/"
+title = "E&W Trading Group"
+enableRobotsTXT = true
+paginate = 10
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  # site-wide params can be added here
+

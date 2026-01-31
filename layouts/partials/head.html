@@ -1,0 +1,8 @@
+<head>
+  <link rel="icon" type="image/png" href="/assets/emblem.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ if .IsHome }}E&W Trading Group — Alkyd Resin Export{{ else }}{{ .Title }} | E&W Trading Group{{ end }}</title>
+  {{ with .Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
+  <link rel="stylesheet" href="/style.css" />
+</head>
