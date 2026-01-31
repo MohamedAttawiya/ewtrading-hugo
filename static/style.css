@@ -406,3 +406,41 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 .prose > * + * { margin-top: .85rem; }
 .prose a { color: #0b4aa2; text-decoration: underline; text-underline-offset: 3px; }
 .prose pre, .prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+/* ================================
+   Alkyds hero layout patch
+   (ensures badge sits in right column)
+   ================================ */
+
+/* Keep hero content aligned + prevent weird empty whitespace */
+.hero-alkyd .hero-inner{
+  align-items: start;
+}
+
+/* Ensure the left copy column doesn’t collapse too narrow */
+.hero-alkyd .hero-copy{
+  max-width: 68ch;
+}
+
+/* Force badge to behave like the “right column” card */
+.hero-alkyd .badge{
+  justify-self: end;
+  align-self: start;
+  width: min(360px, 100%);
+}
+
+/* On wide screens, make the two-column layout explicit */
+@media (min-width:800px){
+  .hero-alkyd .hero-inner{
+    grid-template-columns: 1.15fr 0.85fr;
+    column-gap: 2rem;
+  }
+}
+
+/* On small screens, badge should stack below naturally */
+@media (max-width:799px){
+  .hero-alkyd .badge{
+    justify-self: center;
+    margin-top: 1rem;
+  }
+}
