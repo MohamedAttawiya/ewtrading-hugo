@@ -1,6 +1,8 @@
 /* =========================================
-   E&W — Responsive Header (2 rows on small)
-   No JS. No hidden scroll. Zero page overflow.
+   E&W — Site Styles (deduped)
+   - Single header system: .header + .navbar + .nav-links + checkbox hamburger
+   - Deterministic hamburger -> X animation (absolute bars)
+   - Keeps components + Alkyd hero patch
    ========================================= */
 
 :root{
@@ -27,11 +29,16 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 
-/* Layout helpers */
+/* Layout helper */
 .container{width:min(1180px,92%);margin-inline:auto}
 
 /* =========================================
-   HEADER (desktop=1 row; small=2 rows)
+   HEADER (sticky) + NAVBAR (responsive)
+   Markup: header.header > nav.navbar(.container) >
+           a.logo > img
+           input#menu-toggle.menu-toggle
+           label.menu-icon > span*3
+           ul.nav-links > li > a
    ========================================= */
 .header{
   position:sticky; top:0; z-index:1000;
@@ -42,71 +49,149 @@ a{color:inherit;text-decoration:none}
   padding-left:env(safe-area-inset-left);
   padding-right:env(safe-area-inset-right);
 }
-.header-inner{
-  display:grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;  /* brand row + nav row on small */
-  gap:.5rem;
+
+/* The nav container row */
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
   padding:.6rem clamp(.6rem,3vw,1rem);
+  position:relative; /* anchor the dropdown panel */
 }
 
-/* Brand row */
-.brand-row{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:.75rem; min-width:0;
-}
-.logo{display:inline-flex;align-items:center;min-width:0}
-.logo-img{height:48px;width:auto}
+/* Logo */
+.navbar .logo{display:inline-flex;align-items:center;min-width:0}
+.navbar img{height:44px;width:auto}
 
-.header-cta{display:flex;gap:.5rem;flex:0 0 auto}
-.header-cta .btn{
-  background:#fff;color:var(--primary);
-  border-radius:10px;padding:.5rem .8rem;font-weight:800;border:2px solid transparent;
-}
-.header-cta .btn:hover{opacity:.92}
-
-/* Nav row — wraps naturally, centered, never overflows */
-nav{width:100%}
-.nav{
+/* Desktop links */
+.nav-links{
   list-style:none;
-  display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
-  gap:.4rem .65rem; width:100%;
+  display:flex;
+  align-items:center;
+  gap:.4rem .65rem;
+  margin:0;
+  padding:0;
 }
-.nav li{display:inline-flex}
-.nav a{
-  color:#fff; font-weight:800; border-radius:10px;
-  padding:.46rem .72rem; line-height:1; white-space:nowrap;
+.nav-links li{display:inline-flex}
+.nav-links a{
+  color:#fff;
+  font-weight:800;
+  border-radius:10px;
+  padding:.46rem .72rem;
+  line-height:1;
+  white-space:nowrap;
 }
-.nav a:hover,.nav a:focus-visible{background:rgba(255,255,255,.12)}
-.nav a.pill{background:#fff;color:var(--primary)}
+.nav-links a:hover,
+.nav-links a:focus-visible{background:rgba(255,255,255,.12)}
 
-/* Desktop/tablet: compress into one row */
-@media (min-width:900px){
-  .header-inner{
-    grid-template-columns:auto 1fr auto; /* logo | nav | cta */
-    grid-template-rows:auto; gap:.8rem;
+/* Contact pill (if you use class="pill") */
+.nav-links a.pill{background:#fff;color:var(--primary)}
+
+/* Active page indicator (your JS sets aria-current="page") */
+.nav-links a[aria-current="page"],
+.nav-links a.is-active{
+  background: rgba(255,255,255,.18);
+  box-shadow: 0 0 0 2px rgba(255,255,255,.22) inset;
+}
+.nav-links a[aria-current="page"]:hover{background: rgba(255,255,255,.24)}
+
+/* Hide checkbox itself */
+.menu-toggle{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-icon{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.25);
+  cursor:pointer;
+  user-select:none;
+
+  /* crucial for stable X */
+  position:relative;
+}
+
+/* Deterministic bars (absolute positioning) */
+.menu-icon span{
+  position:absolute;
+  left:50%;
+  width:20px;
+  height:2px;
+  background:#fff;
+  border-radius:2px;
+  transform:translateX(-50%);
+  transition:transform .15s ease, opacity .15s ease, top .15s ease;
+}
+.menu-icon span:nth-child(1){ top:14px; }
+.menu-icon span:nth-child(2){ top:21px; }
+.menu-icon span:nth-child(3){ top:28px; }
+
+/* Mobile dropdown */
+@media (max-width:900px){
+  .menu-icon{display:block}
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:calc(100% + .5rem);
+    left:0;
+    right:0;
+    z-index:2000;
+
+    flex-direction:column;
+    align-items:stretch;
+    gap:.25rem;
+
+    padding:.6rem;
+    margin:0;
+
+    background:var(--primary);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
   }
-  .brand-row{grid-column:1 / 2; justify-content:flex-start}
-  nav{grid-column:2 / 3}
-  .header-cta{grid-column:3 / 4}
-  .nav{justify-content:flex-end; flex-wrap:nowrap}
-  .logo-img{height:44px}
-}
-@media (min-width:1200px){
-  .logo-img{height:48px}
-  .nav a{font-size:1rem}
+
+  /* show dropdown when checked */
+  .menu-toggle:checked + .menu-icon + .nav-links{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:.7rem .9rem;
+    border-radius:12px;
+  }
+  .nav-links a.pill{
+    width:100%;
+    text-align:left;
+  }
+
+  /* Hamburger -> X */
+  .menu-toggle:checked + .menu-icon span:nth-child(1){
+    top:21px;
+    transform:translateX(-50%) rotate(45deg);
+  }
+  .menu-toggle:checked + .menu-icon span:nth-child(2){
+    opacity:0;
+  }
+  .menu-toggle:checked + .menu-icon span:nth-child(3){
+    top:21px;
+    transform:translateX(-50%) rotate(-45deg);
+  }
 }
 
-/* Phones: center brand, hide CTA (space), tighten paddings */
-@media (max-width:520px){
-  .brand-row{justify-content:center}
-  .header-cta{display:none}
-  .logo-img{height:46px}
-  .nav a{padding:.42rem .6rem;font-size:.95rem}
+/* Slightly larger logo on wide screens */
+@media (min-width:1200px){
+  .navbar img{height:48px}
 }
 
 /* =========================================
-   TYPOGRAPHY & COMPONENTS (rest of site)
+   TYPOGRAPHY & COMPONENTS
    ========================================= */
 h1,h2,h3{color:var(--primary);font-family:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif}
 h1{font-size:clamp(2rem,1.2rem + 2.2vw,3rem);line-height:1.1;letter-spacing:-.01em}
@@ -147,9 +232,16 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
   .grid.three{grid-template-columns:repeat(3,1fr)}
 }
 
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;box-shadow:0 1px 2px rgba(15,44,89,.06)}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1rem;
+  box-shadow:0 1px 2px rgba(15,44,89,.06)
+}
 .card p{color:var(--muted)}
-.small{font-size:.9rem}.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.muted{color:var(--muted)}
 
 .ticks{margin-top:.5rem;color:var(--muted);display:grid;gap:.45rem;list-style:none}
 .ticks li{position:relative;padding-left:1.5rem}
@@ -159,7 +251,10 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
 .steps li{margin-left:.25rem}
 
 .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem;list-style:none;padding-left:0}
-.chips li{background:#EFF6F3;color:#0A3E2B;border:1px solid #D7E9E1;padding:.25rem .5rem;border-radius:999px;font-size:.85rem;font-weight:600}
+.chips li{
+  background:#EFF6F3;color:#0A3E2B;border:1px solid #D7E9E1;
+  padding:.25rem .5rem;border-radius:999px;font-size:.85rem;font-weight:600
+}
 
 .table-scroll{overflow:auto;border-radius:10px;border:1px solid var(--line);background:var(--card)}
 table.data{width:100%;border-collapse:collapse;font-size:.95rem}
@@ -168,16 +263,26 @@ table.data thead th{position:sticky;top:0;background:#0F2C59;color:#fff;font-wei
 table.data tbody tr:nth-child(odd){background:#FAFCFF}
 table.data tbody tr:hover{background:#F2F7FF}
 
-.note-card{margin-top:1rem;background:#FFF8E6;border:1px solid #F1E1B5;color:#5C4A12;border-radius:12px;padding:.9rem 1rem}
+.note-card{
+  margin-top:1rem;background:#FFF8E6;border:1px solid #F1E1B5;color:#5C4A12;
+  border-radius:12px;padding:.9rem 1rem
+}
 .note-card h4{margin-bottom:.25rem;color:#43360E}
 
 .cta,.cta-row{margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap}
-.btn{display:inline-block;border-radius:10px;padding:.7rem 1.1rem;font-weight:700;border:2px solid transparent;transition:background-color .15s ease,color .15s ease,border-color .15s ease,opacity .15s ease}
+.btn{
+  display:inline-block;border-radius:10px;padding:.7rem 1.1rem;font-weight:700;
+  border:2px solid transparent;
+  transition:background-color .15s ease,color .15s ease,border-color .15s ease,opacity .15s ease
+}
 .btn.primary{background:var(--accent);color:#fff}
 .btn.secondary{background:#fff;color:var(--primary);border-color:var(--primary)}
 .btn.ghost{background:transparent;color:var(--primary);border-color:var(--line)}
 .btn:hover{opacity:.92}
 
+/* =========================================
+   FOOTER
+   ========================================= */
 .footer{background:var(--primary);color:#fff;margin-top:2rem}
 .footer-inner{display:grid;gap:1rem;grid-template-columns:1fr;align-items:center;padding:1.5rem 0}
 .footer-logo{height:44px;width:auto}
@@ -208,27 +313,21 @@ main ul, main ol {
 }
 main ul { list-style: disc; }
 main ol { list-style: decimal; }
-
 main ul, main ol, main ul li, main ol li { display: block; }
 main ul li { display: list-item; }
 main ul li::marker { font-size: 1rem; }
-
 main ul:not(.list-check) li::before,
 main ol li::before { content: none !important; }
-
 main .card ul { padding-left: 1.25rem; }
-
 main .list-check { list-style: none; padding-left: 0; }
 main .list-check li { position: relative; padding-left: 1.25rem; }
 main .list-check li::before {
   content: "✓";
   position: absolute; left: 0; top: 0.1rem;
 }
-
 main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
-
-/* ===== BRAND PROMINENCE ===== */
+/* ===== BRAND PROMINENCE (optional helpers) ===== */
 .brand-head .h3,
 .brand-title {
   font-size: clamp(1.6rem, 2.4vw, 2.1rem);
@@ -250,195 +349,26 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   vertical-align: middle;
   margin-right: .5rem;
 }
-/* === Active page indicator for header nav === */
-.nav a.is-active,
-.nav a[aria-current="page"]{
-  background: rgba(255,255,255,.18);
-  box-shadow: 0 0 0 2px rgba(255,255,255,.22) inset;
-  border-radius: 10px;
-}
-.nav a.is-active:hover,
-.nav a[aria-current="page"]:hover{
-  background: rgba(255,255,255,.24);
-}
-
 
 /* ================================
    Alkyds hero layout patch
-   (ensures badge sits in right column)
    ================================ */
-
-/* Keep hero content aligned + prevent weird empty whitespace */
-.hero-alkyd .hero-inner{
-  align-items: start;
-}
-
-/* Ensure the left copy column doesn’t collapse too narrow */
-.hero-alkyd .hero-copy{
-  max-width: 68ch;
-}
-
-/* Force badge to behave like the “right column” card */
+.hero-alkyd .hero-inner{ align-items:start; }
+.hero-alkyd .hero-copy{ max-width:68ch; }
 .hero-alkyd .badge{
-  justify-self: end;
-  align-self: start;
-  width: min(360px, 100%);
+  justify-self:end;
+  align-self:start;
+  width:min(360px,100%);
 }
-
-/* On wide screens, make the two-column layout explicit */
 @media (min-width:800px){
   .hero-alkyd .hero-inner{
     grid-template-columns: 1.15fr 0.85fr;
     column-gap: 2rem;
   }
 }
-
-/* On small screens, badge should stack below naturally */
 @media (max-width:799px){
   .hero-alkyd .badge{
-    justify-self: center;
-    margin-top: 1rem;
-  }
-}
-
-/* =========================================
-   HAMBURGER NAV (for header.html markup)
-   Works with: input#menu-toggle + label + ul.nav-links
-   ========================================= */
-
-.navbar{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  padding:.6rem clamp(.6rem,3vw,1rem);
-  position:relative; /* anchor dropdown */
-}
-
-/* Use your existing logo sizing but ensure it behaves in this layout */
-.navbar .logo{display:inline-flex;align-items:center;min-width:0}
-.navbar .logo-img{height:44px;width:auto}
-
-/* Desktop nav */
-.nav-links{
-  list-style:none;
-  display:flex;
-  align-items:center;
-  gap:.4rem .65rem;
-  margin:0;
-  padding:0;
-}
-.nav-links li{display:inline-flex}
-.nav-links a{
-  color:#fff;
-  font-weight:800;
-  border-radius:10px;
-  padding:.46rem .72rem;
-  line-height:1;
-  white-space:nowrap;
-}
-.nav-links a:hover,
-.nav-links a:focus-visible{background:rgba(255,255,255,.12)}
-
-/* Contact pill (your markup uses a.pill) */
-.nav-links a.pill{
-  background:#fff;
-  color:var(--primary);
-}
-
-/* Active page indicator (your markup uses aria-current) */
-.nav-links a[aria-current="page"],
-.nav-links a.is-active{
-  background: rgba(255,255,255,.18);
-  box-shadow: 0 0 0 2px rgba(255,255,255,.22) inset;
-}
-.nav-links a[aria-current="page"]:hover{
-  background: rgba(255,255,255,.24);
-}
-
-/* Hide checkbox control visually */
-.menu-toggle{
-  position:absolute;
-  opacity:0;
-  pointer-events:none;
-}
-
-/* Hamburger icon (hidden on desktop) */
-.menu-icon{
-  display:none;
-  width:44px;
-  height:44px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,.25);
-  align-items:center;
-  justify-content:center;
-  gap:5px;
-  cursor:pointer;
-  user-select:none;
-}
-.menu-icon span{
-  display:block;
-  width:18px;
-  height:2px;
-  background:#fff;
-  border-radius:2px;
-}
-
-/* Mobile behavior */
-@media (max-width:900px){
-  .menu-icon{display:flex}
-
-  /* dropdown hidden by default */
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:calc(100% + .5rem);
-    left:0;
-    right:0;
-    z-index:2000;
-
-    flex-direction:column;
-    align-items:stretch;
-    gap:.25rem;
-
-    padding:.6rem;
-    margin:0;
-
-    background:var(--primary);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:14px;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
-  }
-
-  /* show dropdown when checked */
-  .menu-toggle:checked + .menu-icon + .nav-links{
-    display:flex;
-  }
-
-  .nav-links a{
-    padding:.7rem .9rem;
-    border-radius:12px;
-  }
-
-  /* Make the pill full-width but still pill-like */
-  .nav-links a.pill{
-    width:100%;
-    text-align:left;
-  }
-}
-
-/* Optional: small animation when opened */
-@media (max-width:900px){
-  .menu-toggle:checked + .menu-icon span:nth-child(1){
-    transform: translateY(7px) rotate(45deg);
-  }
-  .menu-toggle:checked + .menu-icon span:nth-child(2){
-    opacity:0;
-  }
-  .menu-toggle:checked + .menu-icon span:nth-child(3){
-    transform: translateY(-7px) rotate(-45deg);
-  }
-  .menu-icon span{
-    transition:transform .15s ease, opacity .15s ease;
+    justify-self:center;
+    margin-top:1rem;
   }
 }
