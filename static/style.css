@@ -444,3 +444,145 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
     margin-top: 1rem;
   }
 }
+
+/* =========================================
+   HAMBURGER NAV (for header.html markup)
+   Works with: input#menu-toggle + label + ul.nav-links
+   ========================================= */
+
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:.6rem clamp(.6rem,3vw,1rem);
+  position:relative; /* anchor dropdown */
+}
+
+/* Use your existing logo sizing but ensure it behaves in this layout */
+.navbar .logo{display:inline-flex;align-items:center;min-width:0}
+.navbar .logo-img{height:44px;width:auto}
+
+/* Desktop nav */
+.nav-links{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:.4rem .65rem;
+  margin:0;
+  padding:0;
+}
+.nav-links li{display:inline-flex}
+.nav-links a{
+  color:#fff;
+  font-weight:800;
+  border-radius:10px;
+  padding:.46rem .72rem;
+  line-height:1;
+  white-space:nowrap;
+}
+.nav-links a:hover,
+.nav-links a:focus-visible{background:rgba(255,255,255,.12)}
+
+/* Contact pill (your markup uses a.pill) */
+.nav-links a.pill{
+  background:#fff;
+  color:var(--primary);
+}
+
+/* Active page indicator (your markup uses aria-current) */
+.nav-links a[aria-current="page"],
+.nav-links a.is-active{
+  background: rgba(255,255,255,.18);
+  box-shadow: 0 0 0 2px rgba(255,255,255,.22) inset;
+}
+.nav-links a[aria-current="page"]:hover{
+  background: rgba(255,255,255,.24);
+}
+
+/* Hide checkbox control visually */
+.menu-toggle{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.menu-icon{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.25);
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  cursor:pointer;
+  user-select:none;
+}
+.menu-icon span{
+  display:block;
+  width:18px;
+  height:2px;
+  background:#fff;
+  border-radius:2px;
+}
+
+/* Mobile behavior */
+@media (max-width:900px){
+  .menu-icon{display:flex}
+
+  /* dropdown hidden by default */
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:calc(100% + .5rem);
+    left:0;
+    right:0;
+    z-index:2000;
+
+    flex-direction:column;
+    align-items:stretch;
+    gap:.25rem;
+
+    padding:.6rem;
+    margin:0;
+
+    background:var(--primary);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+  }
+
+  /* show dropdown when checked */
+  .menu-toggle:checked + .menu-icon + .nav-links{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:.7rem .9rem;
+    border-radius:12px;
+  }
+
+  /* Make the pill full-width but still pill-like */
+  .nav-links a.pill{
+    width:100%;
+    text-align:left;
+  }
+}
+
+/* Optional: small animation when opened */
+@media (max-width:900px){
+  .menu-toggle:checked + .menu-icon span:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+  }
+  .menu-toggle:checked + .menu-icon span:nth-child(2){
+    opacity:0;
+  }
+  .menu-toggle:checked + .menu-icon span:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  .menu-icon span{
+    transition:transform .15s ease, opacity .15s ease;
+  }
+}
