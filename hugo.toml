@@ -9,3 +9,7 @@ paginate = 10
 [params]
   # site-wide params can be added here
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

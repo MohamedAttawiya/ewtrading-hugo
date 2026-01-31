@@ -1,5 +1,15 @@
- <main role="main">
-  <div class="container">
-    {{ block "main" . }}{{ end }}
-  </div>
- </main>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    {{ partial "header.html" . }}
+    <main role="main">
+      <div class="container">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

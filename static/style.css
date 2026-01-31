@@ -200,31 +200,6 @@ table.data tbody tr:hover{background:#F2F7FF}
   .footer-logo{height:38px}
 }
 
-/* ===== LISTS: fix bullets/numbering everywhere ===== */
-
-ul { list-style: disc; }
-ol { list-style: decimal; }
-
-/* undo any accidental flex/grid applied to lists or LIs */
-
-ul li { display: list-item; }      /* force native markers */
-ul li::marker { font-size: 1rem; }
-
-/* kill global pseudo-counters that might reorder bullets */
-ul:not(.list-check) li::before,
-ol li::before { content: none !important; }
-
-/* lists inside cards */
-.card ul { padding-left: 1.25rem; }
-
-/* checkmark list keeps its custom look */
-.list-check { list-style: none; padding-left: 0; }
-.list-check li { position: relative; padding-left: 1.25rem; }
-.list-check li::before {
-  content: "✓";
-  position: absolute; left: 0; top: 0.1rem;
-}
-
 /* ===== LISTS: fix bullets/numbering in MAIN content only ===== */
 main ul, main ol {
   margin: 0 0 1rem 0;
@@ -234,19 +209,15 @@ main ul, main ol {
 main ul { list-style: disc; }
 main ol { list-style: decimal; }
 
-/* undo any accidental flex/grid applied to lists or LIs (content only) */
 main ul, main ol, main ul li, main ol li { display: block; }
 main ul li { display: list-item; }
 main ul li::marker { font-size: 1rem; }
 
-/* kill global pseudo-counters that might reorder bullets (content only) */
 main ul:not(.list-check) li::before,
 main ol li::before { content: none !important; }
 
-/* lists inside cards */
 main .card ul { padding-left: 1.25rem; }
 
-/* checkmark list keeps its custom look */
 main .list-check { list-style: none; padding-left: 0; }
 main .list-check li { position: relative; padding-left: 1.25rem; }
 main .list-check li::before {
@@ -254,11 +225,8 @@ main .list-check li::before {
   position: absolute; left: 0; top: 0.1rem;
 }
 
-/* inline/utility lists still allowed */
 main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
-/* inline/utility lists still allowed */
-ul.inline, ul.no-markers { list-style: none; padding-left: 0; }
 
 /* ===== BRAND PROMINENCE ===== */
 .brand-head .h3,
