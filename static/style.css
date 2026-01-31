@@ -372,3 +372,61 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
     margin-top:1rem;
   }
 }
+/* =========================================
+   NAV TWEAKS (requested)
+   1) remove Contact glow
+   2) nav font = light serif
+   3) dropdown menu = sharp edges
+   ========================================= */
+
+/* 2) Nav typography: light serif (desktop + mobile) */
+.nav a,
+.nav-links a{
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 600; /* lighter than current 800 */
+  letter-spacing: 0; /* keep crisp */
+}
+
+/* 1) Remove the “glow”/ring from active state (keep subtle bg only) */
+.nav a.is-active,
+.nav a[aria-current="page"],
+.nav-links a.is-active,
+.nav-links a[aria-current="page"]{
+  box-shadow: none !important;            /* kills inset ring/glow */
+  outline: none;                           /* just in case */
+  background: rgba(255,255,255,.14);       /* subtle active bg */
+}
+
+/* Also ensure the Contact pill never has a glow */
+.nav a.pill,
+.nav-links a.pill{
+  box-shadow: none !important;
+}
+
+/* If Contact is currently implemented as a white pill, keep it clean */
+.nav a.pill,
+.nav-links a.pill{
+  background: #fff;
+  color: var(--primary);
+  border-radius: 10px; /* keep pill look itself */
+}
+
+/* 3) Dropdown menu (mobile) sharp edges */
+@media (max-width:900px){
+  /* the dropdown panel itself */
+  .nav-links{
+    border-radius: 0 !important; /* sharp */
+  }
+
+  /* each link row — optional: also sharp */
+  .nav-links a{
+    border-radius: 0 !important;
+  }
+
+  /* if you have a wrapper panel around links in your burger CSS, include it too */
+  .navbar,
+  .site-header,
+  .header{
+    border-radius: 0;
+  }
+}
