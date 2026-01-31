@@ -3,7 +3,6 @@ title: "Alkyds — E&W Trading Group"
 description: "PACHIN alkyd resin export portfolio with grades, documentation, and Africa-focused logistics."
 ---
 
-{{< html >}}
 <section class="hero hero-alkyd">
   <div class="container hero-inner">
     <div class="hero-copy">
@@ -36,9 +35,7 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
         <p class="badge-copy">
           Alkyd resins engineered for adhesion, gloss, durability &amp; chemical resistance.
         </p>
-        <a class="badge-link" href="https://www.pachin.net/en/" target="_blank" rel="noopener">
-          About PACHIN
-        </a>
+        <a class="badge-link" href="https://www.pachin.net/en/" target="_blank" rel="noopener">About PACHIN</a>
       </div>
     </aside>
   </div>
@@ -89,7 +86,7 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
       </article>
     </div>
 
-    <div class="grid two mt-1">
+    <div class="grid two">
       <article class="card">
         <h3>Urethane-Modified Alkyd</h3>
         <p class="muted">
@@ -106,8 +103,7 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
       <article class="card">
         <h3>Documentation &amp; QA</h3>
         <p class="muted">
-          Each shipment includes TDS, MSDS and COA.
-          Manufacturing certified to ISO 9001, 14001 and 45001.
+          Each shipment includes TDS, MSDS and COA. Manufacturing certified to ISO 9001, 14001 and 45001.
         </p>
         <a class="btn ghost" href="/alkyds/#grades">See Spec Pack</a>
       </article>
@@ -119,45 +115,25 @@ description: "PACHIN alkyd resin export portfolio with grades, documentation, an
   <div class="container">
     <h2>Featured Export Grades</h2>
     <p class="section-lead">
-      Representative grades from PACHIN&rsquo;s portfolio.
-      Ask us for the full list and guidance on selection for your formulation.
+      Representative grades from PACHIN&rsquo;s portfolio. Ask us for the full list and guidance on selection.
     </p>
 
-    <h3 class="fam">Long Oil Alkyds</h3>
+    <h3>Long Oil Alkyds</h3>
     <div class="table-scroll">
       <table class="data">
         <thead>
           <tr>
-            <th>Grade</th>
-            <th>Oil Type</th>
-            <th>Oil %</th>
-            <th>PA %</th>
-            <th>Polyol</th>
-            <th>Form</th>
-            <th>Viscosity (25&nbsp;&deg;C)</th>
-            <th>Color max</th>
-            <th>Acid max</th>
-            <th>NV %</th>
-            <th>Typical Uses</th>
+            <th>Grade</th><th>Oil Type</th><th>Oil %</th><th>PA %</th><th>Polyol</th><th>Form</th>
+            <th>Viscosity (25&nbsp;&deg;C)</th><th>Color max</th><th>Acid max</th><th>NV %</th><th>Typical Uses</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>10927</td>
-            <td>Soya oil</td>
-            <td>59</td>
-            <td>27</td>
-            <td>PE + Glycerol</td>
-            <td>70% in white spirit</td>
-            <td>Gardner Z6&ndash;Z7</td>
-            <td>5</td>
-            <td>7 mg KOH/g</td>
-            <td>70 &plusmn; 1</td>
-            <td>High-build interior/exterior enamels</td>
+            <td>10927</td><td>Soya oil</td><td>59</td><td>27</td><td>PE + Glycerol</td><td>70% in white spirit</td>
+            <td>Gardner Z6&ndash;Z7</td><td>5</td><td>7 mg KOH/g</td><td>70 &plusmn; 1</td><td>High-build enamels</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
-{{< /html >}}
