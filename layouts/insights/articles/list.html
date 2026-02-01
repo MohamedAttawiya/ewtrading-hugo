@@ -1,18 +1,32 @@
 {{ define "main" }}
 <section class="container">
-  <h1>{{ .Title }}</h1>
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+  </header>
 
-  {{ $paginator := .Paginate (where .Pages "Draft" "ne" true) }}
-  <div class="cards">
-    {{ range $paginator.Pages }}
-      <article class="card">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
-        <p class="meta">{{ .Date.Format "02 Jan 2006" }}</p>
-      </article>
-    {{ end }}
-  </div>
+  {{ $articlesSection := site.GetPage "section" "insights/articles" }}
+  {{ $pages := slice }}
+  {{ if $articlesSection }}
+    {{ $pages = where $articlesSection.RegularPages "Draft" "ne" true }}
+  {{ end }}
 
-  {{ template "_internal/pagination.html" . }}
+  {{ if gt (len $pages) 0 }}
+    {{ $paginator := .Paginate $pages }}
+
+    <div class="cards">
+      {{ range $paginator.Pages }}
+        <article class="card">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+          <p class="meta">{{ .Date.Format "02 Jan 2006" }}</p>
+        </article>
+      {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+  {{ else }}
+    <p>No articles yet.</p>
+  {{ end }}
 </section>
 {{ end }}
