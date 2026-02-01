@@ -12,18 +12,23 @@ We ship alkyd resin grades with export-focused documentation, predictable packag
 {{< /callout >}}
 
 {{< two-col >}}
+<div>
 ### What you get
 - TDS and COA available per grade / batch
 - MSDS on request
 - Consistent labeling (product name, batch, net weight)
 - Export pack list + commercial invoice support
+</div>
 
+<div>
 ### What we confirm upfront
 - Incoterms: **FOB / CFR / CIF**
 - Destination port and preferred carrier terms
 - Packaging type and palletization
 - Production + dispatch lead time (by grade + volume)
+</div>
 {{< /two-col >}}
+
 
 ## Documentation package (typical)
 Most buyers ask for the same set. We keep it simple and repeatable:
