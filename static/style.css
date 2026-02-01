@@ -2,7 +2,7 @@
    E&W — Site Styles (deduped)
    - Single header system: .header + .navbar + .nav-links + checkbox hamburger
    - Deterministic hamburger -> X animation (absolute bars)
-   - Keeps components + Alkyd hero patch
+   - Components + Alkyd hero patch
    ========================================= */
 
 :root{
@@ -74,27 +74,39 @@ a{color:inherit;text-decoration:none}
   padding:0;
 }
 .nav-links li{display:inline-flex}
+
+/* NAV typography + base */
 .nav-links a{
   color:#fff;
-  font-weight:800;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; /* light serif */
+  font-weight: 400; /* light */
   border-radius:10px;
   padding:.46rem .72rem;
   line-height:1;
   white-space:nowrap;
+
+  /* ensure no “glow” anywhere */
+  box-shadow:none !important;
+  outline:none !important;
 }
 .nav-links a:hover,
 .nav-links a:focus-visible{background:rgba(255,255,255,.12)}
 
-/* Contact pill (if you use class="pill") */
-.nav-links a.pill{background:#fff;color:var(--primary)}
+/* Remove the special white "pill" look completely.
+   If your markup still has class="pill" on Contact, it will look like a normal link. */
+.nav-links a.pill{
+  background:transparent !important;
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:10px;
+}
 
-/* Active page indicator (your JS sets aria-current="page") */
+/* Active page indicator (your JS sets aria-current="page") — NO inset ring/glow */
 .nav-links a[aria-current="page"],
 .nav-links a.is-active{
-  background: rgba(255,255,255,.18);
-  box-shadow: 0 0 0 2px rgba(255,255,255,.22) inset;
+  background: rgba(255,255,255,.16);
+  box-shadow: none !important;
 }
-.nav-links a[aria-current="page"]:hover{background: rgba(255,255,255,.24)}
 
 /* Hide checkbox itself */
 .menu-toggle{
@@ -112,9 +124,7 @@ a{color:inherit;text-decoration:none}
   border:1px solid rgba(255,255,255,.25);
   cursor:pointer;
   user-select:none;
-
-  /* crucial for stable X */
-  position:relative;
+  position:relative; /* crucial for stable X */
 }
 
 /* Deterministic bars (absolute positioning) */
@@ -146,14 +156,17 @@ a{color:inherit;text-decoration:none}
 
     flex-direction:column;
     align-items:stretch;
-    gap:.25rem;
+    gap:0;
 
-    padding:.6rem;
+    padding:0;
     margin:0;
 
     background:var(--primary);
     border:1px solid rgba(255,255,255,.12);
-    border-radius:14px;
+
+    /* sharp edges as requested */
+    border-radius:0 !important;
+
     box-shadow:0 10px 30px rgba(0,0,0,.25);
   }
 
@@ -162,13 +175,26 @@ a{color:inherit;text-decoration:none}
     display:flex;
   }
 
+  /* Center dropdown items */
+  .nav-links li{ text-align:center; }
   .nav-links a{
-    padding:.7rem .9rem;
-    border-radius:12px;
-  }
-  .nav-links a.pill{
+    display:block;
     width:100%;
-    text-align:left;
+    text-align:center;
+    padding:14px 0;
+    border-radius:0 !important;
+  }
+
+  /* Keep the "pill" link from turning white in mobile too */
+  .nav-links a.pill{
+    background:transparent !important;
+    color:#fff !important;
+    border-left:0;
+    border-right:0;
+    border-top:1px solid rgba(255,255,255,.10);
+    border-bottom:1px solid rgba(255,255,255,.10);
+    border-radius:0 !important;
+    margin:0;
   }
 
   /* Hamburger -> X */
@@ -327,29 +353,6 @@ main .list-check li::before {
 }
 main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
-/* ===== BRAND PROMINENCE (optional helpers) ===== */
-.brand-head .h3,
-.brand-title {
-  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
-  line-height: 1.15;
-  font-weight: 800;
-  letter-spacing: .01em;
-  margin-bottom: .25rem;
-}
-.brand-badge {
-  display: inline-block;
-  font-size: .75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  padding: .25rem .5rem;
-  border-radius: 999px;
-  background: var(--primary-50, #eef6ff);
-  color: var(--primary-800, #0b4aa2);
-  vertical-align: middle;
-  margin-right: .5rem;
-}
-
 /* ================================
    Alkyds hero layout patch
    ================================ */
@@ -370,145 +373,5 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   .hero-alkyd .badge{
     justify-self:center;
     margin-top:1rem;
-  }
-}
-/* =========================================
-   NAV TWEAKS (requested)
-   1) remove Contact glow
-   2) nav font = light serif
-   3) dropdown menu = sharp edges
-   ========================================= */
-
-/* 2) Nav typography: light serif (desktop + mobile) */
-.nav a,
-.nav-links a{
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 600; /* lighter than current 800 */
-  letter-spacing: 0; /* keep crisp */
-}
-
-/* 1) Remove the “glow”/ring from active state (keep subtle bg only) */
-.nav a.is-active,
-.nav a[aria-current="page"],
-.nav-links a.is-active,
-.nav-links a[aria-current="page"]{
-  box-shadow: none !important;            /* kills inset ring/glow */
-  outline: none;                           /* just in case */
-  background: rgba(255,255,255,.14);       /* subtle active bg */
-}
-
-/* Also ensure the Contact pill never has a glow */
-.nav a.pill,
-.nav-links a.pill{
-  box-shadow: none !important;
-}
-
-/* If Contact is currently implemented as a white pill, keep it clean */
-.nav a.pill,
-.nav-links a.pill{
-  background: #fff;
-  color: var(--primary);
-  border-radius: 10px; /* keep pill look itself */
-}
-
-/* 3) Dropdown menu (mobile) sharp edges */
-@media (max-width:900px){
-  /* the dropdown panel itself */
-  .nav-links{
-    border-radius: 0 !important; /* sharp */
-  }
-
-  /* each link row — optional: also sharp */
-  .nav-links a{
-    border-radius: 0 !important;
-  }
-
-  /* if you have a wrapper panel around links in your burger CSS, include it too */
-  .navbar,
-  .site-header,
-  .header{
-    border-radius: 0;
-  }
-}
-/* =====================================================
-   FINAL NAV OVERRIDES
-   ===================================================== */
-
-/* -----------------------------
-   1) REMOVE CONTACT GLOW (ALL STATES)
-   ----------------------------- */
-
-/* Kill any glow, ring, inset shadow everywhere */
-.nav a,
-.nav-links a{
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* Explicitly nuke Contact pill glow */
-.nav a.pill,
-.nav-links a.pill{
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* Active / current page state — NO glow */
-.nav a.is-active,
-.nav a[aria-current="page"],
-.nav-links a.is-active,
-.nav-links a[aria-current="page"]{
-  box-shadow: none !important;
-  outline: none !important;
-  background: rgba(255,255,255,0.15); /* subtle bg only */
-}
-
-/* -----------------------------
-   2) LIGHT SERIF (NOT BOLD)
-   ----------------------------- */
-
-.nav a,
-.nav-links a{
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 400;            /* <-- LIGHT */
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-/* Keep Contact pill readable but NOT bold */
-.nav a.pill,
-.nav-links a.pill{
-  font-weight: 500;
-}
-
-/* -----------------------------
-   3) MOBILE DROPDOWN CENTERING + SHARP EDGES
-   ----------------------------- */
-
-@media (max-width: 900px){
-
-  /* Dropdown panel: sharp edges */
-  .nav-links{
-    border-radius: 0 !important;
-    padding: 12px 0;
-  }
-
-  /* Center all menu items */
-  .nav-links li{
-    text-align: center;
-  }
-
-  .nav-links a{
-    display: block;
-    width: 100%;
-    text-align: center;
-    border-radius: 0 !important;
-    padding: 14px 0;
-  }
-
-  /* Contact pill inside dropdown: centered, no glow */
-  .nav-links a.pill{
-    margin: 8px 16px;
-    border-radius: 0 !important;
-    box-shadow: none !important;
   }
 }
