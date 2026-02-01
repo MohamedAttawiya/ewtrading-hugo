@@ -661,3 +661,24 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 .insight-title a {
   text-decoration: none;
 }
+
+.callout{
+  border:1px solid var(--line);
+  background:var(--card);
+  padding:1rem;
+  margin:1rem 0;
+}
+.callout-title{ font-weight:800; margin-bottom:.35rem; }
+.callout-info{ border-left:4px solid var(--primary); }
+.callout-warn{ border-left:4px solid var(--gold); }
+.callout-ok{ border-left:4px solid var(--accent); }
+
+.two-col{
+  display:grid;
+  gap:1.25rem;
+  grid-template-columns:1fr;
+  margin:1.25rem 0;
+}
+@media (min-width:900px){
+  .two-col{ grid-template-columns:1fr 1fr; }
+}

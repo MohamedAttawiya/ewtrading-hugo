@@ -1,0 +1,4 @@
+{{- $href := .Get "href" -}}
+{{- $text := .Get "text" | default "Learn more" -}}
+{{- $kind := .Get "kind" | default "secondary" -}}
+<a class="btn {{ $kind }}" href="{{ $href | safeURL }}">{{ $text }}</a>
