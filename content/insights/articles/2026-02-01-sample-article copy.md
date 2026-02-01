@@ -4,18 +4,22 @@ date: 2026-02-01
 draft: false
 categories: ["Alkyds"]
 tags: ["Export", "Documentation"]
-summary: "What buyers need: TDS/COA, Incoterms, packaging, and lead times."
+summary: "What buyers need to know: documentation, Incoterms, packaging, and lead times when sourcing alkyd resins for Africa."
 ---
 
 {{< callout title="Buyer-ready exports" tone="info" >}}
-We ship alkyd resin grades with export-focused documentation, predictable packaging options, and clear Incoterms — built for distributors and coating manufacturers across Africa.
+We supply alkyd resin grades with export-focused documentation, predictable logistics, and clear commercial terms — built for coating manufacturers and distributors across African markets.
 {{< /callout >}}
+
+## How our export process works
+We approach export shipments as **repeatable commercial flows**, not one-off transactions.  
+That means documentation, packaging, and timelines are aligned before production starts.
 
 {{< two-col >}}
 <div>
 ### What you get
-- TDS and COA available per grade / batch
-- MSDS on request
+- **TDS & COA** available per grade / batch
+- **MSDS** on request
 - Consistent labeling (product name, batch, net weight)
 - Export pack list + commercial invoice support
 </div>
@@ -23,40 +27,39 @@ We ship alkyd resin grades with export-focused documentation, predictable packag
 <div>
 ### What we confirm upfront
 - Incoterms: **FOB / CFR / CIF**
-- Destination port and preferred carrier terms
+- Destination port & preferred carrier terms
 - Packaging type and palletization
-- Production + dispatch lead time (by grade + volume)
+- Production + dispatch lead time (by grade & volume)
 </div>
 {{< /two-col >}}
 
-
 ## Documentation package (typical)
-Most buyers ask for the same set. We keep it simple and repeatable:
+Most buyers ask for the same core documents. We keep this standardized to avoid delays:
 
-- **TDS**: key properties and recommended use-cases  
-- **COA**: batch-specific results aligned with the TDS ranges  
-- **MSDS**: supplied upon request depending on destination requirements  
+- **TDS** – key properties and recommended use-cases  
+- **COA** – batch-specific results aligned with TDS ranges  
+- **MSDS** – supplied upon request depending on destination requirements  
 
-{{< callout title="Tip for faster clearance" tone="ok" >}}
-Share your target destination and any local compliance requirements early (e.g., special labeling rules). It reduces back-and-forth and avoids port delays.
+{{< callout title="Faster clearance tip" tone="ok" >}}
+Share your destination country and any local compliance rules early (label language, customs templates, or registration requirements). It significantly reduces clearance time.
 {{< /callout >}}
 
-## Packaging & handling
-We can support common industrial formats based on your handling setup and shipment mode.
+## Packaging & shipment planning
+Packaging is selected based on handling method, shipment size, and port infrastructure.
 
-- Drums / pails (where applicable)
+- Industrial drums or pails (grade-dependent)
 - Palletized loads with stretch-wrap and corner protection
-- Container loading plan aligned to weight distribution
+- Container loading plans optimized for weight distribution
 
-## Lead times & planning
-Lead time depends on the grade family, order volume, and packaging configuration.
+## Lead times & availability
+Lead times depend on grade family, order size, and packaging configuration.
 
-- Standard grades: typically faster availability  
-- Specialty / modified grades: may require scheduling  
-- Large volumes: best handled via split shipments if timing is tight  
+- Standard grades: shorter production windows  
+- Specialty or modified grades: scheduled production  
+- Larger volumes: may ship in staged lots to meet delivery windows  
 
-{{< callout title="Send your RFQ" tone="warn" >}}
-To quote accurately, include: grade(s), quantity, destination port, Incoterm, and target delivery window.
+{{< callout title="Requesting a quote" tone="warn" >}}
+For an accurate quotation, include: grade(s), quantity, destination port, Incoterm, and target delivery date.
 {{< /callout >}}
 
 {{< btn href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%20Alkyd%20Resin%20Export" text="Get RFQ" kind="secondary" >}}
