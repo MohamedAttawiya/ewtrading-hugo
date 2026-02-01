@@ -375,3 +375,54 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
     margin-top:1rem;
   }
 }
+/* =========================================
+   CONTACT FORM (Hugo) – normalize controls
+   ========================================= */
+
+.contact-card{
+  max-width: 720px;
+}
+
+.hp-field{
+  position:absolute;
+  left:-9999px;
+  visibility:hidden;
+}
+
+.form-group{
+  display:grid;
+  gap:.35rem;
+  margin-bottom:.9rem;
+}
+
+.form-group label{
+  font-weight:700;
+  color: var(--ink);
+}
+
+.form-group input,
+.form-group textarea{
+  width:100%;
+  font: inherit;
+  color: var(--ink);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:.7rem .85rem;
+  outline:none;
+}
+
+.form-group textarea{
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color: rgba(15,44,89,.55);
+  box-shadow: 0 0 0 3px rgba(207,175,94,.22);
+}
+
+#status{
+  margin-top:.75rem;
+}
