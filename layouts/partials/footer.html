@@ -1,11 +1,61 @@
 <footer class="site-footer footer" role="contentinfo">
-  <div class="footer-content container">
-    <img
-      src="/assets/logo/monogram-reverse.svg"
-      alt="E&W Trading Group"
-      class="footer-logo"
-      onerror="this.replaceWith(document.createTextNode('E&W Trading Group'))"
-    />
-    <p>© {{ now.Format "2006" }} E&W Trading Group. All rights reserved.</p>
+  <div class="footer-top container">
+    <div class="footer-left">
+      <p class="footer-tagline">
+        Alkyd resin export program with documentation-ready shipments and dependable logistics.
+      </p>
+
+      <div class="footer-actions">
+        <a class="btn secondary footer-btn" href="mailto:rfq@ewtradingco.com?subject=RFQ%20Request%20%E2%80%94%20E%26W%20Trading%20Group">
+          Get RFQ
+        </a>
+        <a class="btn ghost footer-btn" href="mailto:sales@ewtradingco.com?subject=Sales%20Inquiry%20%E2%80%94%20E%26W%20Trading%20Group">
+          Contact Sales
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/alkyds/">Alkyds</a></li>
+            <li><a href="/insights/">Insights</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Commercial</h4>
+          <ul>
+            <li><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20Request%20%E2%80%94%20E%26W%20Trading%20Group">Request Quote (RFQ)</a></li>
+            <li><a href="mailto:sales@ewtradingco.com?subject=Sales%20Inquiry%20%E2%80%94%20E%26W%20Trading%20Group">Sales Desk</a></li>
+            <li><a href="/contact/">General Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Compliance</h4>
+          <ul>
+            <li><span class="footer-muted">TDS / COA / MSDS on request</span></li>
+            <li><span class="footer-muted">FOB / CFR / CIF available</span></li>
+            <li><span class="footer-muted">Export-focused documentation</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <img
+        src="/assets/logo/monogram-reverse.svg"
+        alt="E&W Trading Group"
+        class="footer-logo"
+        onerror="this.replaceWith(document.createTextNode('E&W Trading Group'))"
+      />
+    </div>
+  </div>
+
+  <div class="footer-bottom container">
+    <p class="footer-legal">© {{ now.Format "2006" }} E&W Trading Group. All rights reserved.</p>
   </div>
 </footer>
