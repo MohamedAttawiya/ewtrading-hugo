@@ -1,8 +1,8 @@
 /* =========================================
    E&W — Site Styles (RECTANGULAR SYSTEM)
    - Sharp corners everywhere (no radius)
-   - Nav active = full-height tab (top -> bottom)
-   - Single header system (.header/.navbar/.nav-links + checkbox hamburger)
+   - Nav active = full-height tab (top -> bottom) on desktop
+   - Mobile dropdown: centered panel, full-width rows, full-row active highlight
    - Footer mobile centered
    ========================================= */
 
@@ -41,9 +41,6 @@ a{color:inherit;text-decoration:none}
 /* =========================================
    GLOBAL: force sharp rectangles everywhere
    ========================================= */
-
-/* If you want “everything” sharp, this is the most deterministic approach.
-   (Yes it’s heavy-handed. It does exactly what you asked.) */
 *,
 *::before,
 *::after{
@@ -52,6 +49,11 @@ a{color:inherit;text-decoration:none}
 
 /* =========================================
    HEADER (sticky) + NAVBAR (responsive)
+   Markup: header.header > nav.navbar(.container) >
+           a.logo > img
+           input#menu-toggle.menu-toggle
+           label.menu-icon > span*3
+           ul.nav-links > li > a
    ========================================= */
 .header{
   position:sticky; top:0; z-index:1000;
@@ -67,12 +69,12 @@ a{color:inherit;text-decoration:none}
 /* The nav container row */
 .navbar{
   display:flex;
-  align-items:stretch;        /* important: allows full-height tabs */
+  align-items:stretch;        /* tabs stretch full height */
   justify-content:space-between;
   gap:1rem;
 
   min-height: var(--header-h);
-  padding:0 clamp(.6rem,3vw,1rem);  /* remove vertical padding so tabs touch top/bottom */
+  padding:0 clamp(.6rem,3vw,1rem); /* remove vertical padding so tabs touch top/bottom */
   position:relative;
 }
 
@@ -89,8 +91,8 @@ a{color:inherit;text-decoration:none}
 .nav-links{
   list-style:none;
   display:flex;
-  align-items:stretch;     /* important: tabs stretch full height */
-  gap:0;                   /* tabs touch each other */
+  align-items:stretch;     /* tabs stretch full height */
+  gap:0;                   /* tabs touch */
   margin:0;
   padding:0;
 }
@@ -100,7 +102,7 @@ a{color:inherit;text-decoration:none}
 .nav-links a{
   display:flex;
   align-items:center;
-  height:100%;                  /* full navbar height */
+  height:100%;
   padding:0 var(--nav-pad-x);
   line-height:1;
   white-space:nowrap;
@@ -109,11 +111,9 @@ a{color:inherit;text-decoration:none}
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight:400;
 
-  /* no glow */
   box-shadow:none !important;
   outline:none !important;
 
-  /* make hover feel like a real “tab” */
   border-left:1px solid rgba(255,255,255,.10);
 }
 .nav-links li:first-child a{ border-left:none; }
@@ -123,7 +123,7 @@ a{color:inherit;text-decoration:none}
   background:rgba(255,255,255,.10);
 }
 
-/* “pill” class becomes a normal tab with a subtle divider */
+/* Any "pill" link becomes a normal tab */
 .nav-links a.pill{
   background:transparent !important;
   color:#fff !important;
@@ -136,8 +136,6 @@ a{color:inherit;text-decoration:none}
 .nav-links a.is-active{
   background:rgba(255,255,255,.16);
   box-shadow:none !important;
-
-  /* optional: add a strong top marker for “selected” */
   border-top:3px solid var(--gold);
 }
 
@@ -157,7 +155,7 @@ a{color:inherit;text-decoration:none}
   cursor:pointer;
   user-select:none;
   position:relative;
-  align-self:center; /* keep centered in header */
+  align-self:center;
 }
 
 /* Deterministic bars */
@@ -174,19 +172,36 @@ a{color:inherit;text-decoration:none}
 .menu-icon span:nth-child(2){ top:21px; }
 .menu-icon span:nth-child(3){ top:28px; }
 
-/* Mobile dropdown */
+/* =========================================
+   MOBILE NAV DROPDOWN (centered panel)
+   - panel centered, not full-bleed
+   - each item is full-width row button
+   - active highlight covers entire row
+   ========================================= */
 @media (max-width:900px){
-  .navbar{ align-items:center; min-height: var(--header-h); }
-  .menu-icon{display:block}
+  .navbar{
+    align-items:center;
+    min-height: var(--header-h);
+  }
+
+  .menu-icon{
+    display:block;
+    align-self:center;
+  }
 
   .nav-links{
     display:none;
     position:absolute;
     top:calc(100% + .5rem);
-    left:0;
-    right:0;
-    z-index:2000;
 
+    /* center the panel */
+    left:50%;
+    transform:translateX(-50%);
+
+    /* controlled width */
+    width:min(520px, calc(100vw - 1.5rem));
+
+    z-index:2000;
     flex-direction:column;
     align-items:stretch;
     gap:0;
@@ -199,31 +214,38 @@ a{color:inherit;text-decoration:none}
     box-shadow:0 10px 30px rgba(0,0,0,.25);
   }
 
-  .menu-toggle:checked + .menu-icon + .nav-links{ display:flex; }
+  .menu-toggle:checked + .menu-icon + .nav-links{
+    display:flex;
+  }
 
-  .nav-links li{ text-align:center; }
+  .nav-links li{
+    display:block;
+    width:100%;
+  }
 
-  /* In mobile, tabs become full-width rows */
   .nav-links a{
-    height:auto;
-    padding:14px 0;
+    display:flex;
+    width:100%;
     justify-content:center;
-    border-left:0;
+    align-items:center;
+
+    min-height:48px;
+    padding:14px 12px;
+
+    border:0;
     border-top:1px solid rgba(255,255,255,.10);
   }
   .nav-links li:first-child a{ border-top:0; }
 
-  /* Active row highlight still full-height (row height) + top marker */
+  .nav-links a:hover,
+  .nav-links a:focus-visible{
+    background:rgba(255,255,255,.12);
+  }
+
   .nav-links a[aria-current="page"],
   .nav-links a.is-active{
     background:rgba(255,255,255,.18);
-    border-top:3px solid var(--gold);
-  }
-
-  .nav-links a.pill{
-    background:transparent !important;
-    color:#fff !important;
-    border-left:0;
+    box-shadow: inset 4px 0 0 var(--gold);
   }
 
   /* Hamburger -> X */
@@ -231,7 +253,9 @@ a{color:inherit;text-decoration:none}
     top:21px;
     transform:translateX(-50%) rotate(45deg);
   }
-  .menu-toggle:checked + .menu-icon span:nth-child(2){ opacity:0; }
+  .menu-toggle:checked + .menu-icon span:nth-child(2){
+    opacity:0;
+  }
   .menu-toggle:checked + .menu-icon span:nth-child(3){
     top:21px;
     transform:translateX(-50%) rotate(-45deg);
@@ -323,7 +347,7 @@ table.data tbody tr:hover{background:#F2F7FF}
 }
 .note-card h4{margin-bottom:.25rem;color:#43360E}
 
-/* Buttons (sharp) */
+/* Buttons */
 .cta,.cta-row{margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap}
 .btn{
   display:inline-block;
@@ -337,9 +361,7 @@ table.data tbody tr:hover{background:#F2F7FF}
 .btn.ghost{background:transparent;color:var(--primary);border-color:var(--line)}
 .btn:hover{opacity:.92}
 
-/* =========================================
-   MOBILE TYPO/SPACE TUNING
-   ========================================= */
+/* Mobile spacing */
 @media (max-width:640px){
   .hero-inner{grid-template-columns:1fr !important}
   .hero{border-bottom-width:0}
@@ -454,7 +476,7 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
 .footer-top{
   display:grid;
-  grid-template-columns: 1fr auto; /* content | emblem */
+  grid-template-columns: 1fr auto;
   gap: 1.5rem;
   padding: 2rem 0 1.25rem;
   align-items:start;
@@ -539,9 +561,7 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   .footer-links{ grid-template-columns: 1fr; }
 }
 
-/* =========================
-   Mobile footer alignment
-   ========================= */
+/* Mobile footer alignment */
 @media (max-width: 768px) {
   .site-footer { text-align: center; }
 
