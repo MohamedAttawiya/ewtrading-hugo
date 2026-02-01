@@ -25,7 +25,14 @@
       <!-- Non-negotiable: keep contact.html -->
       <li><a class="pill" href="/contact.html">Contact</a></li>
 
-      <li><a href="/insights/" {{ if eq .RelPermalink "/insights/" }}aria-current="page"{{ end }}>Insights</a></li>
+{{ $p := .RelPermalink }}
+<li>
+  <a
+    href="/insights/"
+    {{ if or (eq $p "/insights/") (eq $p "/insights") (hasPrefix $p "/insights/") }}aria-current="page"{{ end }}
+  >Insights</a>
+</li>
+
     </ul>
   </nav>
 </header>
