@@ -1,8 +1,9 @@
 /* =========================================
-   E&W — Site Styles (deduped)
-   - Single header system: .header + .navbar + .nav-links + checkbox hamburger
-   - Deterministic hamburger -> X animation (absolute bars)
-   - Components + Alkyd hero patch
+   E&W — Site Styles (RECTANGULAR SYSTEM)
+   - Sharp corners everywhere (no radius)
+   - Nav active = full-height tab (top -> bottom)
+   - Single header system (.header/.navbar/.nav-links + checkbox hamburger)
+   - Footer mobile centered
    ========================================= */
 
 :root{
@@ -15,8 +16,14 @@
   --card:#FFFFFF;
   --line:#E6ECF2;
   --scrim:rgba(15,44,89,.08);
+
+  /* Rect system */
+  --radius:0px;          /* global hard corners */
+  --header-h:64px;       /* used to make nav tabs full-height */
+  --nav-pad-x:.9rem;     /* horizontal padding for nav items */
 }
 
+/* Reset */
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:100%;max-width:100%;overflow-x:hidden;background:var(--bg)}
 body{
@@ -29,22 +36,29 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 
-/* Layout helper */
 .container{width:min(1180px,92%);margin-inline:auto}
 
 /* =========================================
+   GLOBAL: force sharp rectangles everywhere
+   ========================================= */
+
+/* If you want “everything” sharp, this is the most deterministic approach.
+   (Yes it’s heavy-handed. It does exactly what you asked.) */
+*,
+*::before,
+*::after{
+  border-radius: var(--radius) !important;
+}
+
+/* =========================================
    HEADER (sticky) + NAVBAR (responsive)
-   Markup: header.header > nav.navbar(.container) >
-           a.logo > img
-           input#menu-toggle.menu-toggle
-           label.menu-icon > span*3
-           ul.nav-links > li > a
    ========================================= */
 .header{
   position:sticky; top:0; z-index:1000;
   background:var(--primary); color:#fff;
   border-bottom:1px solid rgba(255,255,255,.12);
   box-shadow:0 2px 20px var(--scrim);
+
   padding-top:env(safe-area-inset-top);
   padding-left:env(safe-area-inset-left);
   padding-right:env(safe-area-inset-right);
@@ -53,62 +67,81 @@ a{color:inherit;text-decoration:none}
 /* The nav container row */
 .navbar{
   display:flex;
-  align-items:center;
+  align-items:stretch;        /* important: allows full-height tabs */
   justify-content:space-between;
   gap:1rem;
-  padding:.6rem clamp(.6rem,3vw,1rem);
-  position:relative; /* anchor the dropdown panel */
+
+  min-height: var(--header-h);
+  padding:0 clamp(.6rem,3vw,1rem);  /* remove vertical padding so tabs touch top/bottom */
+  position:relative;
 }
 
 /* Logo */
-.navbar .logo{display:inline-flex;align-items:center;min-width:0}
+.navbar .logo{
+  display:inline-flex;
+  align-items:center;
+  min-width:0;
+}
 .navbar img{height:44px;width:auto}
+@media (min-width:1200px){ .navbar img{height:48px} }
 
 /* Desktop links */
 .nav-links{
   list-style:none;
   display:flex;
-  align-items:center;
-  gap:.4rem .65rem;
+  align-items:stretch;     /* important: tabs stretch full height */
+  gap:0;                   /* tabs touch each other */
   margin:0;
   padding:0;
 }
-.nav-links li{display:inline-flex}
+.nav-links li{display:flex}
 
-/* NAV typography + base */
+/* NAV item base (TAB) */
 .nav-links a{
-  color:#fff;
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; /* light serif */
-  font-weight: 400; /* light */
-  border-radius:10px;
-  padding:.46rem .72rem;
+  display:flex;
+  align-items:center;
+  height:100%;                  /* full navbar height */
+  padding:0 var(--nav-pad-x);
   line-height:1;
   white-space:nowrap;
 
-  /* ensure no “glow” anywhere */
+  color:#fff;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight:400;
+
+  /* no glow */
   box-shadow:none !important;
   outline:none !important;
-}
-.nav-links a:hover,
-.nav-links a:focus-visible{background:rgba(255,255,255,.12)}
 
-/* Remove the special white "pill" look completely.
-   If your markup still has class="pill" on Contact, it will look like a normal link. */
+  /* make hover feel like a real “tab” */
+  border-left:1px solid rgba(255,255,255,.10);
+}
+.nav-links li:first-child a{ border-left:none; }
+
+.nav-links a:hover,
+.nav-links a:focus-visible{
+  background:rgba(255,255,255,.10);
+}
+
+/* “pill” class becomes a normal tab with a subtle divider */
 .nav-links a.pill{
   background:transparent !important;
   color:#fff !important;
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:10px;
+  border:0;
+  border-left:1px solid rgba(255,255,255,.14);
 }
 
-/* Active page indicator (your JS sets aria-current="page") — NO inset ring/glow */
+/* ACTIVE = full-height highlight (top -> bottom) */
 .nav-links a[aria-current="page"],
 .nav-links a.is-active{
-  background: rgba(255,255,255,.16);
-  box-shadow: none !important;
+  background:rgba(255,255,255,.16);
+  box-shadow:none !important;
+
+  /* optional: add a strong top marker for “selected” */
+  border-top:3px solid var(--gold);
 }
 
-/* Hide checkbox itself */
+/* Hide checkbox */
 .menu-toggle{
   position:absolute;
   opacity:0;
@@ -120,21 +153,20 @@ a{color:inherit;text-decoration:none}
   display:none;
   width:44px;
   height:44px;
-  border-radius:12px;
   border:1px solid rgba(255,255,255,.25);
   cursor:pointer;
   user-select:none;
-  position:relative; /* crucial for stable X */
+  position:relative;
+  align-self:center; /* keep centered in header */
 }
 
-/* Deterministic bars (absolute positioning) */
+/* Deterministic bars */
 .menu-icon span{
   position:absolute;
   left:50%;
   width:20px;
   height:2px;
   background:#fff;
-  border-radius:2px;
   transform:translateX(-50%);
   transition:transform .15s ease, opacity .15s ease, top .15s ease;
 }
@@ -144,6 +176,7 @@ a{color:inherit;text-decoration:none}
 
 /* Mobile dropdown */
 @media (max-width:900px){
+  .navbar{ align-items:center; min-height: var(--header-h); }
   .menu-icon{display:block}
 
   .nav-links{
@@ -163,38 +196,34 @@ a{color:inherit;text-decoration:none}
 
     background:var(--primary);
     border:1px solid rgba(255,255,255,.12);
-
-    /* sharp edges as requested */
-    border-radius:0 !important;
-
     box-shadow:0 10px 30px rgba(0,0,0,.25);
   }
 
-  /* show dropdown when checked */
-  .menu-toggle:checked + .menu-icon + .nav-links{
-    display:flex;
-  }
+  .menu-toggle:checked + .menu-icon + .nav-links{ display:flex; }
 
-  /* Center dropdown items */
   .nav-links li{ text-align:center; }
+
+  /* In mobile, tabs become full-width rows */
   .nav-links a{
-    display:block;
-    width:100%;
-    text-align:center;
+    height:auto;
     padding:14px 0;
-    border-radius:0 !important;
+    justify-content:center;
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.10);
+  }
+  .nav-links li:first-child a{ border-top:0; }
+
+  /* Active row highlight still full-height (row height) + top marker */
+  .nav-links a[aria-current="page"],
+  .nav-links a.is-active{
+    background:rgba(255,255,255,.18);
+    border-top:3px solid var(--gold);
   }
 
-  /* Keep the "pill" link from turning white in mobile too */
   .nav-links a.pill{
     background:transparent !important;
     color:#fff !important;
     border-left:0;
-    border-right:0;
-    border-top:1px solid rgba(255,255,255,.10);
-    border-bottom:1px solid rgba(255,255,255,.10);
-    border-radius:0 !important;
-    margin:0;
   }
 
   /* Hamburger -> X */
@@ -202,18 +231,11 @@ a{color:inherit;text-decoration:none}
     top:21px;
     transform:translateX(-50%) rotate(45deg);
   }
-  .menu-toggle:checked + .menu-icon span:nth-child(2){
-    opacity:0;
-  }
+  .menu-toggle:checked + .menu-icon span:nth-child(2){ opacity:0; }
   .menu-toggle:checked + .menu-icon span:nth-child(3){
     top:21px;
     transform:translateX(-50%) rotate(-45deg);
   }
-}
-
-/* Slightly larger logo on wide screens */
-@media (min-width:1200px){
-  .navbar img{height:48px}
 }
 
 /* =========================================
@@ -234,8 +256,9 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
 
 .badge{justify-self:center}
 .badge-inner{
-  background:#0F2C59;color:#fff;padding:1rem;border-radius:12px;
-  border:1px solid rgba(255,255,255,.12);box-shadow:0 6px 18px rgba(15,44,89,.2);
+  background:#0F2C59;color:#fff;padding:1rem;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 6px 18px rgba(15,44,89,.2);
   inline-size:min(360px,100%);text-align:center;
 }
 .badge .eyebrow{color:#D3E7FF}
@@ -261,7 +284,6 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
 .card{
   background:var(--card);
   border:1px solid var(--line);
-  border-radius:12px;
   padding:1rem;
   box-shadow:0 1px 2px rgba(15,44,89,.06)
 }
@@ -279,27 +301,36 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
 .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem;list-style:none;padding-left:0}
 .chips li{
   background:#EFF6F3;color:#0A3E2B;border:1px solid #D7E9E1;
-  padding:.25rem .5rem;border-radius:999px;font-size:.85rem;font-weight:600
+  padding:.25rem .5rem;font-size:.85rem;font-weight:600
 }
 
-.table-scroll{overflow:auto;border-radius:10px;border:1px solid var(--line);background:var(--card)}
+/* Tables */
+.table-scroll{
+  overflow:auto;
+  border:1px solid var(--line);
+  background:var(--card);
+}
 table.data{width:100%;border-collapse:collapse;font-size:.95rem}
 table.data th,table.data td{padding:.6rem .7rem;text-align:left;vertical-align:top}
 table.data thead th{position:sticky;top:0;background:#0F2C59;color:#fff;font-weight:700;letter-spacing:.01em}
 table.data tbody tr:nth-child(odd){background:#FAFCFF}
 table.data tbody tr:hover{background:#F2F7FF}
 
+/* Notes */
 .note-card{
   margin-top:1rem;background:#FFF8E6;border:1px solid #F1E1B5;color:#5C4A12;
-  border-radius:12px;padding:.9rem 1rem
+  padding:.9rem 1rem
 }
 .note-card h4{margin-bottom:.25rem;color:#43360E}
 
+/* Buttons (sharp) */
 .cta,.cta-row{margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap}
 .btn{
-  display:inline-block;border-radius:10px;padding:.7rem 1.1rem;font-weight:700;
+  display:inline-block;
+  padding:.7rem 1.1rem;
+  font-weight:700;
   border:2px solid transparent;
-  transition:background-color .15s ease,color .15s ease,border-color .15s ease,opacity .15s ease
+  transition:background-color .15s ease,color .15s ease,border-color .15s ease,opacity .15s ease;
 }
 .btn.primary{background:var(--accent);color:#fff}
 .btn.secondary{background:#fff;color:var(--primary);border-color:var(--primary)}
@@ -307,28 +338,17 @@ table.data tbody tr:hover{background:#F2F7FF}
 .btn:hover{opacity:.92}
 
 /* =========================================
-   FOOTER
+   MOBILE TYPO/SPACE TUNING
    ========================================= */
-.footer{background:var(--primary);color:#fff;margin-top:2rem}
-.footer-inner{display:grid;gap:1rem;grid-template-columns:1fr;align-items:center;padding:1.5rem 0}
-.footer-logo{height:44px;width:auto}
-.footer-cta h3{color:#E7F3FF;margin-bottom:.25rem}
-.footer-cta p{color:#DDE7F3;margin-bottom:.5rem}
-.footer .btn.secondary{border-color:#fff;color:#fff;background:transparent}
-.footer .btn.secondary:hover{background:rgba(255,255,255,.1)}
-@media (min-width:900px){.footer-inner{grid-template-columns:1fr auto}}
-
 @media (max-width:640px){
   .hero-inner{grid-template-columns:1fr !important}
   .hero{border-bottom-width:0}
   .cta .btn{width:100%;text-align:center}
   .section{padding:1.25rem 0}
-  .card{padding:.9rem;border-radius:10px}
-  .table-scroll{margin:0 -.5rem;width:calc(100% + 1rem);border-radius:8px}
+  .card{padding:.9rem}
+  .table-scroll{margin:0 -.5rem;width:calc(100% + 1rem)}
   table.data{font-size:.9rem}
   table.data th,table.data td{padding:.55rem .6rem}
-  .footer-inner{padding:1.25rem 0}
-  .footer-logo{height:38px}
 }
 
 /* ===== LISTS: fix bullets/numbering in MAIN content only ===== */
@@ -375,13 +395,11 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
     margin-top:1rem;
   }
 }
+
 /* =========================================
    CONTACT FORM (Hugo) – normalize controls
    ========================================= */
-
-.contact-card{
-  max-width: 720px;
-}
+.contact-card{ max-width: 720px; }
 
 .hp-field{
   position:absolute;
@@ -407,7 +425,6 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   color: var(--ink);
   background:#fff;
   border:1px solid var(--line);
-  border-radius:10px;
   padding:.7rem .85rem;
   outline:none;
 }
@@ -423,15 +440,13 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   box-shadow: 0 0 0 3px rgba(207,175,94,.22);
 }
 
-#status{
-  margin-top:.75rem;
-}
+#status{ margin-top:.75rem; }
 
 /* =========================================
    FOOTER (B2B)
    ========================================= */
-
-.footer{
+.footer,
+.site-footer{
   background: var(--primary);
   color:#fff;
   margin-top: 2.5rem;
@@ -470,9 +485,7 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   margin-bottom: 1.25rem;
 }
 
-.footer-btn{
-  padding:.6rem 1rem;
-}
+.footer-btn{ padding:.6rem 1rem; }
 
 .footer-links{
   display:grid;
@@ -506,9 +519,7 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   text-decoration: underline;
 }
 
-.footer-muted{
-  color:#BFD0E3;
-}
+.footer-muted{ color:#BFD0E3; }
 
 .footer-bottom{
   border-top: 1px solid rgba(255,255,255,.14);
@@ -521,79 +532,64 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   margin:0;
 }
 
-/* Mobile */
+/* Footer responsive layout */
 @media (max-width: 820px){
-  .footer-top{
-    grid-template-columns: 1fr;
-  }
-  .footer-right{
-    justify-content:flex-start;
-    order: -1; /* emblem first on mobile */
-  }
-  .footer-links{
-    grid-template-columns: 1fr;
-  }
+  .footer-top{ grid-template-columns: 1fr; }
+  .footer-right{ justify-content:flex-start; order:-1; }
+  .footer-links{ grid-template-columns: 1fr; }
 }
+
 /* =========================
    Mobile footer alignment
    ========================= */
 @media (max-width: 768px) {
-  .site-footer {
-    text-align: center;
-  }
+  .site-footer { text-align: center; }
 
-  .footer-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  .footer-top{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2rem;
   }
 
   .footer-left,
-  .footer-right {
-    width: 100%;
-    align-items: center;
+  .footer-right{
+    width:100%;
+    align-items:center;
   }
 
-  .footer-tagline {
-    max-width: 32rem;
-    margin-inline: auto;
+  .footer-tagline{
+    max-width:32rem;
+    margin-inline:auto;
   }
 
-  .footer-actions {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+  .footer-actions{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:0.75rem;
   }
 
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+  .footer-btn{
+    width:100%;
+    max-width:280px;
+    text-align:center;
   }
 
-  .footer-col ul {
-    padding: 0;
+  .footer-links{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1.5rem;
   }
 
-  .footer-logo {
-    margin-inline: auto;
-    max-width: 120px;
+  .footer-col ul{ padding:0; }
+
+  .footer-logo{
+    margin-inline:auto;
+    max-width:120px;
   }
 
-  .footer-bottom {
-    text-align: center;
-  }
-}
-@media (max-width: 768px) {
-  .footer-btn {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-@media (max-width: 768px) {
-  .footer-links h4 {
-    margin-bottom: 0.25rem;
-  }
+  .footer-bottom{ text-align:center; }
+
+  .footer-links h4{ margin-bottom:0.25rem; }
 }
