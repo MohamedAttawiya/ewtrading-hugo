@@ -11,3 +11,35 @@ paginate = 10
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+[menu]
+
+  [[menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Alkyds"
+    pageRef = "/alkyds"
+    weight = 20
+
+  [[menu.main]]
+    name = "Products"
+    pageRef = "/products"
+    weight = 30
+
+  [[menu.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 40
+
+  # Contact stays the static passthrough file (do NOT render via Hugo)
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact.html"
+    weight = 50
+
+  [[menu.main]]
+    name = "Insights"
+    pageRef = "/insights"
+    weight = 60
