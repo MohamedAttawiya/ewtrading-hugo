@@ -430,3 +430,85 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
     border-radius: 0;
   }
 }
+/* =====================================================
+   FINAL NAV OVERRIDES
+   ===================================================== */
+
+/* -----------------------------
+   1) REMOVE CONTACT GLOW (ALL STATES)
+   ----------------------------- */
+
+/* Kill any glow, ring, inset shadow everywhere */
+.nav a,
+.nav-links a{
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Explicitly nuke Contact pill glow */
+.nav a.pill,
+.nav-links a.pill{
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Active / current page state — NO glow */
+.nav a.is-active,
+.nav a[aria-current="page"],
+.nav-links a.is-active,
+.nav-links a[aria-current="page"]{
+  box-shadow: none !important;
+  outline: none !important;
+  background: rgba(255,255,255,0.15); /* subtle bg only */
+}
+
+/* -----------------------------
+   2) LIGHT SERIF (NOT BOLD)
+   ----------------------------- */
+
+.nav a,
+.nav-links a{
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;            /* <-- LIGHT */
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Keep Contact pill readable but NOT bold */
+.nav a.pill,
+.nav-links a.pill{
+  font-weight: 500;
+}
+
+/* -----------------------------
+   3) MOBILE DROPDOWN CENTERING + SHARP EDGES
+   ----------------------------- */
+
+@media (max-width: 900px){
+
+  /* Dropdown panel: sharp edges */
+  .nav-links{
+    border-radius: 0 !important;
+    padding: 12px 0;
+  }
+
+  /* Center all menu items */
+  .nav-links li{
+    text-align: center;
+  }
+
+  .nav-links a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 !important;
+    padding: 14px 0;
+  }
+
+  /* Contact pill inside dropdown: centered, no glow */
+  .nav-links a.pill{
+    margin: 8px 16px;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+}
