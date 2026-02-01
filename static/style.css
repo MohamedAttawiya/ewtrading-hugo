@@ -534,3 +534,66 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   Mobile footer alignment
+   ========================= */
+@media (max-width: 768px) {
+  .site-footer {
+    text-align: center;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-tagline {
+    max-width: 32rem;
+    margin-inline: auto;
+  }
+
+  .footer-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .footer-col ul {
+    padding: 0;
+  }
+
+  .footer-logo {
+    margin-inline: auto;
+    max-width: 120px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .footer-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-links h4 {
+    margin-bottom: 0.25rem;
+  }
+}
