@@ -2,20 +2,14 @@
 <section class="container">
   <header>
     <h1>{{ .Title }}</h1>
-    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
   </header>
 
-  {{ $articlesSection := site.GetPage "section" "insights/articles" }}
-  {{ $pages := slice }}
-  {{ if $articlesSection }}
-    {{ $pages = where $articlesSection.RegularPages "Draft" "ne" true }}
-  {{ end }}
+  {{ $pages := where .RegularPages "Draft" "ne" true }}
 
   {{ if gt (len $pages) 0 }}
-    {{ $paginator := .Paginate $pages }}
-
+    {{ $p := .Paginate $pages }}
     <div class="cards">
-      {{ range $paginator.Pages }}
+      {{ range $p.Pages }}
         <article class="card">
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
@@ -23,7 +17,6 @@
         </article>
       {{ end }}
     </div>
-
     {{ template "_internal/pagination.html" . }}
   {{ else }}
     <p>No articles yet.</p>
