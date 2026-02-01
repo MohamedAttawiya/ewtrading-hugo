@@ -613,3 +613,17 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
   .footer-links h4{ margin-bottom:0.25rem; }
 }
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.insight-card {
+  border: 1px solid #e5e5e5;
+  padding: 1.5rem;
+}
+
+.insight-title a {
+  text-decoration: none;
+}
