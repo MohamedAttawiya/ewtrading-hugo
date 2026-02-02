@@ -58,6 +58,8 @@ a{color:inherit;text-decoration:none}
   border-radius: var(--radius) !important;
 }
 
+[hidden]{display:none !important;}
+
 /* =========================================
    HEADER (sticky) + NAVBAR (responsive)
    Markup: header.header > nav.navbar(.container) >

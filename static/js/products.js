@@ -24,16 +24,17 @@
     let shown = 0;
 
     cards.forEach(card => {
-      const apps = (card.dataset.app || '')
-        .split(',')
-        .map(norm)
-        .filter(Boolean);
+    const apps = (card.dataset.app || '')
+      .split(',')
+      .map(norm)
+      .filter(Boolean);
 
       const matchesApp = !state.app || apps.includes(state.app);
       const matchesFamily = !state.family || norm(card.dataset.family) === state.family;
       const visible = matchesApp && matchesFamily;
 
       card.hidden = !visible;
+      card.style.display = visible ? '' : 'none'; // Force hide for browsers that ignore hidden on div
       if (visible) shown += 1;
     });
 
