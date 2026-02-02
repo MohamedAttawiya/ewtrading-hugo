@@ -60,68 +60,142 @@ description: "Export-ready alkyd resin supplier for Africa, the Middle East, and
     <div class="container">
       <h2 class="h2">Representative Export Grades</h2>
       <p class="muted">TDS / COA / SDS available on request for each alkyd resin grade.</p>
-      <div class="table">
-        <div class="table-row table-head">
-          <div>Grade</div>
-          <div>Family</div>
-          <div>Typical Use</div>
-          <div>CTA</div>
+      <div class="grade-finder">
+        <div class="grade-controls">
+          <label for="gfApp">Application</label>
+          <select id="gfApp">
+            <option value="">All applications</option>
+            <option value="decorative">Decorative enamels</option>
+            <option value="industrial">Industrial enamels / maintenance</option>
+            <option value="metal">Metal primers &amp; enamels</option>
+            <option value="wood">Wood coatings / varnishes</option>
+            <option value="floor">Floor / parquet coatings</option>
+          </select>
+
+          <label for="gfFamily">Family</label>
+          <select id="gfFamily">
+            <option value="">All families</option>
+            <option value="long">Long Oil</option>
+            <option value="medium">Medium Oil</option>
+            <option value="short">Short Oil</option>
+            <option value="urethane">Urethane-Modified</option>
+          </select>
+
+          <button id="gfReset" class="btn ghost" type="button">Reset</button>
+          <span id="gfCount" class="muted small">Showing 9 of 9 grades</span>
         </div>
-        <div class="table-row">
-          <div><strong>10927</strong></div>
-          <div>Long Oil Alkyd</div>
-          <div>Decorative enamels and primers</div>
-          <div><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2010927%20Long%20Oil%20Alkyd" class="link">Request RFQ</a></div>
-        </div>
-        <div class="table-row">
-          <div><strong>10925/2</strong></div>
-          <div>Long Oil Alkyd</div>
-          <div>Wood coatings and metal primers</div>
-          <div><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2010925-2%20Long%20Oil%20Alkyd" class="link">Request RFQ</a></div>
-        </div>
-        <div class="table-row">
-          <div><strong>20526</strong></div>
-          <div>Long Oil Alkyd</div>
-          <div>General decorative coatings</div>
-          <div><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020526%20Long%20Oil%20Alkyd" class="link">Request RFQ</a></div>
-        </div>
-        <div class="table-row">
-          <div><strong>20715/1</strong></div>
-          <div>Long Oil Alkyd</div>
-          <div>Metal primers and enamels</div>
-          <div><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020715-1%20Long%20Oil%20Alkyd" class="link">Request RFQ</a></div>
-        </div>
-        <div class="table-row">
-          <div><strong>20563</strong></div>
-          <div>Medium Oil Alkyd</div>
-          <div>Industrial enamels and maintenance coatings</div>
-          <div><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020563%20Medium%20Oil%20Alkyd" class="link">Request RFQ</a></div>
-        </div>
-        <div class="table-row">
-          <div><strong>20586</strong></div>
-          <div>Medium Oil Alkyd</div>
-          <div>Machinery and equipment coatings</div>
-          <div><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020586%20Medium%20Oil%20Alkyd" class="link">Request RFQ</a></div>
-        </div>
-        <div class="table-row">
-          <div><strong>20386</strong></div>
-          <div>Short Oil Alkyd</div>
-          <div>Quick-dry metal finishes</div>
-          <div><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020386%20Short%20Oil%20Alkyd" class="link">Request RFQ</a></div>
-        </div>
-        <div class="table-row">
-          <div><strong>20957</strong></div>
-          <div>Short Oil Alkyd</div>
-          <div>High-gloss industrial coatings</div>
-          <div><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020957%20Short%20Oil%20Alkyd" class="link">Request RFQ</a></div>
-        </div>
-        <div class="table-row">
-          <div><strong>20621/2</strong></div>
-          <div>Urethane-Modified Alkyd</div>
-          <div>Heavy-duty, chemically resistant coatings</div>
-          <div><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020621-2%20Urethane%20Modified%20Alkyd" class="link">Request RFQ</a></div>
+
+        <div class="grade-grid">
+          <div class="grade-card card" data-family="long" data-app="decorative">
+            <strong>10927</strong>
+            <div class="grade-meta">Family: Long Oil Alkyd</div>
+            <p>Decorative enamels and primers</p>
+            <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
+            <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2010927%20Long%20Oil%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
+
+          <div class="grade-card card" data-family="long" data-app="decorative,wood">
+            <strong>10925/2</strong>
+            <div class="grade-meta">Family: Long Oil Alkyd</div>
+            <p>Wood coatings and metal primers</p>
+            <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
+            <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2010925-2%20Long%20Oil%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
+
+          <div class="grade-card card" data-family="long" data-app="decorative">
+            <strong>20526</strong>
+            <div class="grade-meta">Family: Long Oil Alkyd</div>
+            <p>General decorative coatings</p>
+            <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
+            <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020526%20Long%20Oil%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
+
+          <div class="grade-card card" data-family="long" data-app="metal">
+            <strong>20715/1</strong>
+            <div class="grade-meta">Family: Long Oil Alkyd</div>
+            <p>Metal primers and enamels</p>
+            <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
+            <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020715-1%20Long%20Oil%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
+
+          <div class="grade-card card" data-family="medium" data-app="decorative">
+            <strong>20563</strong>
+            <div class="grade-meta">Family: Medium Oil Alkyd</div>
+            <p>Industrial enamels and maintenance coatings</p>
+            <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
+            <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020563%20Medium%20Oil%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
+
+          <div class="grade-card card" data-family="medium" data-app="industrial">
+            <strong>20586</strong>
+            <div class="grade-meta">Family: Medium Oil Alkyd</div>
+            <p>Machinery and equipment coatings</p>
+            <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
+            <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020586%20Medium%20Oil%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
+
+          <div class="grade-card card" data-family="short" data-app="industrial,metal">
+            <strong>20386</strong>
+            <div class="grade-meta">Family: Short Oil Alkyd</div>
+            <p>Quick-dry metal finishes</p>
+            <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
+            <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020386%20Short%20Oil%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
+
+          <div class="grade-card card" data-family="short" data-app="wood,metal,industrial">
+            <strong>20957</strong>
+            <div class="grade-meta">Family: Short Oil Alkyd</div>
+            <p>High-gloss industrial coatings</p>
+            <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
+            <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020957%20Short%20Oil%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
+
+          <div class="grade-card card" data-family="urethane" data-app="wood,floor">
+            <strong>20621/2</strong>
+            <div class="grade-meta">Family: Urethane-Modified Alkyd</div>
+            <p>Heavy-duty, chemically resistant coatings</p>
+            <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
+            <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020621-2%20Urethane%20Modified%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
         </div>
       </div>
+
+      <script>
+        (function() {
+          const appSelect = document.getElementById('gfApp');
+          const familySelect = document.getElementById('gfFamily');
+          const resetBtn = document.getElementById('gfReset');
+          const cards = Array.from(document.querySelectorAll('.grade-card'));
+          const count = document.getElementById('gfCount');
+
+          function applyFilters() {
+            const app = appSelect.value;
+            const family = familySelect.value;
+            let shown = 0;
+
+            cards.forEach(card => {
+              const apps = card.dataset.app.split(',').map(s => s.trim());
+              const matchesApp = !app || apps.includes(app);
+              const matchesFamily = !family || card.dataset.family === family;
+              const visible = matchesApp && matchesFamily;
+              card.hidden = !visible;
+              if (visible) shown += 1;
+            });
+
+            count.textContent = `Showing ${shown} of ${cards.length} grades`;
+          }
+
+          appSelect.addEventListener('change', applyFilters);
+          familySelect.addEventListener('change', applyFilters);
+          resetBtn.addEventListener('click', () => {
+            appSelect.value = '';
+            familySelect.value = '';
+            applyFilters();
+          });
+
+          applyFilters();
+        })();
+      </script>
     </div>
   </section>
 

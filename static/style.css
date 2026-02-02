@@ -326,6 +326,27 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
 .small{font-size:.9rem}
 .muted{color:var(--muted)}
 
+/* Grade Finder */
+.grade-finder{margin-top:1rem;display:flex;flex-direction:column;gap:.75rem}
+.grade-controls{display:flex;flex-wrap:wrap;gap:.65rem;align-items:center}
+.grade-controls label{font-weight:600;color:var(--primary)}
+.grade-controls select{
+  padding:.55rem .65rem;
+  border:1px solid var(--line);
+  background:var(--card);
+  color:var(--ink);
+  min-width:180px;
+}
+.grade-controls .btn{padding:.55rem .9rem}
+#gfCount{margin-left:auto}
+@media (max-width:700px){#gfCount{margin-left:0}}
+.grade-grid{display:grid;gap:1rem;grid-template-columns:1fr}
+@media (min-width:800px){.grade-grid{grid-template-columns:repeat(2,1fr)}}
+.grade-card{display:flex;flex-direction:column;gap:.35rem}
+.grade-card strong{font-size:1.05rem;color:var(--primary)}
+.grade-meta{color:var(--muted);font-size:.9rem}
+.grade-card .btn{align-self:flex-start;margin-top:.25rem;padding:.55rem .9rem}
+
 .ticks{margin-top:.5rem;color:var(--muted);display:grid;gap:.45rem;list-style:none}
 .ticks li{position:relative;padding-left:1.5rem}
 .ticks li::before{content:"✓";position:absolute;left:0;top:0;line-height:1;font-weight:700;color:var(--accent)}
