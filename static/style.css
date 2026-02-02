@@ -465,7 +465,10 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
   }
 }
 .grade-card{display:flex;flex-direction:column;gap:.35rem}
-.grade-card strong{font-size:1.05rem;color:var(--accent)}
+.grade-card strong{
+  font-size:1.8rem; /* bumped ~+15pt equivalent */
+  color:var(--accent);
+}
 .grade-meta{color:var(--muted);font-size:.9rem}
 .grade-card .btn{align-self:flex-start;margin-top:.25rem;padding:.55rem .9rem}
 .grade-card.has-icon{padding-top:var(--space-2);}
