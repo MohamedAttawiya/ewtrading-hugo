@@ -14,7 +14,7 @@
     {{ if gt (len $pages) 0 }}
       {{ $paginator := .Paginate $pages }}
 
-      <div class="cards">
+      <div class="cards insights-cards">
         {{ range $paginator.Pages }}
           <article class="card">
             <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>

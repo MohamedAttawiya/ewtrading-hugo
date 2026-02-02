@@ -453,52 +453,124 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 }
 
 /* =========================================
-   CONTACT FORM (Hugo) – normalize controls
+/* =========================================
+/* =========================================
+   CONTACT FORM (grid layout, desktop-first)
    ========================================= */
-.contact-card{ max-width: 720px; }
+.contact-panel{
+  margin-top:1.25rem;
+}
+
+.contact-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:18px;
+  display:grid;
+  gap:12px 14px;
+  grid-template-columns: repeat(6, minmax(150px,1fr)) minmax(150px,170px);
+  grid-template-areas:
+    "name job company phone email title send"
+    "message message message message message message send";
+  align-items:start;
+}
 
 .hp-field{
   position:absolute;
   left:-9999px;
   visibility:hidden;
+  height:0;
+  overflow:hidden;
 }
 
-.form-group{
-  display:grid;
-  gap:.35rem;
-  margin-bottom:.9rem;
+.contact-field{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  height:100%;
 }
 
-.form-group label{
+.contact-field label{
   font-weight:700;
   color: var(--ink);
+  font-size:.95rem;
 }
 
-.form-group input,
-.form-group textarea{
+.contact-field input,
+.contact-field textarea{
   width:100%;
   font: inherit;
   color: var(--ink);
   background:#fff;
   border:1px solid var(--line);
-  padding:.7rem .85rem;
+  padding:.65rem .8rem;
   outline:none;
 }
 
-.form-group textarea{
+.contact-field textarea{
   resize: vertical;
-  min-height: 140px;
+  min-height: 160px;
 }
 
-.form-group input:focus,
-.form-group textarea:focus{
+.contact-field input:focus,
+.contact-field textarea:focus{
   border-color: rgba(15,44,89,.55);
   box-shadow: 0 0 0 3px rgba(207,175,94,.22);
 }
 
-#status{ margin-top:.75rem; }
+.contact-field.name-field{ grid-area: name; }
+.contact-field.job-field{ grid-area: job; }
+.contact-field.company-field{ grid-area: company; }
+.contact-field.phone-field{ grid-area: phone; }
+.contact-field.email-field{ grid-area: email; }
+.contact-field.subject-field{ grid-area: title; }
+.message-field{ grid-area: message; }
 
-/* =========================================
+.contact-action{
+  grid-area: send;
+  display:flex;
+  align-items:stretch;
+  justify-content:stretch;
+}
+
+.contact-action .btn{
+  width:100%;
+  min-height:160px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.05rem;
+}
+
+.contact-status{
+  grid-column: 1 / -1;
+  margin-top:.35rem;
+}
+
+@media (max-width:1100px){
+  .contact-card{
+    grid-template-columns:repeat(3, minmax(170px,1fr));
+    grid-template-areas:none;
+  }
+  .contact-field,
+  .contact-action{
+    grid-area:auto;
+  }
+  .message-field{
+    grid-column:1 / -1;
+  }
+  .contact-action .btn{
+    min-height:120px;
+  }
+}
+
+@media (max-width:720px){
+  .contact-card{
+    grid-template-columns:1fr;
+  }
+  .contact-action .btn{
+    min-height:48px;
+  }
+}
    FOOTER (B2B)
    ========================================= */
 .footer,
@@ -813,17 +885,17 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 .article-body p{ margin: 0 0 14px; line-height: 1.7; }
 .article-body ul{ margin: 0 0 14px; padding-left: 1.1rem; }
 /* =========================
+/* =========================
    Insights cards: always horizontal
    ========================= */
-
-.cards{
+.insights-cards{
   display:flex;
   flex-direction:column;
   gap:16px;
   margin-top:16px;
 }
 
-.card{
+.insights-cards .card{
   display:flex;
   align-items:stretch;
   justify-content:space-between;
@@ -832,41 +904,39 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   padding:18px 18px;
   background:var(--card);
   border:1px solid var(--line);
+  position:relative;
 }
 
-.card h2{
+.insights-cards .card h2{
   margin:0 0 8px;
   line-height:1.15;
 }
 
-.card h2 a{
+.insights-cards .card h2 a{
   color:var(--primary);
   text-decoration:none;
 }
 
-.card h2 a:hover{
+.insights-cards .card h2 a:hover{
   text-decoration:underline;
 }
 
-.card p{
+.insights-cards .card p{
   margin:0;
   color:var(--muted);
   max-width:68ch;
 }
 
 /* Right rail (date / optional arrow) */
-.card .meta{
+.insights-cards .card .meta{
   margin:0;
   color:var(--muted);
   font-size:14px;
   white-space:nowrap;
 }
 
-.card{
-  position:relative;
-}
-.card::after{
-  content:"→";
+.insights-cards .card::after{
+  content:"->";
   color:var(--primary);
   position:absolute;
   right:16px;
@@ -875,24 +945,23 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 }
 
 /* Make the whole card feel clickable without changing your markup */
-.card:hover{
+.insights-cards .card:hover{
   background:var(--bg);
 }
 
-/* Mobile: still horizontal “card” but naturally stacks content if needed */
+/* Mobile: still horizontal card but naturally stacks content if needed */
 @media (max-width: 600px){
-  .card{
+  .insights-cards .card{
     flex-direction:column;
     gap:10px;
   }
-  .card::after{
+  .insights-cards .card::after{
     display:none;
   }
-  .card .meta{
+  .insights-cards .card .meta{
     order:3;
   }
 }
-/* =========================
    Pagination
    ========================= */
 

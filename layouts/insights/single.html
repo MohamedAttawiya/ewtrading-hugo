@@ -1,0 +1,62 @@
+{{ define "main" }}
+<section class="container article">
+
+  <!-- Shopify-style breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ "/" | relURL }}">Home</a>
+    <span>/</span>
+
+    {{/* If your Insights landing is /insights/ */}}
+    <a href="{{ "/insights/" | relURL }}">Insights</a>
+    <span>/</span>
+
+    <span class="current" aria-current="page">{{ .Title }}</span>
+  </nav>
+
+  <!-- Header -->
+  <header class="article-head">
+    <h1 class="article-title">{{ .Title }}</h1>
+
+    <div class="article-meta">
+      {{ with .Date }}
+        <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "02 Jan 2006" }}</time>
+      {{ end }}
+
+      {{ with .Params.categories }}
+        <span class="sep">&bull;</span>
+        <span class="meta-chip">{{ delimit . ", " }}</span>
+      {{ end }}
+
+      {{ with .Params.tags }}
+        <span class="sep">&bull;</span>
+        <span class="meta-chip">{{ delimit . ", " }}</span>
+      {{ end }}
+    </div>
+
+    {{ with .Params.summary }}
+      <p class="article-summary">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  <!-- Body -->
+  <div class="article-body">
+    {{ .Content }}
+  </div>
+
+  <!-- Footer nav (optional but useful) -->
+  <footer class="article-foot">
+    <div class="article-nav">
+      {{ with .PrevInSection }}
+        <a class="article-prev" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>
+      {{ end }}
+
+      <a class="article-back" href="{{ "/insights/" | relURL }}">Back to Insights</a>
+
+      {{ with .NextInSection }}
+        <a class="article-next" href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>
+      {{ end }}
+    </div>
+  </footer>
+
+</section>
+{{ end }}
