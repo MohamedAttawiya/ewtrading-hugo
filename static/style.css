@@ -328,15 +328,27 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
 
 /* Grade Finder */
 .grade-finder{margin-top:1rem;display:flex;flex-direction:column;gap:.75rem}
-.grade-controls{display:flex;flex-wrap:wrap;gap:.65rem;align-items:center}
-.grade-controls label{font-weight:600;color:var(--primary)}
-.grade-controls select{
-  padding:.55rem .65rem;
+.grade-controls{display:flex;flex-direction:column;gap:.75rem}
+.filter-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.filter-label{font-weight:600;color:var(--primary)}
+.filter-tabs{display:flex;flex-wrap:wrap;gap:.4rem}
+.filter-tab{
   border:1px solid var(--line);
   background:var(--card);
   color:var(--ink);
-  min-width:180px;
+  padding:.35rem .7rem;
+  border-radius:999px;
+  font-size:.9rem;
+  cursor:pointer;
+  transition:background .2s ease,border-color .2s ease,color .2s ease;
 }
+.filter-tab:hover{border-color:var(--accent)}
+.filter-tab.is-active{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+.filter-actions{display:flex;flex-wrap:wrap;gap:.65rem;align-items:center}
 .grade-controls .btn{padding:.55rem .9rem}
 #gfCount{margin-left:auto}
 @media (max-width:700px){#gfCount{margin-left:0}}

@@ -62,27 +62,33 @@ description: "Export-ready alkyd resin supplier for Africa, the Middle East, and
       <p class="muted">TDS / COA / SDS available on request for each alkyd resin grade.</p>
       <div class="grade-finder">
         <div class="grade-controls">
-          <label for="gfApp">Application</label>
-          <select id="gfApp">
-            <option value="">All applications</option>
-            <option value="decorative">Decorative enamels</option>
-            <option value="industrial">Industrial enamels / maintenance</option>
-            <option value="metal">Metal primers &amp; enamels</option>
-            <option value="wood">Wood coatings / varnishes</option>
-            <option value="floor">Floor / parquet coatings</option>
-          </select>
+          <div class="filter-row">
+            <span class="filter-label">Application</span>
+            <div class="filter-tabs" role="tablist" aria-label="Application tabs">
+              <button class="filter-tab is-active" type="button" data-filter-group="app" data-value="" aria-pressed="true">All</button>
+              <button class="filter-tab" type="button" data-filter-group="app" data-value="decorative" aria-pressed="false">Decorative enamels</button>
+              <button class="filter-tab" type="button" data-filter-group="app" data-value="industrial" aria-pressed="false">Industrial / maintenance</button>
+              <button class="filter-tab" type="button" data-filter-group="app" data-value="metal" aria-pressed="false">Metal primers &amp; enamels</button>
+              <button class="filter-tab" type="button" data-filter-group="app" data-value="wood" aria-pressed="false">Wood coatings / varnishes</button>
+              <button class="filter-tab" type="button" data-filter-group="app" data-value="floor" aria-pressed="false">Floor / parquet</button>
+            </div>
+          </div>
 
-          <label for="gfFamily">Family</label>
-          <select id="gfFamily">
-            <option value="">All families</option>
-            <option value="long">Long Oil</option>
-            <option value="medium">Medium Oil</option>
-            <option value="short">Short Oil</option>
-            <option value="urethane">Urethane-Modified</option>
-          </select>
+          <div class="filter-row">
+            <span class="filter-label">Family</span>
+            <div class="filter-tabs" role="tablist" aria-label="Family tabs">
+              <button class="filter-tab is-active" type="button" data-filter-group="family" data-value="" aria-pressed="true">All families</button>
+              <button class="filter-tab" type="button" data-filter-group="family" data-value="long" aria-pressed="false">Long Oil</button>
+              <button class="filter-tab" type="button" data-filter-group="family" data-value="medium" aria-pressed="false">Medium Oil</button>
+              <button class="filter-tab" type="button" data-filter-group="family" data-value="short" aria-pressed="false">Short Oil</button>
+              <button class="filter-tab" type="button" data-filter-group="family" data-value="urethane" aria-pressed="false">Urethane-Modified</button>
+            </div>
+          </div>
 
-          <button id="gfReset" class="btn ghost" type="button">Reset</button>
-          <span id="gfCount" class="muted small">Showing 9 of 9 grades</span>
+          <div class="filter-actions">
+            <button id="gfReset" class="btn ghost" type="button">Reset</button>
+            <span id="gfCount" class="muted small">Showing 9 of 9 grades</span>
+          </div>
         </div>
 
         <div class="grade-grid">
@@ -162,21 +168,29 @@ description: "Export-ready alkyd resin supplier for Africa, the Middle East, and
 
       <script>
         (function() {
-          const appSelect = document.getElementById('gfApp');
-          const familySelect = document.getElementById('gfFamily');
+          const appTabs = Array.from(document.querySelectorAll('[data-filter-group="app"]'));
+          const familyTabs = Array.from(document.querySelectorAll('[data-filter-group="family"]'));
           const resetBtn = document.getElementById('gfReset');
           const cards = Array.from(document.querySelectorAll('.grade-card'));
           const count = document.getElementById('gfCount');
+          let activeApp = '';
+          let activeFamily = '';
+
+          function setActive(tabs, value) {
+            tabs.forEach(tab => {
+              const isActive = tab.dataset.value === value;
+              tab.classList.toggle('is-active', isActive);
+              tab.setAttribute('aria-pressed', String(isActive));
+            });
+          }
 
           function applyFilters() {
-            const app = appSelect.value;
-            const family = familySelect.value;
             let shown = 0;
 
             cards.forEach(card => {
               const apps = card.dataset.app.split(',').map(s => s.trim());
-              const matchesApp = !app || apps.includes(app);
-              const matchesFamily = !family || card.dataset.family === family;
+              const matchesApp = !activeApp || apps.includes(activeApp);
+              const matchesFamily = !activeFamily || card.dataset.family === activeFamily;
               const visible = matchesApp && matchesFamily;
               card.hidden = !visible;
               if (visible) shown += 1;
@@ -185,11 +199,27 @@ description: "Export-ready alkyd resin supplier for Africa, the Middle East, and
             count.textContent = `Showing ${shown} of ${cards.length} grades`;
           }
 
-          appSelect.addEventListener('change', applyFilters);
-          familySelect.addEventListener('change', applyFilters);
+          appTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              activeApp = tab.dataset.value;
+              setActive(appTabs, activeApp);
+              applyFilters();
+            });
+          });
+
+          familyTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              activeFamily = tab.dataset.value;
+              setActive(familyTabs, activeFamily);
+              applyFilters();
+            });
+          });
+
           resetBtn.addEventListener('click', () => {
-            appSelect.value = '';
-            familySelect.value = '';
+            activeApp = '';
+            activeFamily = '';
+            setActive(appTabs, activeApp);
+            setActive(familyTabs, activeFamily);
             applyFilters();
           });
 
