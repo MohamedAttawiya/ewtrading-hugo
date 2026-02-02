@@ -465,14 +465,23 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
   }
 }
 .grade-card{display:flex;flex-direction:column;gap:.35rem}
-.grade-card strong{font-size:1.05rem;color:var(--primary)}
+.grade-card strong{font-size:1.05rem;color:var(--accent)}
 .grade-meta{color:var(--muted);font-size:.9rem}
 .grade-card .btn{align-self:flex-start;margin-top:.25rem;padding:.55rem .9rem}
-.grade-card.has-icon{padding-top:calc(var(--space-2) + 2.2rem);}
+.grade-card.has-icon{padding-top:var(--space-2);}
+.grade-header{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  margin-bottom:.15rem;
+}
+.grade-header strong{
+  margin:0;
+  color:var(--accent);
+  font-weight:800;
+}
 .grade-flag{
-  position:absolute;
-  top:var(--space-1);
-  right:var(--space-1);
+  margin-left:auto;
   width:38px;
   height:38px;
   object-fit:contain;
