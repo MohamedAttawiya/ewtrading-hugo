@@ -23,7 +23,7 @@
       <li><a href="/about/" {{ if eq .RelPermalink "/about/" }}aria-current="page"{{ end }}>About</a></li>
 
       <!-- Non-negotiable: keep contact.html -->
-      <li><a class="pill" href="/contact.html">Contact</a></li>
+      <li><a href="/contact.html" {{ if or (eq .RelPermalink "/contact/") (eq .RelPermalink "/contact.html") }}aria-current="page"{{ end }}>Contact</a></li>
 
 {{ $p := .RelPermalink }}
 <li>

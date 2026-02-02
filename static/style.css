@@ -453,124 +453,58 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 }
 
 /* =========================================
-/* =========================================
-/* =========================================
-   CONTACT FORM (grid layout, desktop-first)
+   CONTACT FORM (single-column layout)
    ========================================= */
-.contact-panel{
-  margin-top:1.25rem;
-}
-
 .contact-card{
-  background:var(--card);
-  border:1px solid var(--line);
-  padding:18px;
-  display:grid;
-  gap:12px 14px;
-  grid-template-columns: repeat(6, minmax(150px,1fr)) minmax(150px,170px);
-  grid-template-areas:
-    "name job company phone email title send"
-    "message message message message message message send";
-  align-items:start;
+  max-width: 720px;
+  margin: 1rem auto 0;
 }
 
 .hp-field{
   position:absolute;
   left:-9999px;
   visibility:hidden;
-  height:0;
-  overflow:hidden;
 }
 
-.contact-field{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-  height:100%;
+.form-group{
+  display:grid;
+  gap:.35rem;
+  margin-bottom:.9rem;
 }
 
-.contact-field label{
+.form-group label{
   font-weight:700;
   color: var(--ink);
-  font-size:.95rem;
 }
 
-.contact-field input,
-.contact-field textarea{
+.form-group input,
+.form-group textarea{
   width:100%;
   font: inherit;
   color: var(--ink);
   background:#fff;
   border:1px solid var(--line);
-  padding:.65rem .8rem;
+  padding:.7rem .85rem;
   outline:none;
 }
 
-.contact-field textarea{
+.form-group textarea{
   resize: vertical;
-  min-height: 160px;
+  min-height: 140px;
 }
 
-.contact-field input:focus,
-.contact-field textarea:focus{
+.form-group input:focus,
+.form-group textarea:focus{
   border-color: rgba(15,44,89,.55);
   box-shadow: 0 0 0 3px rgba(207,175,94,.22);
 }
 
-.contact-field.name-field{ grid-area: name; }
-.contact-field.job-field{ grid-area: job; }
-.contact-field.company-field{ grid-area: company; }
-.contact-field.phone-field{ grid-area: phone; }
-.contact-field.email-field{ grid-area: email; }
-.contact-field.subject-field{ grid-area: title; }
-.message-field{ grid-area: message; }
+#status{ margin-top:.75rem; }
 
-.contact-action{
-  grid-area: send;
-  display:flex;
-  align-items:stretch;
-  justify-content:stretch;
-}
+/* Contact page spacing */
+.contact-page.section{ padding-top: 2rem; }
 
-.contact-action .btn{
-  width:100%;
-  min-height:160px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.05rem;
-}
-
-.contact-status{
-  grid-column: 1 / -1;
-  margin-top:.35rem;
-}
-
-@media (max-width:1100px){
-  .contact-card{
-    grid-template-columns:repeat(3, minmax(170px,1fr));
-    grid-template-areas:none;
-  }
-  .contact-field,
-  .contact-action{
-    grid-area:auto;
-  }
-  .message-field{
-    grid-column:1 / -1;
-  }
-  .contact-action .btn{
-    min-height:120px;
-  }
-}
-
-@media (max-width:720px){
-  .contact-card{
-    grid-template-columns:1fr;
-  }
-  .contact-action .btn{
-    min-height:48px;
-  }
-}
+/* =========================================
    FOOTER (B2B)
    ========================================= */
 .footer,
