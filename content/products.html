@@ -166,66 +166,7 @@ description: "Export-ready alkyd resin supplier for Africa, the Middle East, and
         </div>
       </div>
 
-      <script>
-        (function() {
-          const appTabs = Array.from(document.querySelectorAll('[data-filter-group="app"]'));
-          const familyTabs = Array.from(document.querySelectorAll('[data-filter-group="family"]'));
-          const resetBtn = document.getElementById('gfReset');
-          const cards = Array.from(document.querySelectorAll('.grade-card'));
-          const count = document.getElementById('gfCount');
-          let activeApp = '';
-          let activeFamily = '';
-
-          function setActive(tabs, value) {
-            tabs.forEach(tab => {
-              const isActive = tab.dataset.value === value;
-              tab.classList.toggle('is-active', isActive);
-              tab.setAttribute('aria-pressed', String(isActive));
-            });
-          }
-
-          function applyFilters() {
-            let shown = 0;
-
-            cards.forEach(card => {
-              const apps = card.dataset.app.split(',').map(s => s.trim());
-              const matchesApp = !activeApp || apps.includes(activeApp);
-              const matchesFamily = !activeFamily || card.dataset.family === activeFamily;
-              const visible = matchesApp && matchesFamily;
-              card.hidden = !visible;
-              if (visible) shown += 1;
-            });
-
-            count.textContent = `Showing ${shown} of ${cards.length} grades`;
-          }
-
-          appTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-              activeApp = tab.dataset.value;
-              setActive(appTabs, activeApp);
-              applyFilters();
-            });
-          });
-
-          familyTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-              activeFamily = tab.dataset.value;
-              setActive(familyTabs, activeFamily);
-              applyFilters();
-            });
-          });
-
-          resetBtn.addEventListener('click', () => {
-            activeApp = '';
-            activeFamily = '';
-            setActive(appTabs, activeApp);
-            setActive(familyTabs, activeFamily);
-            applyFilters();
-          });
-
-          applyFilters();
-        })();
-      </script>
+      <script src="/js/products.js" defer></script>
     </div>
   </section>
 
