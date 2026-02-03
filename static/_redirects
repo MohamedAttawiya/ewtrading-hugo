@@ -1,7 +1,7 @@
 /about.html     /about/      301
-/products.html  /products/   301
-/alkyds.html    /products/   301
-/alkyds/        /products/   301
+/products.html  /alkyds/     301
+/products/      /alkyds/     301
+/alkyds.html    /alkyds/     301
 
 /contact        /contact/    301
 /contact.html   /contact/    301
