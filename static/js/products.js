@@ -83,4 +83,27 @@
   }
 
   applyFilters();
+
+  // Card highlight + reason reveal
+  const activateCard = (card) => {
+    cards.forEach(c => c.classList.remove('active'));
+    if (card) card.classList.add('active');
+  };
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      if (card.hidden) return;
+      activateCard(card);
+    });
+    card.addEventListener('keydown', evt => {
+      if ((evt.key === 'Enter' || evt.key === ' ') && !card.hidden) {
+        evt.preventDefault();
+        activateCard(card);
+      }
+    });
+    card.setAttribute('tabindex', '0');
+  });
+
+  // activate first visible by default
+  activateCard(cards.find(c => !c.hidden));
 })();

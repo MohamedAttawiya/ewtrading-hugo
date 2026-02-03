@@ -477,6 +477,8 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
   align-items:center;
   gap:.6rem;
   margin-bottom:.15rem;
+  position:relative;
+  padding-right:60px;
 }
 .grade-header strong{
   margin:0;
@@ -493,6 +495,34 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
   border-radius:50%;
   padding:6px;
   filter:drop-shadow(0 2px 6px rgba(15,44,89,.18));
+}
+.grade-reason{
+  position:absolute;
+  right:48px;
+  top:50%;
+  transform:translateY(-50%) translateX(10px);
+  background:rgba(15,44,89,.06);
+  color:var(--ink);
+  padding:.2rem .55rem;
+  font-size:.8rem;
+  font-weight:800;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease, transform .25s ease;
+}
+.grade-card.active .grade-reason{
+  opacity:1;
+  transform:translateY(-50%) translateX(-6px);
+}
+.grade-card{
+  cursor:pointer;
+  transition:box-shadow .2s ease, outline .2s ease;
+}
+.grade-card.active{
+  outline:2px solid var(--accent);
+  box-shadow:0 10px 24px rgba(15,44,89,.14);
 }
 
 .ticks{margin-top:.5rem;color:var(--muted);display:grid;gap:.45rem;list-style:none}
