@@ -1102,10 +1102,10 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:14px;
+  gap:16px;
   margin:22px 0 0;
   padding:14px 0;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
 }
 
 .pager-btn{
@@ -1115,6 +1115,7 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   background:var(--card);
   color:var(--primary);
   text-decoration:none;
+  flex:0 0 auto;
 }
 
 .pager-btn:hover{
