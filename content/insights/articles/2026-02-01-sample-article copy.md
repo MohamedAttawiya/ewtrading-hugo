@@ -1,5 +1,5 @@
 ---
-title: "How We Export Alkyd Resins to Africa"
+title: "HERE MAN"
 date: 2026-02-01
 draft: false
 categories: ["Alkyds"]
