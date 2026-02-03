@@ -824,6 +824,14 @@ main .list-check li::before {
 }
 main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
+/* Article imagery spacing */
+.article-figure{
+  display:block;
+  margin:1.25rem auto;
+  max-width:960px;
+  width:100%;
+}
+
 /* Article comparison tables */
 .comparison-table{
   margin-top:var(--space-2);
