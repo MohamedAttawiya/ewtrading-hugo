@@ -162,3 +162,32 @@ Long oil alkyds deliver flexibility and toughness at the cost of slower drying. 
 In alkyd procurement, oil length is not a specification line item—it is the structural logic of the resin. Buyers who understand this make faster decisions, avoid costly failures, and build more resilient formulations.
 
 <img src="/assets/ai-photos/how-chain-length-affects-perfo/temperature-locale.png" alt="Environmental and logistics considerations for alkyd resin performance" class="article-figure" loading="lazy" />
+
+## FAQ: Oil Length, Drying, Flexibility, and Hardness
+
+<section class="faq-block">
+<details>
+  <summary>Why do long oil alkyds dry slower than short oil alkyds?</summary>
+  <p>Higher oil content lowers crosslink density and slows oxygen diffusion, so autoxidation takes longer. Short oil alkyds have fewer fatty acids and crosslink faster, especially with heat.</p>
+</details>
+<details>
+  <summary>Can I speed up a long oil alkyd without changing the resin?</summary>
+  <p>You can optimize drier type/dose, film thickness, and airflow, but there is a ceiling: the intrinsic oil length still sets the baseline curing rate.</p>
+</details>
+<details>
+  <summary>Which oil length should I choose for flexible substrates?</summary>
+  <p>Use long oil (or upper-medium) alkyds for wood or substrates that move; short oil systems are too rigid and risk cracking.</p>
+</details>
+<details>
+  <summary>Why won’t my short oil alkyd air-dry properly?</summary>
+  <p>Short oils are designed for bake/force-dry. Without heat and the right drier balance, they remain under-cured and brittle.</p>
+</details>
+<details>
+  <summary>How does solvent choice relate to oil length?</summary>
+  <p>Long oils dissolve in aliphatic solvents; short oils often need aromatic strength. Mismatching solvent strength causes haze, phase separation, and poor leveling.</p>
+</details>
+<details>
+  <summary>Do alternative driers (non-cobalt) change oil-length selection?</summary>
+  <p>They don’t change the needed oil length, but they may require dose tweaks—especially for slow-curing long oils—to hit target dry times without wrinkling or under-cure.</p>
+</details>
+</section>
