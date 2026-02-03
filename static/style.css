@@ -1099,13 +1099,12 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
    ========================= */
 
 .pager{
-  display:flex;
+  display:grid;
+  grid-template-columns: auto 1fr auto;
   align-items:center;
-  justify-content:center;
   gap:16px;
   margin:22px 0 0;
   padding:14px 0;
-  flex-wrap:nowrap;
 }
 
 .pager-btn{
@@ -1115,7 +1114,10 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   background:var(--card);
   color:var(--primary);
   text-decoration:none;
-  flex:0 0 auto;
+  justify-self:start;
+}
+.pager-btn:last-of-type{
+  justify-self:end;
 }
 
 .pager-btn:hover{
@@ -1132,7 +1134,7 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   gap:6px;
   flex-wrap:wrap;
   justify-content:center;
-  flex:0 0 auto;
+  justify-self:center;
 }
 
 .pager-page{
@@ -1158,10 +1160,15 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
 @media (max-width: 600px){
   .pager{
-    flex-direction:column;
-    align-items:stretch;
+    grid-template-columns: 1fr;
+    justify-items:start;
+    gap:10px;
   }
   .pager-pages{
     justify-content:flex-start;
+    justify-self:start;
+  }
+  .pager-btn:last-of-type{
+    justify-self:start;
   }
 }
