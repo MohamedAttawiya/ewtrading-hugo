@@ -16,11 +16,11 @@
 
       <div class="cards insights-cards">
         {{ range $paginator.Pages }}
-          <article class="card">
-            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <a class="card" href="{{ .RelPermalink }}">
+            <h2>{{ .Title }}</h2>
             {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
             <p class="meta">{{ .Date.Format "02 Jan 2006" }}</p>
-          </article>
+          </a>
         {{ end }}
       </div>
 
