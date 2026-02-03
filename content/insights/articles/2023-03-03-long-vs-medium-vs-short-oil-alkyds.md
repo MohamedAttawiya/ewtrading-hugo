@@ -11,6 +11,10 @@ summary: "A practical comparison of long, medium, and short oil alkyd resins —
 Oil length is the single most important structural parameter in alkyd resins. It directly controls drying behavior, film flexibility, hardness, solvent compatibility, and suitable end-use applications.
 {{< /callout >}}
 
+![Oil length continuum for alkyd resins](/assets/alkyd-oil-length-band.svg)
+
+![Simplified alkyd resin production flow](/assets/alkyd-process-flow.svg)
+
 ## What does “oil length” mean?
 
 Oil length is the percentage of fatty acids or drying oils in the total alkyd resin composition.
@@ -207,3 +211,4 @@ Oil length determines how an alkyd behaves before, during, and after application
   <p>Modifiers can raise hardness or resistance at a given oil length, but they don’t replace the core role of oil length. Choose oil length first, then use modifiers to fine-tune performance.</p>
 </details>
 </section>
+
