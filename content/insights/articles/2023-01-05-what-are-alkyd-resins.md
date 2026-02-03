@@ -11,6 +11,8 @@ summary: "A practical explanation of alkyd resin chemistry, how oil length and s
 Despite the rise of acrylics and polyurethanes, alkyd resins remain one of the most widely used binders in decorative, industrial, and specialty coatings — especially where balance, robustness, and cost-efficiency matter.
 {{< /callout >}}
 
+<img src="/assets/ai-photos/what-is-alkyd/what-is-alkyd.png" alt="Illustration of alkyd resin concept and applications" class="article-figure" loading="lazy" />
+
 ## What is an alkyd resin?
 An alkyd resin is a polyester modified with fatty acids or oils. It is produced by reacting three core components:
 
@@ -75,6 +77,8 @@ In many markets, alkyds also provide cost stability, especially when compared to
 {{< callout title="Practical advantage" tone="ok" >}}
 For many enamel and industrial systems, alkyds deliver “good enough everywhere” performance — without formulation complexity or process sensitivity.
 {{< /callout >}}
+
+<img src="/assets/ai-photos/what-is-alkyd/uses-of-alkyd.png" alt="Visual summary of common alkyd resin uses across coatings" class="article-figure" loading="lazy" />
 
 ## Modified alkyds: extending the base chemistry
 To meet higher performance requirements, alkyds are often chemically modified:
