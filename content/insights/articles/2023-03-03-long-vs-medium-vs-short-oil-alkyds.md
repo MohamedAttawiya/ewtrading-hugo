@@ -1,6 +1,6 @@
 ---
 title: "Long Oil vs Medium Oil vs Short Oil Alkyds: Practical Differences Explained"
-date: 2026-02-03
+date: 2023-03-03
 draft: false
 categories: ["Alkyds"]
 tags: ["Selection", "Formulation", "Coatings"]
