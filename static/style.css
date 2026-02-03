@@ -317,7 +317,7 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
   inline-size:min(360px,100%);text-align:center;
 }
 .badge .eyebrow{color:#D3E7FF}
-.pachin-logo{max-height:36px;margin:.25rem auto .5rem}
+.pachin-logo{max-height:50px;margin:.25rem auto .5rem}
 .badge-copy{color:#E8EEF7;margin-bottom:.5rem;font-size:.95rem}
 .badge-link{color:#CFE7FF;text-underline-offset:3px}
 
@@ -370,6 +370,18 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
 }
 @media (max-width:640px){
   .rm-grid{grid-template-columns:1fr;}
+}
+
+.coatings-range-grid{
+  display:grid;
+  gap:1rem;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+@media (max-width:980px){
+  .coatings-range-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:640px){
+  .coatings-range-grid{grid-template-columns:1fr;}
 }
 
 .card{
