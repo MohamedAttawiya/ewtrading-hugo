@@ -114,14 +114,56 @@ Short oil alkyds will not properly air-dry. Using them in ambient-cure systems l
 
 ## Side-by-side practical comparison
 
-| Property        | Long Oil                | Medium Oil                 | Short Oil                     |
-|-----------------|-------------------------|----------------------------|--------------------------------|
-| Oil content     | High (>60%)             | Medium (40–60%)            | Low (<40%)                     |
-| Drying          | Slow, air-dry           | Moderate, air-dry          | Heat-cure                      |
-| Flexibility     | High                    | Medium                     | Low                            |
-| Hardness        | Low–Medium              | Medium                     | High                           |
-| Solvent type    | Aliphatic               | Mixed                      | Aromatic                       |
-| Typical use     | Decorative, wood        | General purpose            | Industrial baking              |
+<div class="comparison-table">
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Long Oil</th>
+      <th>Medium Oil</th>
+      <th>Short Oil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Oil content</td>
+      <td>High (&gt;60%)</td>
+      <td>Medium (40–60%)</td>
+      <td>Low (&lt;40%)</td>
+    </tr>
+    <tr>
+      <td>Drying</td>
+      <td>Slow, air-dry</td>
+      <td>Moderate, air-dry</td>
+      <td>Heat-cure</td>
+    </tr>
+    <tr>
+      <td>Flexibility</td>
+      <td>High</td>
+      <td>Medium</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Hardness</td>
+      <td>Low–Medium</td>
+      <td>Medium</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Solvent type</td>
+      <td>Aliphatic</td>
+      <td>Mixed</td>
+      <td>Aromatic</td>
+    </tr>
+    <tr>
+      <td>Typical use</td>
+      <td>Decorative, wood</td>
+      <td>General purpose</td>
+      <td>Industrial baking</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ## Choosing the right oil length
 

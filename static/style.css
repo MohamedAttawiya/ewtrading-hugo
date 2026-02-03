@@ -824,6 +824,35 @@ main .list-check li::before {
 }
 main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
+/* Article comparison tables */
+.comparison-table{
+  margin-top:var(--space-2);
+}
+.comparison-table table{
+  width:100%;
+  border-collapse:collapse;
+  border:1px solid var(--line);
+  background:var(--card);
+}
+.comparison-table th,
+.comparison-table td{
+  padding:.65rem .75rem;
+  text-align:left;
+  vertical-align:top;
+  border-bottom:1px solid var(--line);
+  font-size:.95rem;
+}
+.comparison-table thead th{
+  background:#0F2C59;
+  color:#fff;
+}
+.comparison-table tbody tr:nth-child(even){
+  background:#FAFCFF;
+}
+.comparison-table tbody tr:hover{
+  background:#F2F7FF;
+}
+
 /* ===== FAQ (article-scoped) ===== */
 .faq-block{
   margin-top:var(--space-3);
