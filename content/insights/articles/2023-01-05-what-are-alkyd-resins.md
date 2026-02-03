@@ -1,6 +1,6 @@
 ---
 title: "What Are Alkyd Resins? Chemistry, Structure, and Why They’re Still Used"
-date: 2026-02-03
+date: 2023-01-05
 draft: false
 categories: ["Alkyds"]
 tags: ["Chemistry", "Coatings", "Formulation"]
@@ -120,3 +120,28 @@ Understanding their chemistry is not about nostalgia; it is about choosing the r
 
 {{< btn href="/alkyds" text="Explore Alkyd Resin Families" kind="secondary" >}}
 {{< btn href="mailto:sales@ewtradingco.com?subject=Alkyd%20Resin%20Inquiry" text="Contact Technical Sales" kind="primary" >}}
+
+## FAQ: Alkyd Resin Chemistry & Selection
+
+<section class="faq-block">
+<details>
+  <summary>What defines the oil length of an alkyd resin?</summary>
+  <p>Oil length is the percentage of fatty acid or oil in the total resin formulation. Higher oil length means more flexibility and slower drying; lower oil length yields faster, harder films.</p>
+</details>
+<details>
+  <summary>Why do some alkyds dry faster than others?</summary>
+  <p>Dry time is driven by oil length, degree of unsaturation in the oil, and the drier package. Short-oil alkyds with higher unsaturation and optimized cobalt/zirconium/calcium driers cure fastest.</p>
+</details>
+<details>
+  <summary>When should I choose a urethane-modified alkyd?</summary>
+  <p>Use urethane-modified alkyds when you need higher hardness, chemical resistance, or block resistance than a conventional alkyd can provide—e.g., industrial maintenance or parquet finishes.</p>
+</details>
+<details>
+  <summary>Are water-reducible alkyds covered here?</summary>
+  <p>This overview focuses on solventborne systems. Water-reducible and alkyd emulsions follow similar oil-length logic but include emulsifiers and different solvents; request a grade list if you need them.</p>
+</details>
+<details>
+  <summary>How do I pick between long, medium, and short oil grades?</summary>
+  <p>Match oil length to the application: long oil for appearance/weathering, medium for balanced general-purpose use, short oil for productivity and hardness. Then fine-tune by polyol type and modifiers.</p>
+</details>
+</section>

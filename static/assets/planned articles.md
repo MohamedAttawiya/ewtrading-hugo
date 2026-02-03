@@ -6,7 +6,7 @@ Use this list to track writing progress for each Insights article.
 
 ## A. Alkyd Fundamentals (First-time & SEO entry traffic)
 
-1. [ ] What Are Alkyd Resins? Chemistry, Structure, and Why They’re Still Used  
+1. [1] What Are Alkyd Resins? Chemistry, Structure, and Why They’re Still Used  
 2. [ ] Long Oil vs Medium Oil vs Short Oil Alkyds: Practical Differences Explained  
 3. [ ] How Oil Length Directly Affects Drying Time, Flexibility, and Hardness  
 4. [ ] How Alkyd Resins Cure: Understanding Oxidative Drying (Without the Chemistry Degree)  

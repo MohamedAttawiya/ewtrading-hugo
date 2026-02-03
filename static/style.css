@@ -824,6 +824,34 @@ main .list-check li::before {
 }
 main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
+/* ===== FAQ (article-scoped) ===== */
+.faq-block{
+  margin-top:var(--space-3);
+  display:grid;
+  gap:var(--space-2);
+}
+.faq-block details{
+  border:1px solid var(--line);
+  background:var(--card);
+  box-shadow:var(--surface-shadow);
+  padding:var(--space-2);
+}
+.faq-block summary{
+  cursor:pointer;
+  font-weight:800;
+  color:var(--primary);
+}
+.faq-block details[open]{
+  border-color:var(--primary);
+}
+.faq-block p{
+  margin:.35rem 0 0;
+  color:var(--muted);
+}
+.faq-block.is-hidden{
+  display:none;
+}
+
 /* ================================
    Alkyds hero layout patch
    ================================ */
