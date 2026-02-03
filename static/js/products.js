@@ -84,7 +84,7 @@
 
   applyFilters();
 
-  // Card highlight + reason reveal
+  // Card highlight + reason reveal (hover on desktop, click/tap on touch)
   const activateCard = (card) => {
     cards.forEach(c => c.classList.remove('active'));
     if (card) card.classList.add('active');
@@ -103,7 +103,4 @@
     });
     card.setAttribute('tabindex', '0');
   });
-
-  // activate first visible by default
-  activateCard(cards.find(c => !c.hidden));
 })();
