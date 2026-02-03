@@ -12,7 +12,7 @@ Then visit:
 - `/` home
 - `/about/`
 - `/products/`
-- `/alkyds/`
+- `/partners/`
 - `/contact.html` (static passthrough)
 
 ## Production build
@@ -24,7 +24,7 @@ hugo
 Artifacts render to `public/` with:
 - `public/contact.html` identical to the original
 - `public/style.css`, `public/assets/`, `public/.well-known/`
-- Section pages in their clean URLs (`/about/`, `/products/`, `/alkyds/`)
+- Section pages in their clean URLs (`/about/`, `/products/`, `/partners/`)
 
 ## Netlify
 
