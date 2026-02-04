@@ -325,6 +325,9 @@ ul.inline, ul.no-markers { list-style: none; padding-left: 0; }
   grid-column:2;
   grid-row:2;
 }
+.timeline-content > :first-child{margin-top:0}
+.timeline-content p{max-width:68ch}
+.timeline-content .list-check{margin-top:.55rem}
 .timeline-content .cta{margin-top:.75rem}
 
 @media (min-width:900px){
@@ -351,16 +354,17 @@ ul.inline, ul.no-markers { list-style: none; padding-left: 0; }
     grid-column:1;
     justify-self:end;
   }
-  .timeline > li.timeline-item:nth-child(odd) .timeline-time{
-    grid-column:3;
-    justify-self:start;
-  }
   .timeline > li.timeline-item:nth-child(even) .timeline-content{
     grid-column:3;
     justify-self:start;
   }
-  .timeline > li.timeline-item:nth-child(even) .timeline-time{
+  /* time pills sit near the spine on the same side as the content */
+  .timeline > li.timeline-item:nth-child(odd) .timeline-time{
     grid-column:1;
     justify-self:end;
+  }
+  .timeline > li.timeline-item:nth-child(even) .timeline-time{
+    grid-column:3;
+    justify-self:start;
   }
 }
