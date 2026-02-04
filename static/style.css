@@ -688,6 +688,36 @@ body.home .rm-card ul{
   outline:3px solid var(--gold);
   outline-offset:2px;
 }
+.grade-card.active .grade-info-btn{
+  opacity:1;
+  animation:gradeInfoGlow 1.6s ease-in-out infinite;
+}
+@keyframes gradeInfoGlow{
+  0%{
+    box-shadow:0 0 0 0 rgba(30,158,106,0);
+    filter:
+      drop-shadow(0 1px 3px rgba(15,44,89,.12))
+      drop-shadow(0 0 0 rgba(30,158,106,0));
+  }
+  55%{
+    box-shadow:0 0 0 8px rgba(30,158,106,.18);
+    filter:
+      drop-shadow(0 1px 3px rgba(15,44,89,.12))
+      drop-shadow(0 0 14px rgba(30,158,106,.45));
+  }
+  100%{
+    box-shadow:0 0 0 0 rgba(30,158,106,0);
+    filter:
+      drop-shadow(0 1px 3px rgba(15,44,89,.12))
+      drop-shadow(0 0 0 rgba(30,158,106,0));
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .grade-card.active .grade-info-btn{
+    animation:none;
+    box-shadow:0 0 0 3px rgba(30,158,106,.25);
+  }
+}
 .grade-flag{
   position:absolute;
   top:-2px;
