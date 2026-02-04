@@ -1,71 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 760" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
   <title id="title">E&amp;W Trading Group timeline</title>
-  <desc id="desc">A left-aligned vertical spine with four milestone dots: Origins, Growth, Export Focus, and Today, each with an explanation.</desc>
+  <desc id="desc">A left-aligned vertical spine with four milestone dots: Origins, Growth, Export Focus, and Today, each with an explanation aligned to the right.</desc>
 
   <defs>
     <style>
-      .title{font:800 44px/1.1 ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; fill:#0F2C59}
-      .lead{font:500 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#5A6473}
       .pillText{font:800 13px/1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#ffffff}
-      .h{font:800 20px/1.2 ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; fill:#0F2C59}
+      .h{font:800 22px/1.15 ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; fill:#0F2C59}
       .p{font:500 15px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#5A6473}
-      .line{stroke:#E6ECF2; stroke-width:3; stroke-linecap:round}
+      .line{stroke:#E6ECF2; stroke-width:3; stroke-linecap:round; vector-effect:non-scaling-stroke}
       .dotOuter{fill:#ffffff; stroke:#1E9E6A; stroke-width:4}
       .dotInner{fill:#1E9E6A}
       .pill{fill:#0F2C59}
-      .divider{stroke:#E6ECF2; stroke-width:1}
     </style>
   </defs>
 
-  <!-- Header -->
-  <text class="title" x="80" y="70">Timeline</text>
-  <text class="lead" x="80" y="104">
-    <tspan x="80" dy="0">A practical journey from the plant floor to an Africa-focused export program.</tspan>
-  </text>
-
   <!-- Spine -->
-  <line class="line" x1="80" y1="140" x2="80" y2="700" />
+  <line class="line" x1="80" y1="40" x2="80" y2="620" />
 
   <!-- Row 1 -->
   <g transform="translate(0,0)">
-    <circle class="dotOuter" cx="80" cy="190" r="12"/>
-    <circle class="dotInner" cx="80" cy="190" r="5"/>
-    <rect class="pill" x="110" y="175" rx="999" ry="999" width="118" height="30"/>
-    <text class="pillText" x="125" y="195">Origins</text>
-    <text class="h" x="110" y="240">Manufacturing-first foundation</text>
-    <text class="p" x="110" y="270">
-      <tspan x="110" dy="0">Founded by a veteran of Egypt’s paint industry, E&amp;W started with hands-on</tspan>
-      <tspan x="110" dy="22">manufacturing experience — formulations, materials, and plant realities that</tspan>
+    <line class="line" x1="80" y1="90" x2="110" y2="90" />
+    <circle class="dotOuter" cx="80" cy="90" r="12"/>
+    <circle class="dotInner" cx="80" cy="90" r="5"/>
+    <rect class="pill" x="110" y="75" rx="999" ry="999" width="118" height="30"/>
+    <text class="pillText" x="169" y="90" text-anchor="middle" dominant-baseline="middle">Origins</text>
+    <text class="h" x="110" y="142">Manufacturing-first foundation</text>
+    <text class="p" x="110" y="172">
+      <tspan x="110" dy="0">Founded by a veteran of Egypt&#8217;s paint industry, E&amp;W started with hands-on</tspan>
+      <tspan x="110" dy="22">manufacturing experience &#8212; formulations, materials, and plant realities that</tspan>
       <tspan x="110" dy="22">determine whether a coating system performs consistently.</tspan>
     </text>
   </g>
 
-  <line class="divider" x1="110" y1="330" x2="930" y2="330"/>
-
   <!-- Row 2 -->
   <g transform="translate(0,0)">
-    <circle class="dotOuter" cx="80" cy="350" r="12"/>
-    <circle class="dotInner" cx="80" cy="350" r="5"/>
-    <rect class="pill" x="110" y="335" rx="999" ry="999" width="112" height="30"/>
-    <text class="pillText" x="125" y="355">Growth</text>
-    <text class="h" x="110" y="400">Raw materials &amp; distribution network</text>
-    <text class="p" x="110" y="430">
+    <line class="line" x1="80" y1="240" x2="110" y2="240" />
+    <circle class="dotOuter" cx="80" cy="240" r="12"/>
+    <circle class="dotInner" cx="80" cy="240" r="5"/>
+    <rect class="pill" x="110" y="225" rx="999" ry="999" width="112" height="30"/>
+    <text class="pillText" x="166" y="240" text-anchor="middle" dominant-baseline="middle">Growth</text>
+    <text class="h" x="110" y="292">Raw materials &amp; distribution network</text>
+    <text class="p" x="110" y="322">
       <tspan x="110" dy="0">We expanded into supplying raw materials and finished coatings, building active</tspan>
-      <tspan x="110" dy="22">relationships across Egypt’s coatings ecosystem and learning the operational details</tspan>
+      <tspan x="110" dy="22">relationships across Egypt&#8217;s coatings ecosystem and learning the operational details</tspan>
       <tspan x="110" dy="22">that keep supply dependable.</tspan>
     </text>
   </g>
 
-  <line class="divider" x1="110" y1="490" x2="930" y2="490"/>
-
   <!-- Row 3 -->
   <g transform="translate(0,0)">
-    <circle class="dotOuter" cx="80" cy="510" r="12"/>
-    <circle class="dotInner" cx="80" cy="510" r="5"/>
-    <rect class="pill" x="110" y="495" rx="999" ry="999" width="142" height="30"/>
-    <text class="pillText" x="125" y="515">Export Focus</text>
-    <text class="h" x="110" y="560">Built a B2B export program</text>
-    <text class="p" x="110" y="590">
+    <line class="line" x1="80" y1="390" x2="110" y2="390" />
+    <circle class="dotOuter" cx="80" cy="390" r="12"/>
+    <circle class="dotInner" cx="80" cy="390" r="5"/>
+    <rect class="pill" x="110" y="375" rx="999" ry="999" width="142" height="30"/>
+    <text class="pillText" x="181" y="390" text-anchor="middle" dominant-baseline="middle">Export Focus</text>
+    <text class="h" x="110" y="442">Built a B2B export program</text>
+    <text class="p" x="110" y="472">
       <tspan x="110" dy="0">Clear MOQs, export packing, documentation readiness, and logistics aligned upfront</tspan>
       <tspan x="110" dy="22">to reduce delays and surprises.</tspan>
     </text>
@@ -73,12 +63,13 @@
 
   <!-- Row 4 -->
   <g transform="translate(0,0)">
-    <circle class="dotOuter" cx="80" cy="670" r="12"/>
-    <circle class="dotInner" cx="80" cy="670" r="5"/>
-    <rect class="pill" x="110" y="655" rx="999" ry="999" width="96" height="30"/>
-    <text class="pillText" x="125" y="675">Today</text>
-    <text class="h" x="110" y="720">Africa-focused alkyd resin exports</text>
-    <text class="p" x="110" y="748">
+    <line class="line" x1="80" y1="540" x2="110" y2="540" />
+    <circle class="dotOuter" cx="80" cy="540" r="12"/>
+    <circle class="dotInner" cx="80" cy="540" r="5"/>
+    <rect class="pill" x="110" y="525" rx="999" ry="999" width="96" height="30"/>
+    <text class="pillText" x="158" y="540" text-anchor="middle" dominant-baseline="middle">Today</text>
+    <text class="h" x="110" y="592">Africa-focused alkyd resin exports</text>
+    <text class="p" x="110" y="622">
       <tspan x="110" dy="0">Long-, medium-, and short-oil alkyds for architectural and industrial coatings,</tspan>
       <tspan x="110" dy="22">supplied B2B with predictable lead times and responsive coordination.</tspan>
     </text>
