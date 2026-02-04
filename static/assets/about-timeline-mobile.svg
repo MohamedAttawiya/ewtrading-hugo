@@ -10,7 +10,7 @@
         --tl-rail: rgba(35,43,54,.16);
         --tl-node: rgba(35,43,54,.28);
       }
-      .eyebrow{font:700 12px/1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--tl-muted); letter-spacing:.14em}
+      .eyebrow{font:600 13px/1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--tl-muted); letter-spacing:.08em}
       .h{font:700 20px/1.2 ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; fill:var(--tl-ink)}
       .p{font:500 15px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--tl-muted)}
       .rail{stroke:var(--tl-rail); stroke-width:1; stroke-linecap:butt; vector-effect:non-scaling-stroke}

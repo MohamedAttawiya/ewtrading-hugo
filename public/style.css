@@ -961,6 +961,86 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 
 #status{ margin-top:.75rem; }
 
+/* =========================================
+   ABOUT PAGE: Cohesion (scoped)
+   ========================================= */
+.about-page{
+  --about-section-y: 4rem;         /* ~64px */
+  --about-card-pad: 1.25rem;
+}
+@media (min-width: 900px){
+  .about-page{ --about-section-y: 6rem; }  /* ~96px */
+}
+@media (max-width: 640px){
+  .about-page{ --about-card-pad: 1rem; }
+}
+
+/* Inner containers: avoid double-% shrink inside base container */
+.about-page .container{
+  width: min(1180px, 92vw);
+}
+
+/* One rhythm */
+.about-page .section{
+  padding: var(--about-section-y) 0;
+  background: transparent;
+}
+.about-page .section + .section{
+  border-top: 1px solid var(--line);
+}
+.about-page .hero{
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+}
+.about-page .hero-inner{
+  padding: calc(var(--about-section-y) - 1rem) 0 calc(var(--about-section-y) - 1.25rem);
+}
+.about-page .section.emphasis{
+  background: transparent;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/* Typography alignment */
+.about-page .eyebrow{
+  margin-bottom: .35rem;
+}
+.about-page .section-lead{
+  margin: .35rem 0 1.25rem;
+}
+
+/* Card system consistency */
+.about-page .card{
+  padding: var(--about-card-pad);
+}
+
+/* Hero badge: make it feel like a card (About only) */
+.about-page .badge-inner{
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(15,44,89,.06);
+}
+.about-page .badge .eyebrow{ color: var(--muted); }
+.about-page .badge-copy{ color: var(--muted); }
+.about-page .badge-link{
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Timeline: keep it quiet + responsive */
+.about-page .timeline-graphic{
+  margin: 1rem 0 0 0;
+  max-width: 980px;
+}
+.about-page .timeline-graphic picture{ display:block; }
+.about-page .timeline-graphic img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Contact page spacing */
 .contact-page.section{ padding-top: 2rem; }
 
