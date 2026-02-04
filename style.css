@@ -267,6 +267,14 @@ ul.inline, ul.no-markers { list-style: none; padding-left: 0; }
 }
 
 /* ===== ABOUT: Timeline ===== */
+.timeline-graphic{
+  margin:1rem 0 0 0;
+}
+.timeline-graphic img{
+  width:100%;
+  height:auto;
+  display:block;
+}
 .timeline{
   list-style:none;
   padding-left:0;
