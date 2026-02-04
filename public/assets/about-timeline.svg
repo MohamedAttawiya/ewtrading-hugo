@@ -4,7 +4,7 @@
 
   <defs>
     <style>
-      .pillText{font:800 13px/1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#ffffff}
+      .pillText{font:800 13px/1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#ffffff; letter-spacing:.08em}
       .h{font:800 22px/1.15 ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; fill:#0F2C59}
       .p{font:500 15px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#5A6473}
       .line{stroke:#E6ECF2; stroke-width:3; stroke-linecap:round; vector-effect:non-scaling-stroke}
@@ -22,8 +22,8 @@
     <line class="line" x1="80" y1="90" x2="110" y2="90" />
     <circle class="dotOuter" cx="80" cy="90" r="12"/>
     <circle class="dotInner" cx="80" cy="90" r="5"/>
-    <rect class="pill" x="110" y="75" rx="999" ry="999" width="118" height="30"/>
-    <text class="pillText" x="169" y="90" text-anchor="middle" dominant-baseline="middle">Origins</text>
+    <rect class="pill" x="110" y="75" rx="8" ry="8" width="128" height="30"/>
+    <text class="pillText" x="174" y="90" text-anchor="middle" dominant-baseline="middle">ORIGINS</text>
     <text class="h" x="110" y="142">Manufacturing-first foundation</text>
     <text class="p" x="110" y="172">
       <tspan x="110" dy="0">Founded by a veteran of Egypt&#8217;s paint industry, E&amp;W started with hands-on</tspan>
@@ -37,8 +37,8 @@
     <line class="line" x1="80" y1="240" x2="110" y2="240" />
     <circle class="dotOuter" cx="80" cy="240" r="12"/>
     <circle class="dotInner" cx="80" cy="240" r="5"/>
-    <rect class="pill" x="110" y="225" rx="999" ry="999" width="112" height="30"/>
-    <text class="pillText" x="166" y="240" text-anchor="middle" dominant-baseline="middle">Growth</text>
+    <rect class="pill" x="110" y="225" rx="8" ry="8" width="122" height="30"/>
+    <text class="pillText" x="171" y="240" text-anchor="middle" dominant-baseline="middle">GROWTH</text>
     <text class="h" x="110" y="292">Raw materials &amp; distribution network</text>
     <text class="p" x="110" y="322">
       <tspan x="110" dy="0">We expanded into supplying raw materials and finished coatings, building active</tspan>
@@ -52,8 +52,8 @@
     <line class="line" x1="80" y1="390" x2="110" y2="390" />
     <circle class="dotOuter" cx="80" cy="390" r="12"/>
     <circle class="dotInner" cx="80" cy="390" r="5"/>
-    <rect class="pill" x="110" y="375" rx="999" ry="999" width="142" height="30"/>
-    <text class="pillText" x="181" y="390" text-anchor="middle" dominant-baseline="middle">Export Focus</text>
+    <rect class="pill" x="110" y="375" rx="8" ry="8" width="172" height="30"/>
+    <text class="pillText" x="196" y="390" text-anchor="middle" dominant-baseline="middle">EXPORT FOCUS</text>
     <text class="h" x="110" y="442">Built a B2B export program</text>
     <text class="p" x="110" y="472">
       <tspan x="110" dy="0">Clear MOQs, export packing, documentation readiness, and logistics aligned upfront</tspan>
@@ -66,8 +66,8 @@
     <line class="line" x1="80" y1="540" x2="110" y2="540" />
     <circle class="dotOuter" cx="80" cy="540" r="12"/>
     <circle class="dotInner" cx="80" cy="540" r="5"/>
-    <rect class="pill" x="110" y="525" rx="999" ry="999" width="96" height="30"/>
-    <text class="pillText" x="158" y="540" text-anchor="middle" dominant-baseline="middle">Today</text>
+    <rect class="pill" x="110" y="525" rx="8" ry="8" width="104" height="30"/>
+    <text class="pillText" x="162" y="540" text-anchor="middle" dominant-baseline="middle">TODAY</text>
     <text class="h" x="110" y="592">Africa-focused alkyd resin exports</text>
     <text class="p" x="110" y="622">
       <tspan x="110" dy="0">Long-, medium-, and short-oil alkyds for architectural and industrial coatings,</tspan>
