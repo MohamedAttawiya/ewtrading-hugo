@@ -642,7 +642,7 @@ body.home .rm-card ul{
     grid-template-columns:repeat(2,1fr);
   }
 }
-.grade-card{display:flex;flex-direction:column;gap:.25rem}
+.grade-card{display:flex;flex-direction:column;gap:.25rem;position:relative}
 .grade-card strong{
   font-size:1.8rem; /* bumped ~+15pt equivalent */
   color:var(--accent);
@@ -656,7 +656,7 @@ body.home .rm-card ul{
   gap:.5rem;
   margin-bottom:.05rem;
   position:relative;
-  padding-right:132px; /* room for info button + optional icon */
+  padding-right:80px;
 }
 .grade-header strong{
   margin:0;
@@ -665,25 +665,25 @@ body.home .rm-card ul{
 }
 .grade-info-btn{
   position:absolute;
-  top:-2px;
+  bottom:var(--space-1);
   right:var(--space-1);
-  width:32px;
-  height:32px;
+  width:38px;
+  height:38px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  border:1px solid var(--surface-border);
-  background:rgba(15,44,89,0.04);
-  color:var(--primary);
+  border:none;
+  background:rgba(35,43,54,0.04);
+  padding:6px;
+  opacity:.65;
+  filter:drop-shadow(0 1px 3px rgba(15,44,89,.12));
+  color:var(--ink);
   font-weight:900;
   line-height:1;
   cursor:pointer;
-  z-index:3;
+  z-index:2;
 }
-.grade-card.has-icon .grade-info-btn{
-  right:calc(var(--space-1) + 42px);
-}
-.grade-info-btn:hover{border-color:var(--accent)}
+.grade-info-btn:hover{opacity:.85}
 .grade-info-btn:focus-visible{
   outline:3px solid var(--gold);
   outline-offset:2px;
@@ -719,9 +719,6 @@ body.home .rm-card ul{
   pointer-events:none;
   transition:opacity .25s ease, transform .25s ease;
   z-index:1;
-}
-.grade-card.has-icon .grade-reason{
-  right:calc(var(--space-1) + 42px + 34px); /* keep clear of info button */
 }
 .grade-card:hover .grade-reason,
 .grade-card.active .grade-reason{
