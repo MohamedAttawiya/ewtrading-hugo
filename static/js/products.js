@@ -13,12 +13,34 @@
   const state = { app: '', family: '' };
   const norm = (value = '') => value.trim().toLowerCase();
 
+  const isMobileFilters = () =>
+    window.matchMedia && window.matchMedia('(max-width:700px)').matches;
+
+  const prefersReducedMotion = () =>
+    window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const scrollActiveTabIntoView = (tab) => {
+    if (!tab || !tab.scrollIntoView || !isMobileFilters()) return;
+    const container = tab.parentElement;
+    if (!container || container.scrollWidth <= container.clientWidth) return;
+
+    const behavior = prefersReducedMotion() ? 'auto' : 'smooth';
+    try {
+      tab.scrollIntoView({ behavior, block: 'nearest', inline: 'center' });
+    } catch (err) {
+      tab.scrollIntoView();
+    }
+  };
+
   const setActive = (tabs, value) => {
+    let activeTab = null;
     tabs.forEach(tab => {
       const isActive = norm(tab.dataset.value) === value;
       tab.classList.toggle('is-active', isActive);
       tab.setAttribute('aria-pressed', String(isActive));
+      if (isActive) activeTab = tab;
     });
+    scrollActiveTabIntoView(activeTab);
   };
 
   const applyFilters = () => {
