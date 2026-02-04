@@ -276,28 +276,91 @@ ul.inline, ul.no-markers { list-style: none; padding-left: 0; }
 .timeline::before{
   content:"";
   position:absolute;
-  left:11px;
+  left:16px;
   top:.35rem;
   bottom:.35rem;
   width:2px;
   border-radius:2px;
   background:var(--line);
 }
-.timeline-item{
+.timeline > li.timeline-item{
   position:relative;
   display:grid;
-  grid-template-columns:24px 1fr;
-  gap:.75rem;
-  padding:.65rem 0;
+  grid-template-columns:32px 1fr;
+  grid-template-rows:auto auto;
+  column-gap:.9rem;
+  row-gap:.65rem;
+  padding:.9rem 0;
 }
-.timeline-dot{
-  width:12px;
-  height:12px;
+.timeline > li.timeline-item .timeline-dot{
+  grid-column:1;
+  grid-row:1 / span 2;
+  justify-self:center;
+  align-self:start;
+  width:14px;
+  height:14px;
   border-radius:999px;
   background:var(--accent);
-  margin-left:5px;
-  margin-top:.42rem;
+  margin-top:.55rem;
   box-shadow:0 0 0 4px rgba(30,158,106,.14);
 }
-.timeline-kicker{margin-bottom:.15rem}
-.timeline-card .cta{margin-top:.75rem}
+.timeline-time{
+  grid-column:2;
+  grid-row:1;
+  justify-self:start;
+  align-self:start;
+  display:inline-flex;
+  align-items:center;
+  padding:.35rem .85rem;
+  border-radius:999px;
+  background:var(--primary);
+  color:#fff;
+  font-weight:800;
+  font-size:.85rem;
+  letter-spacing:.01em;
+  border:1px solid rgba(15,44,89,.12);
+  box-shadow:0 10px 22px var(--scrim);
+}
+.timeline-content{
+  grid-column:2;
+  grid-row:2;
+}
+.timeline-content .cta{margin-top:.75rem}
+
+@media (min-width:900px){
+  .timeline::before{
+    left:50%;
+    transform:translateX(-1px);
+  }
+  .timeline > li.timeline-item{
+    grid-template-columns:1fr 92px 1fr;
+    grid-template-rows:auto auto;
+    column-gap:1.25rem;
+    row-gap:.8rem;
+    padding:1.1rem 0;
+  }
+  .timeline > li.timeline-item .timeline-dot{
+    grid-column:2;
+    grid-row:1 / span 2;
+    margin-top:.62rem;
+  }
+  .timeline > li.timeline-item .timeline-content{
+    max-width:min(520px,100%);
+  }
+  .timeline > li.timeline-item:nth-child(odd) .timeline-content{
+    grid-column:1;
+    justify-self:end;
+  }
+  .timeline > li.timeline-item:nth-child(odd) .timeline-time{
+    grid-column:3;
+    justify-self:start;
+  }
+  .timeline > li.timeline-item:nth-child(even) .timeline-content{
+    grid-column:3;
+    justify-self:start;
+  }
+  .timeline > li.timeline-item:nth-child(even) .timeline-time{
+    grid-column:1;
+    justify-self:end;
+  }
+}
