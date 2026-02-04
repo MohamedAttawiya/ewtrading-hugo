@@ -802,6 +802,10 @@ body.home .rm-card ul{
     calc(var(--modal-pad) + env(safe-area-inset-left));
   overscroll-behavior:contain;
 }
+html.grade-modal-open,
+body.grade-modal-open{
+  overflow:hidden;
+}
 .grade-modal__backdrop{
   position:absolute;
   inset:0;

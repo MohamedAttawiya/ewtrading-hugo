@@ -153,7 +153,8 @@
   const SPEC_URL = '/assets/alkyd-specs.json';
   let specsPromise = null;
   let lastFocusEl = null;
-  let prevBodyOverflow = '';
+  let savedScrollY = 0;
+  let prevBodyStyles = null;
 
   const fixEncoding = (value) => {
     if (value === null || value === undefined) return '';
@@ -265,13 +266,61 @@
     if (!modal) return;
     if (open) {
       setViewportHeightVar();
-      prevBodyOverflow = document.body.style.overflow;
+
+      savedScrollY = window.scrollY || 0;
+
+      prevBodyStyles = {
+        overflow: document.body.style.overflow,
+        position: document.body.style.position,
+        top: document.body.style.top,
+        left: document.body.style.left,
+        right: document.body.style.right,
+        width: document.body.style.width,
+        paddingRight: document.body.style.paddingRight,
+      };
+
+      // Prevent background scrolling (especially on iOS Safari).
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.documentElement.classList.add('grade-modal-open');
+      document.body.classList.add('grade-modal-open');
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${savedScrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.width = '100%';
+      if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
+
       modal.hidden = false;
     } else {
-      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.classList.remove('grade-modal-open');
+      document.body.classList.remove('grade-modal-open');
+
+      if (prevBodyStyles) {
+        document.body.style.overflow = prevBodyStyles.overflow;
+        document.body.style.position = prevBodyStyles.position;
+        document.body.style.top = prevBodyStyles.top;
+        document.body.style.left = prevBodyStyles.left;
+        document.body.style.right = prevBodyStyles.right;
+        document.body.style.width = prevBodyStyles.width;
+        document.body.style.paddingRight = prevBodyStyles.paddingRight;
+      } else {
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        document.body.style.paddingRight = '';
+      }
+
       modal.hidden = true;
       if (modalContent) modalContent.replaceChildren();
+
+      if (savedScrollY) window.scrollTo(0, savedScrollY);
+      savedScrollY = 0;
+      prevBodyStyles = null;
+
       if (lastFocusEl && typeof lastFocusEl.focus === 'function') lastFocusEl.focus();
       lastFocusEl = null;
     }
