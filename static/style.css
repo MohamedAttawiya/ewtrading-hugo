@@ -441,7 +441,7 @@ body.home .raw-list{gap:.35rem;}
 .rm-grid{
   display:grid;
   gap:1rem;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(4,minmax(0,1fr));
 }
 .rm-card{
   border:1px solid var(--line);
@@ -464,9 +464,6 @@ body.home #who .grid.cards,
 body.home #families .grid.cards{
   gap:var(--space-2);
   align-items:stretch;
-}
-body.home .rm-grid{
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 }
 
 .coatings-range-grid{
