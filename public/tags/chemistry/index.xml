@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chemistry on E&amp;W Trading Group</title>
+    <link>https://example.com/tags/chemistry/</link>
+    <description>Recent content in Chemistry on E&amp;W Trading Group</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.com/tags/chemistry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Are Alkyd Resins? Chemistry, Structure, and Why They’re Still Used</title>
+      <link>https://example.com/insights/articles/2023-01-05-what-are-alkyd-resins/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.com/insights/articles/2023-01-05-what-are-alkyd-resins/</guid>
+      <description>A practical explanation of alkyd resin chemistry, how oil length and structure affect performance, and why alkyds remain relevant in modern coatings.</description>
+    </item>
+  </channel>
+</rss>

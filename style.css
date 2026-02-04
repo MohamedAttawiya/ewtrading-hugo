@@ -132,7 +132,8 @@ h3{font-size:1.1rem;margin-bottom:.25rem}
 .badge-link{color:#CFE7FF;text-underline-offset:3px}
 
 .section{padding:2.25rem 0}
-.section.emphasis{
+.section.emphasis,
+.section.section-emph{
   background:linear-gradient(180deg,rgba(30,158,106,.06),rgba(30,158,106,0));
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
 }
@@ -264,3 +265,39 @@ ul.inline, ul.no-markers { list-style: none; padding-left: 0; }
 .nav a[aria-current="page"]:hover{
   background: rgba(255,255,255,.24);
 }
+
+/* ===== ABOUT: Timeline ===== */
+.timeline{
+  list-style:none;
+  padding-left:0;
+  margin:0;
+  position:relative;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:11px;
+  top:.35rem;
+  bottom:.35rem;
+  width:2px;
+  border-radius:2px;
+  background:var(--line);
+}
+.timeline-item{
+  position:relative;
+  display:grid;
+  grid-template-columns:24px 1fr;
+  gap:.75rem;
+  padding:.65rem 0;
+}
+.timeline-dot{
+  width:12px;
+  height:12px;
+  border-radius:999px;
+  background:var(--accent);
+  margin-left:5px;
+  margin-top:.42rem;
+  box-shadow:0 0 0 4px rgba(30,158,106,.14);
+}
+.timeline-kicker{margin-bottom:.15rem}
+.timeline-card .cta{margin-top:.75rem}
