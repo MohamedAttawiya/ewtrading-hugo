@@ -1,0 +1,33 @@
+<svg width="1600" height="800" viewBox="0 0 1600 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="ew-g1" x1="160" y1="120" x2="1340" y2="740" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E9E6A"/>
+      <stop offset="0.5" stop-color="#CFAF5E"/>
+      <stop offset="1" stop-color="#0F2C59"/>
+    </linearGradient>
+    <radialGradient id="ew-r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1180 250) rotate(120) scale(560 520)">
+      <stop offset="0" stop-color="#1E9E6A"/>
+      <stop offset="1" stop-color="#1E9E6A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ew-r2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(520 560) rotate(-20) scale(680 520)">
+      <stop offset="0" stop-color="#0F2C59"/>
+      <stop offset="1" stop-color="#0F2C59" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <path
+    d="M-140 600C170 340 420 420 690 260C970 90 1270 120 1740 320L1740 980L-140 980Z"
+    fill="url(#ew-g1)"
+    opacity="0.85"
+  />
+  <path
+    d="M-80 520C190 310 450 350 670 220C900 80 1180 100 1740 300"
+    stroke="url(#ew-g1)"
+    stroke-width="160"
+    stroke-linecap="round"
+    opacity="0.45"
+  />
+
+  <circle cx="1180" cy="250" r="360" fill="url(#ew-r1)" opacity="0.7" />
+  <circle cx="520" cy="560" r="420" fill="url(#ew-r2)" opacity="0.55" />
+</svg>

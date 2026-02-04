@@ -12,4 +12,11 @@
 
 {{ partial "analytics/ga4.html" . }}
 
+{{ if .IsHome }}
+  {{ $heroSwoosh := resources.Get "svg/hero-swoosh.svg" | resources.Minify | fingerprint }}
+  <style>
+    :root{--hero-swoosh-url:url('{{ $heroSwoosh.RelPermalink }}');}
+  </style>
+{{ end }}
+
 <link rel="stylesheet" href="/style.css" />
