@@ -737,13 +737,22 @@ body.home .rm-card ul{
 
 /* Grade specs modal */
 .grade-modal{
+  --modal-pad:clamp(.75rem,.4rem + 2vw,1.5rem);
   position:fixed;
   inset:0;
   z-index:2000;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:clamp(.75rem,.4rem + 2vw,1.5rem);
+  width:100%;
+  height:calc(var(--vvh, 1vh) * 100);
+  min-height:100vh;
+  padding:
+    calc(var(--modal-pad) + env(safe-area-inset-top))
+    calc(var(--modal-pad) + env(safe-area-inset-right))
+    calc(var(--modal-pad) + env(safe-area-inset-bottom))
+    calc(var(--modal-pad) + env(safe-area-inset-left));
+  overscroll-behavior:contain;
 }
 .grade-modal__backdrop{
   position:absolute;
@@ -754,8 +763,9 @@ body.home .rm-card ul{
   position:relative;
   z-index:1;
   width:min(920px,100%);
-  max-height:min(82vh,760px);
+  max-height:100%;
   overflow:auto;
+  -webkit-overflow-scrolling:touch;
   background:var(--surface-bg);
   border:1px solid var(--surface-border);
   box-shadow:0 18px 48px rgba(15,44,89,.32);

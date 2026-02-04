@@ -117,6 +117,17 @@
   const modalContent = document.getElementById('gradeModalContent');
   const modalClose = modal ? modal.querySelector('.grade-modal__close') : null;
 
+  const setViewportHeightVar = () => {
+    // Mobile browsers (especially iOS Safari) can misreport `vh` due to the address bar.
+    document.documentElement.style.setProperty('--vvh', `${window.innerHeight * 0.01}px`);
+  };
+
+  if (modal) {
+    setViewportHeightVar();
+    window.addEventListener('resize', setViewportHeightVar, { passive: true });
+    window.addEventListener('orientationchange', setViewportHeightVar, { passive: true });
+  }
+
   const SPEC_URL = '/assets/alkyd-specs.json';
   let specsPromise = null;
   let lastFocusEl = null;
@@ -231,6 +242,7 @@
   const setModalOpen = (open) => {
     if (!modal) return;
     if (open) {
+      setViewportHeightVar();
       prevBodyOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
       modal.hidden = false;
