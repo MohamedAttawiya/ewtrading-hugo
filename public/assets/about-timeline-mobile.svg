@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 980" role="img" aria-labelledby="title desc" preserveAspectRatio="xMinYMin meet" shape-rendering="geometricPrecision">
+  <title id="title">E&amp;W Trading Group timeline</title>
+  <desc id="desc">A left-aligned vertical timeline with a thin spine and four square markers: Origins, Growth, Export Focus, and Today.</desc>
+
+  <defs>
+    <style>
+      :root{
+        --tl-ink: var(--ink, #232B36);
+        --tl-muted: var(--muted, #5A6473);
+        --tl-rail: rgba(35,43,54,.16);
+        --tl-node: rgba(35,43,54,.28);
+      }
+      .eyebrow{font:700 12px/1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--tl-muted); letter-spacing:.14em}
+      .h{font:700 20px/1.2 ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; fill:var(--tl-ink)}
+      .p{font:500 15px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:var(--tl-muted)}
+      .rail{stroke:var(--tl-rail); stroke-width:1; stroke-linecap:butt; vector-effect:non-scaling-stroke}
+      .node{fill:none; stroke:var(--tl-node); stroke-width:2; vector-effect:non-scaling-stroke}
+    </style>
+  </defs>
+
+  <!-- Spine -->
+  <line class="rail" x1="28" y1="40" x2="28" y2="940" />
+
+  <!-- Row 1 -->
+  <g>
+    <line class="rail" x1="28" y1="80" x2="56" y2="80" />
+    <rect class="node" x="22" y="74" width="12" height="12"/>
+    <text class="eyebrow" x="56" y="80" dominant-baseline="middle">ORIGINS</text>
+    <text class="h" x="56" y="122">Manufacturing-first foundation</text>
+    <text class="p" x="56" y="152">
+      <tspan x="56" dy="0">Founded by a veteran of Egypt&#8217;s</tspan>
+      <tspan x="56" dy="22">paint industry, E&amp;W started with</tspan>
+      <tspan x="56" dy="22">hands-on manufacturing experience</tspan>
+      <tspan x="56" dy="22">&#8212; formulations, materials, and plant</tspan>
+      <tspan x="56" dy="22">realities that determine whether a</tspan>
+      <tspan x="56" dy="22">coating system performs consistently.</tspan>
+    </text>
+  </g>
+
+  <!-- Row 2 -->
+  <g>
+    <line class="rail" x1="28" y1="300" x2="56" y2="300" />
+    <rect class="node" x="22" y="294" width="12" height="12"/>
+    <text class="eyebrow" x="56" y="300" dominant-baseline="middle">GROWTH</text>
+    <text class="h" x="56" y="342">Raw materials &amp; distribution network</text>
+    <text class="p" x="56" y="372">
+      <tspan x="56" dy="0">We expanded into supplying raw</tspan>
+      <tspan x="56" dy="22">materials and finished coatings,</tspan>
+      <tspan x="56" dy="22">building active relationships across</tspan>
+      <tspan x="56" dy="22">Egypt&#8217;s coatings ecosystem and learning</tspan>
+      <tspan x="56" dy="22">the operational details that keep</tspan>
+      <tspan x="56" dy="22">supply dependable.</tspan>
+    </text>
+  </g>
+
+  <!-- Row 3 -->
+  <g>
+    <line class="rail" x1="28" y1="520" x2="56" y2="520" />
+    <rect class="node" x="22" y="514" width="12" height="12"/>
+    <text class="eyebrow" x="56" y="520" dominant-baseline="middle">EXPORT FOCUS</text>
+    <text class="h" x="56" y="562">Built a B2B export program</text>
+    <text class="p" x="56" y="592">
+      <tspan x="56" dy="0">Clear MOQs, export packing,</tspan>
+      <tspan x="56" dy="22">documentation readiness, and logistics</tspan>
+      <tspan x="56" dy="22">aligned upfront to reduce delays and</tspan>
+      <tspan x="56" dy="22">surprises.</tspan>
+    </text>
+  </g>
+
+  <!-- Row 4 -->
+  <g>
+    <line class="rail" x1="28" y1="740" x2="56" y2="740" />
+    <rect class="node" x="22" y="734" width="12" height="12"/>
+    <text class="eyebrow" x="56" y="740" dominant-baseline="middle">TODAY</text>
+    <text class="h" x="56" y="782">Africa-focused alkyd resin exports</text>
+    <text class="p" x="56" y="812">
+      <tspan x="56" dy="0">Long-, medium-, and short-oil alkyds</tspan>
+      <tspan x="56" dy="22">for architectural and industrial</tspan>
+      <tspan x="56" dy="22">coatings, supplied B2B with predictable</tspan>
+      <tspan x="56" dy="22">lead times and responsive coordination.</tspan>
+    </text>
+  </g>
+</svg>
