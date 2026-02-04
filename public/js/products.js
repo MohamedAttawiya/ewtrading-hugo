@@ -96,6 +96,12 @@
       if (card.hidden) return;
       activateCard(card);
     });
+    card.addEventListener('dblclick', () => {
+      if (card.hidden) return;
+      const infoBtn = card.querySelector('.grade-info-btn');
+      const gradeId = infoBtn && infoBtn.dataset ? infoBtn.dataset.grade : '';
+      if (gradeId) openGradeModal(gradeId, infoBtn || card);
+    });
     card.addEventListener('keydown', evt => {
       if ((evt.key === 'Enter' || evt.key === ' ') && !card.hidden) {
         evt.preventDefault();

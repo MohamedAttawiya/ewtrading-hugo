@@ -665,8 +665,8 @@ body.home .rm-card ul{
 }
 .grade-info-btn{
   position:absolute;
-  bottom:var(--space-1);
-  right:var(--space-1);
+  bottom:calc(var(--space-2) + var(--space-1));
+  right:calc(var(--space-2) + var(--space-1)); /* align with top-right icon column */
   width:38px;
   height:38px;
   display:inline-flex;
