@@ -379,7 +379,7 @@ body.home .hero::before{
   background-image:var(--hero-swoosh-url, none);
   background-repeat:no-repeat;
   background-size:140% 140%;
-  background-position:30% 46%;
+  background-position:42% 50%;
   opacity:.13;
   filter:blur(64px) saturate(140%);
   transform:translate3d(-6%,-4%,0) rotate(0deg) scale(1.12);
