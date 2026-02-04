@@ -10,4 +10,6 @@
 {{ with .Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
 <meta property="og:url" content="{{ .Permalink }}" />
 
+{{ partial "analytics/ga4.html" . }}
+
 <link rel="stylesheet" href="/style.css" />

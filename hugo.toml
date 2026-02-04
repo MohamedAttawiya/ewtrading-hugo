@@ -5,6 +5,9 @@ enableRobotsTXT = true
 
 [params]
   # site-wide params can be added here
+  [params.analytics]
+    [params.analytics.ga4]
+      measurement_id = "G-Y5MR71RHK3"
 
 [markup]
   [markup.goldmark]
