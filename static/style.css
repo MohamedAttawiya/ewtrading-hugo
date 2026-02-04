@@ -656,12 +656,37 @@ body.home .rm-card ul{
   gap:.5rem;
   margin-bottom:.05rem;
   position:relative;
-  padding-right:80px;
+  padding-right:132px; /* room for info button + optional icon */
 }
 .grade-header strong{
   margin:0;
   color:var(--accent);
   font-weight:800;
+}
+.grade-info-btn{
+  position:absolute;
+  top:-2px;
+  right:var(--space-1);
+  width:32px;
+  height:32px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--surface-border);
+  background:rgba(15,44,89,0.04);
+  color:var(--primary);
+  font-weight:900;
+  line-height:1;
+  cursor:pointer;
+  z-index:3;
+}
+.grade-card.has-icon .grade-info-btn{
+  right:calc(var(--space-1) + 42px);
+}
+.grade-info-btn:hover{border-color:var(--accent)}
+.grade-info-btn:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:2px;
 }
 .grade-flag{
   position:absolute;
@@ -695,6 +720,9 @@ body.home .rm-card ul{
   transition:opacity .25s ease, transform .25s ease;
   z-index:1;
 }
+.grade-card.has-icon .grade-reason{
+  right:calc(var(--space-1) + 42px + 34px); /* keep clear of info button */
+}
 .grade-card:hover .grade-reason,
 .grade-card.active .grade-reason{
   opacity:1;
@@ -709,6 +737,63 @@ body.home .rm-card ul{
   outline:2px solid var(--accent);
   box-shadow:0 10px 24px rgba(15,44,89,.14);
 }
+
+/* Grade specs modal */
+.grade-modal{
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(.75rem,.4rem + 2vw,1.5rem);
+}
+.grade-modal__backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(15,44,89,.55);
+}
+.grade-modal__dialog{
+  position:relative;
+  z-index:1;
+  width:min(920px,100%);
+  max-height:min(82vh,760px);
+  overflow:auto;
+  background:var(--surface-bg);
+  border:1px solid var(--surface-border);
+  box-shadow:0 18px 48px rgba(15,44,89,.32);
+  padding:var(--space-2);
+}
+.grade-modal__top{
+  display:flex;
+  align-items:flex-start;
+  gap:var(--space-1);
+  margin-bottom:var(--space-1);
+}
+.grade-modal__title{
+  margin:0;
+  color:var(--primary);
+  font-family:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;
+}
+.grade-modal__close{
+  margin-left:auto;
+  border:1px solid var(--surface-border);
+  background:var(--surface-bg);
+  color:var(--ink);
+  min-height:var(--control-h);
+  width:var(--control-h);
+  cursor:pointer;
+  font-size:1.25rem;
+  line-height:1;
+}
+.grade-modal__close:hover{border-color:var(--accent)}
+.grade-modal__close:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:2px;
+}
+.grade-modal__foot{margin-top:var(--space-1)}
+.grade-modal table.data th{width:42%}
+.grade-modal ul{margin:.25rem 0 .25rem 1.1rem;color:var(--muted)}
 
 .ticks{margin-top:.5rem;color:var(--muted);display:grid;gap:.45rem;list-style:none}
 .ticks li{position:relative;padding-left:1.5rem}

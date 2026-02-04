@@ -101,6 +101,7 @@ aliases:
           <div class="grade-card card has-icon" data-family="long" data-app="decorative">
             <div class="grade-header">
               <strong>10927</strong>
+              <button class="grade-info-btn" type="button" aria-label="More info for grade 10927" data-grade="10927">i</button>
               <img class="grade-flag" src="/assets/icons/high-gloss.png" alt="High gloss" loading="lazy" />
               <span class="grade-reason" aria-hidden="true">HIGH GLOSS</span>
             </div>
@@ -113,6 +114,7 @@ aliases:
           <div class="grade-card card has-icon" data-family="long" data-app="decorative,wood">
             <div class="grade-header">
               <strong>10925/2</strong>
+              <button class="grade-info-btn" type="button" aria-label="More info for grade 10925/2" data-grade="10925/2">i</button>
               <img class="grade-flag" src="/assets/icons/wood.png" alt="Wood coatings" loading="lazy" />
               <span class="grade-reason" aria-hidden="true">WOOD</span>
             </div>
@@ -125,6 +127,7 @@ aliases:
           <div class="grade-card card" data-family="long" data-app="decorative">
             <div class="grade-header">
               <strong>20526</strong>
+              <button class="grade-info-btn" type="button" aria-label="More info for grade 20526" data-grade="20526">i</button>
             </div>
             <div class="grade-meta">Family: Long Oil Alkyd</div>
             <p>General decorative coatings</p>
@@ -135,6 +138,7 @@ aliases:
           <div class="grade-card card has-icon" data-family="long" data-app="metal">
             <div class="grade-header">
               <strong>20715/1</strong>
+              <button class="grade-info-btn" type="button" aria-label="More info for grade 20715/1" data-grade="20715/1">i</button>
               <img class="grade-flag" src="/assets/icons/industrial-grade.png" alt="Metal duty" loading="lazy" />
               <span class="grade-reason" aria-hidden="true">METAL</span>
             </div>
@@ -147,6 +151,7 @@ aliases:
           <div class="grade-card card has-icon" data-family="medium" data-app="decorative">
             <div class="grade-header">
               <strong>20563</strong>
+              <button class="grade-info-btn" type="button" aria-label="More info for grade 20563" data-grade="20563">i</button>
               <img class="grade-flag" src="/assets/icons/industrial-grade.png" alt="Industrial grade" loading="lazy" />
               <span class="grade-reason" aria-hidden="true">INDUSTRIAL</span>
             </div>
@@ -159,6 +164,7 @@ aliases:
           <div class="grade-card card has-icon" data-family="medium" data-app="industrial">
             <div class="grade-header">
               <strong>20586</strong>
+              <button class="grade-info-btn" type="button" aria-label="More info for grade 20586" data-grade="20586">i</button>
               <img class="grade-flag" src="/assets/icons/industrial-grade.png" alt="Heavy equipment" loading="lazy" />
               <span class="grade-reason" aria-hidden="true">HEAVY DUTY</span>
             </div>
@@ -171,6 +177,7 @@ aliases:
           <div class="grade-card card has-icon" data-family="short" data-app="industrial,metal">
             <div class="grade-header">
               <strong>20386</strong>
+              <button class="grade-info-btn" type="button" aria-label="More info for grade 20386" data-grade="20386">i</button>
               <img class="grade-flag" src="/assets/icons/quick-dry.png" alt="Quick dry metal" loading="lazy" />
               <span class="grade-reason" aria-hidden="true">QUICK DRY</span>
             </div>
@@ -183,6 +190,7 @@ aliases:
           <div class="grade-card card has-icon" data-family="short" data-app="wood,metal,industrial">
             <div class="grade-header">
               <strong>20957</strong>
+              <button class="grade-info-btn" type="button" aria-label="More info for grade 20957" data-grade="20957">i</button>
               <img class="grade-flag" src="/assets/icons/high-gloss.png" alt="High gloss industrial" loading="lazy" />
               <span class="grade-reason" aria-hidden="true">HIGH GLOSS</span>
             </div>
@@ -195,6 +203,7 @@ aliases:
           <div class="grade-card card has-icon" data-family="urethane" data-app="wood,floor">
             <div class="grade-header">
               <strong>20621/2</strong>
+              <button class="grade-info-btn" type="button" aria-label="More info for grade 20621/2" data-grade="20621/2">i</button>
               <img class="grade-flag" src="/assets/icons/chemical-resistant.png" alt="Chemical resistant" loading="lazy" />
               <span class="grade-reason" aria-hidden="true">CHEM RESIST</span>
             </div>
@@ -202,6 +211,18 @@ aliases:
             <p>Heavy-duty, chemically resistant coatings</p>
             <div class="grade-meta">Docs: TDS / COA / SDS available on request</div>
             <a href="mailto:rfq@ewtradingco.com?subject=RFQ%20-%2020621-2%20Urethane%20Modified%20Alkyd" class="btn ghost">Request RFQ</a>
+          </div>
+        </div>
+
+        <div id="gradeModal" class="grade-modal" hidden>
+          <div class="grade-modal__backdrop" data-grade-modal-close aria-hidden="true"></div>
+          <div class="grade-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="gradeModalTitle">
+            <div class="grade-modal__top">
+              <h3 id="gradeModalTitle" class="grade-modal__title">Grade specs</h3>
+              <button type="button" class="grade-modal__close" data-grade-modal-close aria-label="Close">×</button>
+            </div>
+            <div id="gradeModalContent"></div>
+            <p class="muted small grade-modal__foot">Selection-grade specs shown for quick comparison. Confirm final values via TDS/COA per grade.</p>
           </div>
         </div>
       </div>
