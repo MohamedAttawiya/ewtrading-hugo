@@ -1,0 +1,271 @@
+{
+  "metadata": {
+    "source": "alkyds.html + PACHIN alkyd brochure",
+    "notes": "Selection-grade data. Final formulation, driers, storage, and ASTM methods to be confirmed via TDS per grade.",
+    "chain_length_definition": {
+      "long": "Oil length > ~56%",
+      "medium": "Oil length ~46–55%",
+      "short": "Oil length < ~46%",
+      "urethane_modified": "Alkyd backbone modified with urethane groups"
+    }
+  },
+  "grades": [
+    {
+      "grade": "10927",
+      "chain_length": "long",
+      "oil_type": "soya oil",
+      "oil_percent": 59,
+      "phthalic_anhydride_percent": 27,
+      "polyol": ["pentaerythritol", "glycerol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "70 ± 1"
+      },
+      "viscosity_25c_gardner": "Z6–Z7",
+      "color_max_gardner": 5,
+      "acid_value_max_mg_koh_g": 7,
+      "typical_use": [
+        "high-build interior enamels",
+        "high-build exterior enamels"
+      ]
+    },
+    {
+      "grade": "10925/2",
+      "chain_length": "long",
+      "oil_type": "soya oil",
+      "oil_percent": 59,
+      "phthalic_anhydride_percent": 27,
+      "polyol": ["pentaerythritol", "glycerol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "71 ± 1"
+      },
+      "viscosity_25c_gardner": "Z9–Z10",
+      "color_max_gardner": 5,
+      "acid_value_max_mg_koh_g": 7,
+      "typical_use": [
+        "high-build interior enamels",
+        "high-build exterior enamels"
+      ]
+    },
+    {
+      "grade": "10929/2",
+      "chain_length": "long",
+      "oil_type": "soya oil",
+      "oil_percent": 59,
+      "phthalic_anhydride_percent": 27,
+      "polyol": ["pentaerythritol", "glycerol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "70 ± 1"
+      },
+      "viscosity_25c_gardner": "Z7–Z8",
+      "color_max_gardner": 5,
+      "acid_value_max_mg_koh_g": 7,
+      "typical_use": ["architectural enamels"]
+    },
+    {
+      "grade": "20526",
+      "chain_length": "long",
+      "oil_type": "soya oil",
+      "oil_percent": 62,
+      "phthalic_anhydride_percent": 25,
+      "polyol": ["pentaerythritol", "glycerol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "61 ± 2"
+      },
+      "viscosity_25c_gardner": "X–Y",
+      "color_max_gardner": 4,
+      "acid_value_max_mg_koh_g": 7,
+      "typical_use": [
+        "high-build interior enamels",
+        "high-build exterior enamels"
+      ]
+    },
+    {
+      "grade": "10928",
+      "chain_length": "long",
+      "oil_type": "soya oil",
+      "oil_percent": 59,
+      "phthalic_anhydride_percent": 27,
+      "polyol": ["pentaerythritol", "glycerol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "71 ± 2"
+      },
+      "viscosity_25c_gardner": "Z4–Z5",
+      "color_max_gardner": 5,
+      "acid_value_max_mg_koh_g": 7,
+      "typical_use": ["architectural enamels"]
+    },
+    {
+      "grade": "NRL 55E",
+      "chain_length": "long",
+      "oil_type": "soya fatty acid",
+      "oil_percent": 61,
+      "phthalic_anhydride_percent": 21,
+      "polyol": ["pentaerythritol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "55 ± 1"
+      },
+      "viscosity_25c_gardner": "Y–Z (as such)",
+      "color_max_gardner": 3,
+      "acid_value_max_mg_koh_g": 7,
+      "typical_use": [
+        "high-build interior enamels",
+        "high-build exterior enamels"
+      ]
+    },
+    {
+      "grade": "20715/1",
+      "chain_length": "long",
+      "oil_type": "sunflower fatty acid",
+      "oil_percent": 60,
+      "phthalic_anhydride_percent": 28,
+      "polyol": ["pentaerythritol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "70 ± 1"
+      },
+      "viscosity_25c_gardner": "Z9–Z10",
+      "color_max_gardner": 5,
+      "acid_value_max_mg_koh_g": 12,
+      "typical_use": ["architectural enamels"]
+    },
+    {
+      "grade": "20530 HV",
+      "chain_length": "long",
+      "oil_type": "soya oil",
+      "oil_percent": 59,
+      "phthalic_anhydride_percent": 27,
+      "polyol": ["pentaerythritol", "glycerol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "61 ± 2"
+      },
+      "viscosity_25c_gardner": "Z4–Z5",
+      "color_max_gardner": 4,
+      "acid_value_max_mg_koh_g": 7,
+      "typical_use": ["high-build enamels"]
+    },
+    {
+      "grade": "20563",
+      "chain_length": "medium",
+      "oil_type": "soya oil",
+      "oil_percent": 53,
+      "phthalic_anhydride_percent": 32,
+      "polyol": ["pentaerythritol", "glycerol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "48 ± 2"
+      },
+      "viscosity_25c_gardner": "X–Y",
+      "color_max_gardner": 4,
+      "acid_value_max_mg_koh_g": 7,
+      "typical_use": [
+        "exterior household coatings",
+        "gloss retention systems"
+      ]
+    },
+    {
+      "grade": "20565/2",
+      "chain_length": "medium",
+      "oil_type": "soya oil",
+      "oil_percent": 53,
+      "phthalic_anhydride_percent": 32,
+      "polyol": ["pentaerythritol", "glycerol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "61 ± 2"
+      },
+      "viscosity_25c_gardner": "Z6–Z7",
+      "color_max_gardner": 5,
+      "acid_value_max_mg_koh_g": 10,
+      "typical_use": [
+        "architectural enamels",
+        "yellowing-resistant systems"
+      ]
+    },
+    {
+      "grade": "20586",
+      "chain_length": "medium",
+      "oil_type": "soya fatty acid",
+      "oil_percent": 48,
+      "phthalic_anhydride_percent": 29,
+      "polyol": ["pentaerythritol"],
+      "form": {
+        "solvent": "xylene/solvesso 100 (1:1)",
+        "non_volatile_percent": "70 ± 1"
+      },
+      "viscosity_25c_gardner": {
+        "at_70_percent": "Z7–Z8",
+        "at_60_percent": "Z2–Z3"
+      },
+      "color_max_gardner": 8,
+      "acid_value_max_mg_koh_g": 10,
+      "typical_use": [
+        "fast air-dry finishes",
+        "durable exterior coatings"
+      ]
+    },
+    {
+      "grade": "20386",
+      "chain_length": "short",
+      "oil_type": "soya oil",
+      "oil_percent": 36,
+      "phthalic_anhydride_percent": 31,
+      "polyol": ["pentaerythritol"],
+      "form": {
+        "solvent": "xylene",
+        "non_volatile_percent": "60 ± 1"
+      },
+      "viscosity_25c_gardner": "Z6–Z7",
+      "color_max_gardner": 5,
+      "acid_value_max_mg_koh_g": 7,
+      "typical_use": [
+        "rapid air-dry industrial enamels"
+      ]
+    },
+    {
+      "grade": "20957",
+      "chain_length": "short (chain-stopped)",
+      "oil_type": "soya oil",
+      "oil_percent": 35,
+      "phthalic_anhydride_percent": 30,
+      "polyol": ["pentaerythritol"],
+      "form": {
+        "solvent": "xylene",
+        "non_volatile_percent": "60 ± 1"
+      },
+      "viscosity_25c_gardner": "Z7–Z8 / Y–Z",
+      "color_max_gardner": 6,
+      "acid_value_max_mg_koh_g": 12,
+      "typical_use": [
+        "primers",
+        "industrial enamels",
+        "2K PU wood systems"
+      ]
+    },
+    {
+      "grade": "20621/2",
+      "chain_length": "urethane_modified",
+      "oil_type": "soya oil",
+      "oil_percent": 60,
+      "phthalic_anhydride_percent": null,
+      "polyol": ["pentaerythritol"],
+      "form": {
+        "solvent": "white spirit",
+        "non_volatile_percent": "61 ± 2"
+      },
+      "viscosity_25c_gardner": "Z4–Z5",
+      "color_max_gardner": 6,
+      "acid_value_max_mg_koh_g": 1,
+      "typical_use": [
+        "parquet varnishes",
+        "high hardness floor coatings"
+      ]
+    }
+  ]
+}
