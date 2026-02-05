@@ -416,7 +416,7 @@ body.home .hero::after{
   background-position:0% 0%,0% 0%;
   opacity:.10;
   filter:blur(22px) saturate(160%);
-  animation:heroGlowSweep 26s linear infinite;
+  animation:heroGlowRoll 24s ease-in-out infinite;
   z-index:0;
   pointer-events:none;
 }
@@ -469,10 +469,10 @@ body.home .hero-lines path:nth-child(5){
   50%{transform:translate3d(6%,4%,0) rotate(6deg) scale(1.16);}
   100%{transform:translate3d(-6%,-4%,0) rotate(0deg) scale(1.12);}
 }
-@keyframes heroGlowSweep{
-  0%{background-position:-60% 0%,-60% 0%;opacity:.08;}
-  35%{opacity:.12;}
-  100%{background-position:120% 0%,120% 0%;opacity:.08;}
+@keyframes heroGlowRoll{
+  0%{background-position:0% 0%,0% 0%;opacity:.08;}
+  50%{background-position:100% 0%,100% 0%;opacity:.12;}
+  100%{background-position:0% 0%,0% 0%;opacity:.08;}
 }
 @keyframes heroLineFlow{
   from{stroke-dashoffset:0;}
