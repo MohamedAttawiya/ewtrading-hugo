@@ -897,6 +897,11 @@ body.home .rm-card ul{
   outline:3px solid var(--gold);
   outline-offset:2px;
 }
+.grade-card:hover .grade-info-btn,
+.grade-info-btn:hover{
+  opacity:1;
+  animation:gradeInfoGlow 1.6s ease-in-out infinite;
+}
 .grade-card.active .grade-info-btn{
   opacity:1;
   animation:gradeInfoGlow 1.6s ease-in-out infinite;
@@ -922,6 +927,8 @@ body.home .rm-card ul{
   }
 }
 @media (prefers-reduced-motion: reduce){
+  .grade-card:hover .grade-info-btn,
+  .grade-info-btn:hover,
   .grade-card.active .grade-info-btn{
     animation:none;
     box-shadow:0 0 0 3px rgba(30,158,106,.25);
