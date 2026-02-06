@@ -7,7 +7,9 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', '{{ $id }}');
+    // Defer config until the browser is idle to reduce main-thread contention during initial render.
+    (window.requestIdleCallback || function(cb){setTimeout(cb, 1500);})(function(){
+      gtag('config', '{{ $id }}');
+    });
   </script>
 {{- end -}}
-

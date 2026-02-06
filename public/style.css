@@ -484,6 +484,41 @@ body.home .hero-lines path:nth-child(5){
   body.home .hero-lines path{animation:none;}
 }
 
+/* Performance: stop continuous hero animations when off-screen (set by JS). */
+body.home .hero.hero-paused::before,
+body.home .hero.hero-paused::after{
+  animation-play-state:paused;
+}
+body.home .hero.hero-paused .hero-lines path{
+  animation-play-state:paused;
+}
+
+/* Performance: disable heavy effects on small screens + low-power/data-saver devices. */
+@media (max-width: 768px){
+  body.home .hero::before,
+  body.home .hero::after{
+    animation:none;
+    filter:none;
+    opacity:.07;
+  }
+  body.home .hero-lines path{animation:none;}
+}
+html.low-power body.home .hero::before,
+html.low-power body.home .hero::after{
+  animation:none;
+  filter:none;
+  opacity:.07;
+}
+html.low-power body.home .hero-lines path{animation:none;}
+
+/* Performance: avoid rendering below-the-fold sections until needed (supported browsers only). */
+@supports (content-visibility: auto){
+  body.home .section{
+    content-visibility:auto;
+    contain-intrinsic-size:1px 700px;
+  }
+}
+
 .section{padding:2.25rem 0}
 .section.emphasis{
   background:linear-gradient(180deg,rgba(30,158,106,.06),rgba(30,158,106,0));
