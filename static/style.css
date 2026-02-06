@@ -1052,6 +1052,46 @@ body.grade-modal-open{
 .grade-modal table.data th{width:42%}
 .grade-modal ul{margin:.25rem 0 .25rem 1.1rem;color:var(--muted)}
 
+/* WhatsApp floating contact button */
+.wa-fab{
+  position:fixed;
+  right:calc(18px + env(safe-area-inset-right));
+  bottom:calc(18px + env(safe-area-inset-bottom));
+  width:54px;
+  height:54px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(15,44,89,.14);
+  box-shadow:0 12px 30px rgba(15,44,89,.22);
+  text-decoration:none;
+  z-index:1200;
+  transition:transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.wa-fab:hover{
+  transform:translateY(-1px);
+  box-shadow:
+    0 14px 34px rgba(15,44,89,.24),
+    0 0 0 8px rgba(30,158,106,.12);
+  background:rgba(255,255,255,.98);
+}
+.wa-fab:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:4px;
+}
+.wa-fab__icon{
+  width:26px;
+  height:26px;
+  display:block;
+  object-fit:contain;
+}
+@media (prefers-reduced-motion: reduce){
+  .wa-fab{transition:none;}
+  .wa-fab:hover{transform:none;}
+}
+
 .ticks{margin-top:.5rem;color:var(--muted);display:grid;gap:.45rem;list-style:none}
 .ticks li{position:relative;padding-left:1.5rem}
 .ticks li::before{content:"✓";position:absolute;left:0;top:0;line-height:1;font-weight:700;color:var(--accent)}
