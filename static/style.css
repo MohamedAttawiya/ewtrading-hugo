@@ -837,6 +837,12 @@ body.home .rm-card ul{
   cursor:pointer;
   z-index:2;
 }
+.grade-info-icon{
+  width:20px;
+  height:20px;
+  display:block;
+  object-fit:contain;
+}
 .grade-info-btn:hover{opacity:.85}
 .grade-info-btn:focus-visible{
   outline:3px solid var(--gold);

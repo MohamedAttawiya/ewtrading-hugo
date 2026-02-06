@@ -366,12 +366,151 @@ body.home #pachin .badge-inner{
 }
 body.home .pachin-logo{max-height:58px;}
 
+/* Motion: hero background swoosh (homepage only) */
+body.home .hero{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+body.home .hero::before{
+  content:"";
+  position:absolute;
+  inset:-35%;
+  background-image:var(--hero-swoosh-url, none);
+  background-repeat:no-repeat;
+  background-size:140% 140%;
+  background-position:30% 46%;
+  opacity:.13;
+  filter:blur(64px) saturate(190%);
+  transform:translate3d(-6%,-4%,0) rotate(0deg) scale(1.12);
+  animation:heroSwooshDrift 20s ease-in-out infinite;
+  z-index:0;
+  pointer-events:none;
+}
+body.home .hero::after{
+  content:"";
+  position:absolute;
+  inset:-18% -10%;
+  background:
+    /* wide green glow band */
+    linear-gradient(
+      90deg,
+      rgba(30,158,106,0) 0%,
+      rgba(30,158,106,0) 30%,
+      rgba(30,158,106,.10) 40%,
+      rgba(30,158,106,.26) 50%,
+      rgba(30,158,106,.10) 60%,
+      rgba(30,158,106,0) 70%,
+      rgba(30,158,106,0) 100%
+    ),
+    /* specular highlight (reflection-like shimmer) */
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0) 46%,
+      rgba(255,255,255,.10) 50%,
+      rgba(255,255,255,0) 54%,
+      rgba(255,255,255,0) 100%
+    );
+  background-size:260% 100%,260% 100%;
+  background-position:0% 0%,0% 0%;
+  opacity:.10;
+  filter:blur(22px) saturate(160%);
+  animation:heroGlowSweep 26s linear infinite;
+  z-index:0;
+  pointer-events:none;
+}
+body.home .hero-inner{position:relative;z-index:1;}
+
+/* Motion: ultra-thin flow lines (homepage only) */
+body.home .hero-lines{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  pointer-events:none;
+  opacity:.15;
+  transform:translate3d(0,0,0);
+}
+body.home .hero-lines path{
+  fill:none;
+  stroke:rgba(15,44,89,.95);
+  stroke-width:1.25;
+  stroke-linecap:round;
+  vector-effect:non-scaling-stroke;
+  stroke-dasharray:220 2200;
+  animation:heroLineFlow 25s linear infinite;
+}
+body.home .hero-lines path:nth-child(2),
+body.home .hero-lines path:nth-child(4),
+body.home .hero-lines path:nth-child(6){
+  opacity:.75;
+  stroke-width:1;
+  stroke-dasharray:180 2000;
+  animation-duration:28s;
+  animation-direction:reverse;
+}
+body.home .hero-lines path:nth-child(3){
+  opacity:.55;
+  stroke-width:1;
+  stroke-dasharray:150 1900;
+  animation-duration:32s;
+}
+body.home .hero-lines path:nth-child(5){
+  opacity:.6;
+  stroke-width:1.1;
+  stroke-dasharray:200 2400;
+  animation-duration:30s;
+}
+
+@keyframes heroSwooshDrift{
+  0%{transform:translate3d(-6%,-4%,0) rotate(0deg) scale(1.12);}
+  50%{transform:translate3d(6%,4%,0) rotate(6deg) scale(1.16);}
+  100%{transform:translate3d(-6%,-4%,0) rotate(0deg) scale(1.12);}
+}
+@keyframes heroGlowSweep{
+  0%{background-position:-60% 0%,-60% 0%;opacity:.08;}
+  35%{opacity:.12;}
+  100%{background-position:120% 0%,120% 0%;opacity:.08;}
+}
+@keyframes heroLineFlow{
+  from{stroke-dashoffset:0;}
+  to{stroke-dashoffset:-2400;}
+}
+@media (prefers-reduced-motion: reduce){
+  body.home .hero::before{animation:none;}
+  body.home .hero::after{animation:none;}
+  body.home .hero-lines path{animation:none;}
+}
+
 .section{padding:2.25rem 0}
 .section.emphasis{
   background:linear-gradient(180deg,rgba(30,158,106,.06),rgba(30,158,106,0));
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
 }
 .section-lead{color:var(--muted);margin:.25rem 0 1rem}
+
+/* Motion: reveal sections on scroll (homepage only) */
+body.home .section.reveal{
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity 650ms ease,transform 650ms ease;
+  will-change:opacity,transform;
+}
+body.home .section.reveal.is-revealed{
+  opacity:1;
+  transform:translateY(0);
+}
+@media (prefers-reduced-motion: reduce){
+  body.home .section.reveal,
+  body.home .section.reveal.is-revealed{
+    opacity:1;
+    transform:none;
+    transition:none;
+    will-change:auto;
+  }
+}
 
 /* Homepage section rhythm + anchor affordance */
 body.home .section{
@@ -697,6 +836,12 @@ body.home .rm-card ul{
   line-height:1;
   cursor:pointer;
   z-index:2;
+}
+.grade-info-icon{
+  width:20px;
+  height:20px;
+  display:block;
+  object-fit:contain;
 }
 .grade-info-btn:hover{opacity:.85}
 .grade-info-btn:focus-visible{
