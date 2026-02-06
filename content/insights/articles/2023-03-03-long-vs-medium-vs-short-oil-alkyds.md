@@ -11,9 +11,35 @@ summary: "A practical comparison of long, medium, and short oil alkyd resins —
 Oil length is the single most important structural parameter in alkyd resins. It directly controls drying behavior, film flexibility, hardness, solvent compatibility, and suitable end-use applications.
 {{< /callout >}}
 
-<img src="/assets/ai-photos/long-vs-short/long-vs-short.png" alt="Side-by-side visual of long, medium, and short oil alkyd applications" class="article-figure" loading="lazy" />
+<figure class="article-figure">
+  <picture>
+    <source srcset="/assets/articles/oil-length-alkyds/long-medium-short-oil-alkyds-comparison.webp" type="image/webp" />
+    <img
+      src="/assets/articles/oil-length-alkyds/long-medium-short-oil-alkyds-comparison.jpg"
+      alt="Comparison of long-, medium-, and short-oil alkyds and where each is typically used"
+      width="1200"
+      height="800"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </picture>
+  <figcaption>Oil length shifts the balance: long oil for flexibility, medium for balance, short for hardness and heat-cure systems.</figcaption>
+</figure>
 
-<img src="/assets/ai-photos/long-vs-short/long-vs-short-2.png" alt="Process depiction for alkyd resin production and packaging" class="article-figure" loading="lazy" />
+<figure class="article-figure">
+  <picture>
+    <source srcset="/assets/articles/oil-length-alkyds/alkyd-resin-manufacturing-packaging.webp" type="image/webp" />
+    <img
+      src="/assets/articles/oil-length-alkyds/alkyd-resin-manufacturing-packaging.jpg"
+      alt="Alkyd resin manufacturing flow from raw materials through processing, solvent adjustment, and packaging"
+      width="1200"
+      height="800"
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
+  <figcaption>Alkyd production overview: oils/fatty acids + polyols + anhydrides, then solvent adjustment and packaging.</figcaption>
+</figure>
 
 ## What does “oil length” mean?
 

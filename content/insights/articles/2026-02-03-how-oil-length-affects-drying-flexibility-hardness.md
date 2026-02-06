@@ -13,7 +13,20 @@ This article explains, in practical terms, how oil length directly affects dryin
 
 ---
 
-<img src="/assets/ai-photos/how-chain-length-affects-perfo/Oil length and resin properties explained.png" alt="Diagram showing how alkyd oil length impacts drying, flexibility, and hardness" class="article-figure" loading="lazy" />
+<figure class="article-figure">
+  <picture>
+    <source srcset="/assets/articles/oil-length-performance/alkyd-oil-length-drying-flexibility-hardness.webp" type="image/webp" />
+    <img
+      src="/assets/articles/oil-length-performance/alkyd-oil-length-drying-flexibility-hardness.jpg"
+      alt="Diagram linking alkyd oil length to drying time, flexibility, and hardness"
+      width="1200"
+      height="800"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </picture>
+  <figcaption>Oil length is the structural dial: more oil increases flexibility but slows drying; less oil increases hardness.</figcaption>
+</figure>
 
 ## 1. What oil length actually means in alkyd resins
 
@@ -161,7 +174,20 @@ Long oil alkyds deliver flexibility and toughness at the cost of slower drying. 
 
 In alkyd procurement, oil length is not a specification line item—it is the structural logic of the resin. Buyers who understand this make faster decisions, avoid costly failures, and build more resilient formulations.
 
-<img src="/assets/ai-photos/how-chain-length-affects-perfo/temperature-locale.png" alt="Environmental and logistics considerations for alkyd resin performance" class="article-figure" loading="lazy" />
+<figure class="article-figure">
+  <picture>
+    <source srcset="/assets/articles/oil-length-performance/alkyd-resin-logistics-temperature-storage.webp" type="image/webp" />
+    <img
+      src="/assets/articles/oil-length-performance/alkyd-resin-logistics-temperature-storage.png"
+      alt="Temperature and storage considerations that affect alkyd resin performance during transit"
+      width="490"
+      height="513"
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
+  <figcaption>Logistics reality: temperature and storage time influence oxidation and usability of alkyd resins.</figcaption>
+</figure>
 
 ## FAQ: Oil Length, Drying, Flexibility, and Hardness
 

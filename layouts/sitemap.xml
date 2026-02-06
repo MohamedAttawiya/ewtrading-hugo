@@ -1,0 +1,34 @@
+{{- printf `<?xml version="1.0" encoding="utf-8" standalone="yes"?>` | safeHTML -}}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {{- range .Data.Pages -}}
+    <url>
+      <loc>{{ .Permalink }}</loc>
+      {{- if not .Lastmod.IsZero -}}
+        <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
+      {{- end -}}
+      {{- with .Sitemap.ChangeFreq -}}
+        <changefreq>{{ . }}</changefreq>
+      {{- end -}}
+      {{- if ge .Sitemap.Priority 0.0 -}}
+        <priority>{{ .Sitemap.Priority }}</priority>
+      {{- end -}}
+
+      {{- $isArticle := and (eq .Section "insights") (in .RelPermalink "/insights/articles/") -}}
+      {{- if $isArticle -}}
+        {{- $imgMatches := findRESubmatch `<img[^>]*src=["']([^"']+)["'][^>]*alt=["']([^"']*)["'][^>]*>` .Content -}}
+        {{- range $imgMatches -}}
+          {{- $src := index . 1 -}}
+          {{- $alt := index . 2 -}}
+          {{- if $src -}}
+            <image:image>
+              <image:loc>{{ $src | absURL }}</image:loc>
+              {{- with $alt -}}
+                <image:title>{{ . | htmlEscape }}</image:title>
+              {{- end -}}
+            </image:image>
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    </url>
+  {{- end -}}
+</urlset>

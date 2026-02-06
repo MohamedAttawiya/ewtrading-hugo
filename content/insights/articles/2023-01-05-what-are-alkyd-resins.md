@@ -11,7 +11,20 @@ summary: "A practical explanation of alkyd resin chemistry, how oil length and s
 Despite the rise of acrylics and polyurethanes, alkyd resins remain one of the most widely used binders in decorative, industrial, and specialty coatings — especially where balance, robustness, and cost-efficiency matter.
 {{< /callout >}}
 
-<img src="/assets/ai-photos/what-is-alkyd/what-is-alkyd.png" alt="Illustration of alkyd resin concept and applications" class="article-figure" loading="lazy" />
+<figure class="article-figure">
+  <picture>
+    <source srcset="/assets/articles/alkyd-resin-chemistry/alkyd-resin-chemistry-structure-diagram.webp" type="image/webp" />
+    <img
+      src="/assets/articles/alkyd-resin-chemistry/alkyd-resin-chemistry-structure-diagram.jpg"
+      alt="Alkyd resin chemistry diagram showing the polyester backbone and fatty-acid oil segments"
+      width="1200"
+      height="800"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </picture>
+  <figcaption>Alkyd resins are polyesters modified with fatty acids/oils&mdash;the oil segment drives drying and flexibility.</figcaption>
+</figure>
 
 ## What is an alkyd resin?
 An alkyd resin is a polyester modified with fatty acids or oils. It is produced by reacting three core components:
@@ -78,7 +91,20 @@ In many markets, alkyds also provide cost stability, especially when compared to
 For many enamel and industrial systems, alkyds deliver “good enough everywhere” performance — without formulation complexity or process sensitivity.
 {{< /callout >}}
 
-<img src="/assets/ai-photos/what-is-alkyd/uses-of-alkyd.png" alt="Visual summary of common alkyd resin uses across coatings" class="article-figure" loading="lazy" />
+<figure class="article-figure">
+  <picture>
+    <source srcset="/assets/articles/alkyd-resin-chemistry/alkyd-resin-coatings-applications.webp" type="image/webp" />
+    <img
+      src="/assets/articles/alkyd-resin-chemistry/alkyd-resin-coatings-applications.jpg"
+      alt="Common alkyd resin applications across decorative enamels, industrial finishes, primers, and wood coatings"
+      width="900"
+      height="1350"
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
+  <figcaption>Common alkyd resin applications: enamels, primers, industrial finishes, and wood coatings.</figcaption>
+</figure>
 
 ## Modified alkyds: extending the base chemistry
 To meet higher performance requirements, alkyds are often chemically modified:
