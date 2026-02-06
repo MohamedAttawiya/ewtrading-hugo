@@ -32,6 +32,10 @@
     // Best-effort only.
   }
 
+  if (!reduceMotion && !document.documentElement.classList.contains("low-power")) {
+    document.documentElement.classList.add("motion-ok");
+  }
+
   const sections = Array.from(document.querySelectorAll("section.section"));
   if (sections.length === 0) return;
 

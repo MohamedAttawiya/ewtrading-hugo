@@ -381,9 +381,9 @@ body.home .hero::before{
   background-size:140% 140%;
   background-position:30% 46%;
   opacity:.13;
-  filter:blur(64px) saturate(190%);
+  filter:blur(28px) saturate(140%);
   transform:translate3d(-6%,-4%,0) rotate(0deg) scale(1.12);
-  animation:heroSwooshDrift 20s ease-in-out infinite;
+  animation:none;
   z-index:0;
   pointer-events:none;
 }
@@ -415,8 +415,8 @@ body.home .hero::after{
   background-size:260% 100%,260% 100%;
   background-position:0% 0%,0% 0%;
   opacity:.10;
-  filter:blur(22px) saturate(160%);
-  animation:heroGlowSweep 26s linear infinite;
+  filter:blur(14px) saturate(120%);
+  animation:none;
   z-index:0;
   pointer-events:none;
 }
@@ -431,7 +431,7 @@ body.home .hero-lines{
   z-index:0;
   pointer-events:none;
   opacity:.15;
-  transform:translate3d(0,0,0);
+  transform:none;
 }
 body.home .hero-lines path{
   fill:none;
@@ -439,29 +439,22 @@ body.home .hero-lines path{
   stroke-width:1.25;
   stroke-linecap:round;
   vector-effect:non-scaling-stroke;
-  stroke-dasharray:220 2200;
-  animation:heroLineFlow 25s linear infinite;
+  stroke-dasharray:none;
+  animation:none;
 }
 body.home .hero-lines path:nth-child(2),
 body.home .hero-lines path:nth-child(4),
 body.home .hero-lines path:nth-child(6){
   opacity:.75;
   stroke-width:1;
-  stroke-dasharray:180 2000;
-  animation-duration:28s;
-  animation-direction:reverse;
 }
 body.home .hero-lines path:nth-child(3){
   opacity:.55;
   stroke-width:1;
-  stroke-dasharray:150 1900;
-  animation-duration:32s;
 }
 body.home .hero-lines path:nth-child(5){
   opacity:.6;
   stroke-width:1.1;
-  stroke-dasharray:200 2400;
-  animation-duration:30s;
 }
 
 @keyframes heroSwooshDrift{
@@ -478,10 +471,29 @@ body.home .hero-lines path:nth-child(5){
   from{stroke-dashoffset:0;}
   to{stroke-dashoffset:-2400;}
 }
+@keyframes heroGlowPulse{
+  0%{opacity:.08;}
+  50%{opacity:.11;}
+  100%{opacity:.08;}
+}
+@keyframes heroLinesFloat{
+  0%{transform:translate3d(0,0,0);}
+  50%{transform:translate3d(0,-6px,0);}
+  100%{transform:translate3d(0,0,0);}
+}
 @media (prefers-reduced-motion: reduce){
   body.home .hero::before{animation:none;}
   body.home .hero::after{animation:none;}
   body.home .hero-lines path{animation:none;}
+}
+
+/* Enable lightweight motion on capable devices only (set by JS). */
+html.motion-ok body.home .hero::after{
+  animation:heroGlowPulse 18s ease-in-out infinite;
+}
+html.motion-ok body.home .hero-lines{
+  animation:heroLinesFloat 24s ease-in-out infinite;
+  will-change:transform;
 }
 
 /* Performance: stop continuous hero animations when off-screen (set by JS). */
@@ -489,7 +501,7 @@ body.home .hero.hero-paused::before,
 body.home .hero.hero-paused::after{
   animation-play-state:paused;
 }
-body.home .hero.hero-paused .hero-lines path{
+body.home .hero.hero-paused .hero-lines{
   animation-play-state:paused;
 }
 
@@ -501,6 +513,7 @@ body.home .hero.hero-paused .hero-lines path{
     filter:none;
     opacity:.07;
   }
+  body.home .hero-lines{animation:none;}
   body.home .hero-lines path{animation:none;}
 }
 html.low-power body.home .hero::before,
@@ -509,6 +522,7 @@ html.low-power body.home .hero::after{
   filter:none;
   opacity:.07;
 }
+html.low-power body.home .hero-lines{animation:none;}
 html.low-power body.home .hero-lines path{animation:none;}
 
 /* Performance: avoid rendering below-the-fold sections until needed (supported browsers only). */
