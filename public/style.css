@@ -495,6 +495,19 @@ html.motion-ok body.home .hero::after{
 html.motion-ok body.home .hero-lines{
   animation:heroLinesFloat 24s ease-in-out infinite;
 }
+html.motion-ok body.home .hero-lines path{
+  stroke-dasharray:180 1400;
+  animation:heroLineFlow 30s linear infinite;
+}
+html.motion-ok body.home .hero-lines path:nth-child(2),
+html.motion-ok body.home .hero-lines path:nth-child(4),
+html.motion-ok body.home .hero-lines path:nth-child(6){
+  animation-duration:36s;
+}
+html.motion-ok body.home .hero-lines path:nth-child(3),
+html.motion-ok body.home .hero-lines path:nth-child(5){
+  animation-duration:42s;
+}
 
 /* Performance: stop continuous hero animations when off-screen (set by JS). */
 body.home .hero.hero-paused::before,
@@ -502,6 +515,9 @@ body.home .hero.hero-paused::after{
   animation-play-state:paused;
 }
 body.home .hero.hero-paused .hero-lines{
+  animation-play-state:paused;
+}
+body.home .hero.hero-paused .hero-lines path{
   animation-play-state:paused;
 }
 
