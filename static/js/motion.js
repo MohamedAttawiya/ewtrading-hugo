@@ -5,6 +5,13 @@
     typeof window.matchMedia === "function" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // iOS/iPadOS often reports low CPU core counts that don't correlate with
+  // actual ability to run lightweight CSS animations smoothly.
+  const ua = navigator.userAgent || "";
+  const isAppleMobile =
+    /iPhone|iPad|iPod/i.test(ua) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
   // Performance guardrails for low-power / data-saver devices.
   // (Used by CSS to disable heavy, always-on hero animations.)
   try {
@@ -23,9 +30,11 @@
       typeof navigator.hardwareConcurrency === "number" && Number.isFinite(navigator.hardwareConcurrency)
         ? navigator.hardwareConcurrency
         : 0;
-    const lowCpu = hardwareConcurrency > 0 && hardwareConcurrency <= 4;
+    const lowCpu = hardwareConcurrency > 0 && hardwareConcurrency <= 2;
 
-    if (saveData || slowConnection || lowMemory || lowCpu) {
+    const lowPowerByCpu = lowCpu && !isAppleMobile;
+
+    if (saveData || slowConnection || lowMemory || lowPowerByCpu) {
       document.documentElement.classList.add("low-power");
     }
   } catch {

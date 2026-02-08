@@ -371,6 +371,7 @@ body.home .hero{
   position:relative;
   overflow:hidden;
   isolation:isolate;
+  contain:paint;
 }
 body.home .hero::before{
   content:"";
@@ -381,7 +382,7 @@ body.home .hero::before{
   background-size:140% 140%;
   background-position:30% 46%;
   opacity:.13;
-  filter:blur(28px) saturate(140%);
+  filter:blur(18px) saturate(130%);
   transform:translate3d(-6%,-4%,0) rotate(0deg) scale(1.12);
   animation:none;
   z-index:0;
@@ -415,7 +416,7 @@ body.home .hero::after{
   background-size:260% 100%,260% 100%;
   background-position:0% 0%,0% 0%;
   opacity:.10;
-  filter:blur(14px) saturate(120%);
+  filter:blur(8px) saturate(115%);
   animation:none;
   z-index:0;
   pointer-events:none;
@@ -493,7 +494,6 @@ html.motion-ok body.home .hero::after{
 }
 html.motion-ok body.home .hero-lines{
   animation:heroLinesFloat 24s ease-in-out infinite;
-  will-change:transform;
 }
 
 /* Performance: stop continuous hero animations when off-screen (set by JS). */
@@ -507,14 +507,28 @@ body.home .hero.hero-paused .hero-lines{
 
 /* Performance: disable heavy effects on small screens + low-power/data-saver devices. */
 @media (max-width: 768px){
-  body.home .hero::before,
-  body.home .hero::after{
-    animation:none;
-    filter:none;
-    opacity:.07;
+  body.home .hero::before{
+    display:none;
   }
-  body.home .hero-lines{animation:none;}
-  body.home .hero-lines path{animation:none;}
+  body.home .hero::after{
+    inset:-10% -6%;
+    filter:none;
+    opacity:.06;
+  }
+  body.home .hero-lines{
+    opacity:.12;
+  }
+  body.home .hero-lines path{
+    stroke-width:1;
+  }
+
+  /* Keep subtle movement on mobile/iOS unless reduced/low-power is active. */
+  html.motion-ok body.home .hero::after{
+    animation:heroGlowPulse 16s ease-in-out infinite;
+  }
+  html.motion-ok body.home .hero-lines{
+    animation:heroLinesFloat 20s ease-in-out infinite;
+  }
 }
 html.low-power body.home .hero::before,
 html.low-power body.home .hero::after{
@@ -545,6 +559,8 @@ body.home .section.reveal{
   opacity:0;
   transform:translateY(12px);
   transition:opacity 650ms ease,transform 650ms ease;
+}
+body.home .section.reveal:not(.is-revealed){
   will-change:opacity,transform;
 }
 body.home .section.reveal.is-revealed{
