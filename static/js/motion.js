@@ -11,6 +11,8 @@
   const isAppleMobile =
     /iPhone|iPad|iPod/i.test(ua) ||
     (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isMobileLike =
+    isAppleMobile || /Android|Mobile|Tablet/i.test(ua);
 
   // Performance guardrails for low-power / data-saver devices.
   // (Used by CSS to disable heavy, always-on hero animations.)
@@ -24,7 +26,7 @@
       typeof navigator.deviceMemory === "number" && Number.isFinite(navigator.deviceMemory)
         ? navigator.deviceMemory
         : 0;
-    const lowMemory = deviceMemory > 0 && deviceMemory <= 4;
+    const lowMemory = deviceMemory > 0 && deviceMemory <= 2;
 
     const hardwareConcurrency =
       typeof navigator.hardwareConcurrency === "number" && Number.isFinite(navigator.hardwareConcurrency)
@@ -32,9 +34,11 @@
         : 0;
     const lowCpu = hardwareConcurrency > 0 && hardwareConcurrency <= 2;
 
-    const lowPowerByCpu = lowCpu && !isAppleMobile;
+    // Hardware heuristics are only reliable for mobile-like devices.
+    // Desktop browsers often under/over-report these values.
+    const lowPowerByHardware = isMobileLike && (lowMemory || lowCpu);
 
-    if (saveData || slowConnection || lowMemory || lowPowerByCpu) {
+    if (saveData || slowConnection || lowPowerByHardware) {
       document.documentElement.classList.add("low-power");
     }
   } catch {
