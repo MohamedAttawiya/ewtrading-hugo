@@ -1,0 +1,30 @@
+# Hugo build output
+/public/
+/public_*/
+/public-*/
+/public_tmp*/
+/publictmp*/
+/resources/_gen/
+/.hugo_build.lock
+/.hugo_cache/
+
+# Node/package manager artifacts
+/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Netlify local state
+/.netlify/
+
+# Editor/OS noise
+.DS_Store
+Thumbs.db
+/.idea/
+/.vscode/

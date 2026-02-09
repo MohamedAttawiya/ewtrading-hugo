@@ -113,16 +113,24 @@
     if (card) card.classList.add('active');
   };
 
+  const openInfoForCard = (card, triggerEl) => {
+    if (!card || card.hidden) return;
+
+    const infoBtn = card.querySelector('.grade-info-btn');
+    const gradeId = infoBtn && infoBtn.dataset ? infoBtn.dataset.grade : '';
+    if (!gradeId) return;
+
+    activateCard(card);
+    openGradeModal(gradeId, triggerEl || infoBtn || card);
+  };
+
   cards.forEach(card => {
     card.addEventListener('click', () => {
       if (card.hidden) return;
       activateCard(card);
     });
     card.addEventListener('dblclick', () => {
-      if (card.hidden) return;
-      const infoBtn = card.querySelector('.grade-info-btn');
-      const gradeId = infoBtn && infoBtn.dataset ? infoBtn.dataset.grade : '';
-      if (gradeId) openGradeModal(gradeId, infoBtn || card);
+      openInfoForCard(card, card);
     });
     card.addEventListener('keydown', evt => {
       if ((evt.key === 'Enter' || evt.key === ' ') && !card.hidden) {
@@ -373,7 +381,7 @@
       evt.preventDefault();
       evt.stopPropagation();
       if (btn.disabled) return;
-      openGradeModal(btn.dataset.grade, btn);
+      openInfoForCard(btn.closest('.grade-card'), btn);
     });
 
     btn.addEventListener('keydown', evt => {
