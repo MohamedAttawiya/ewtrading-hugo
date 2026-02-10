@@ -13,8 +13,8 @@ Current focus: SEO capture for commercial and problem-aware traffic. Fundamental
 2. [done] Selecting Alkyd Resins for Industrial Metal Coatings
 3. [done] Alkyd Resins for Wood Coatings: Penetration, Gloss, and Durability
 4. [done] Choosing Between Standard Alkyds and Urethane-Modified Alkyds
-5. [ ] Which Alkyd Oil Types Matter (Soy, Linseed, Tall Oil) and Which Do Not
-6. [ ] Selecting Alkyd Resins for Hot Climate Applications (Middle East and Africa)
+5. [done] Which Alkyd Oil Types Matter (Soy, Linseed, Tall Oil) and Which Do Not
+6. [done] Selecting Alkyd Resins for Hot Climate Applications (Middle East and Africa)
 7. [ ] Fast-Dry vs Long-Open-Time Alkyds: How to Decide
 8. [ ] Alkyd Resins for High-Gloss Enamels: What to Look For
 
