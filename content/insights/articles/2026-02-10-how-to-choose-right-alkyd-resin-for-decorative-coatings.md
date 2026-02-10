@@ -13,12 +13,11 @@ Most decorative coating failures are not caused by additives. They usually start
 
 <figure class="article-figure">
   <picture>
-    <source srcset="/assets/articles/decorative-alkyd-selection/decorative-alkyd-resin-selection-framework.webp" type="image/webp" />
     <img
-      src="/assets/articles/decorative-alkyd-selection/decorative-alkyd-resin-selection-framework.jpg"
+      src="/assets/articles/decorative-alkyd-selection/decorative-alkyd-resin-selection-framework.png"
       alt="Framework for selecting alkyd resin type for decorative coatings"
-      width="1200"
-      height="800"
+      width="798"
+      height="722"
       decoding="async"
       fetchpriority="high"
     />
@@ -107,17 +106,16 @@ Resin selection and drying package must be validated together.
 
 <figure class="article-figure">
   <picture>
-    <source srcset="/assets/articles/decorative-alkyd-selection/decorative-alkyd-coating-failure-modes.webp" type="image/webp" />
     <img
-      src="/assets/articles/decorative-alkyd-selection/decorative-alkyd-coating-failure-modes.jpg"
-      alt="Common decorative alkyd coating failure modes and corrective actions"
-      width="1200"
-      height="800"
+      src="/assets/articles/decorative-alkyd-selection/decorative-alkyd-resin-selection-types.png"
+      alt="Decorative alkyd resin selection types and application fit"
+      width="716"
+      height="599"
       loading="lazy"
       decoding="async"
     />
   </picture>
-  <figcaption>Most decorative failures map back to resin-fit and drying-package mismatch, not pigment choice alone.</figcaption>
+  <figcaption>Selection types overview: match alkyd resin family to decorative coating requirements and service conditions.</figcaption>
 </figure>
 
 ## 6. Use a practical selection checklist

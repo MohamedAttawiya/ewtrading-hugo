@@ -1244,18 +1244,30 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   margin:1.25rem auto;
   max-width:960px;
   width:100%;
+  text-align:center;
 }
 .article-figure picture,
 .article-figure img{
   display:block;
   width:100%;
   height:auto;
+  margin-left:auto;
+  margin-right:auto;
 }
 .article-figure figcaption{
   margin-top:.5rem;
   color:var(--muted);
   font-size:.95rem;
   line-height:1.45;
+  text-align:center;
+}
+
+.article-body figure img,
+.article-body picture img,
+.article-body p > img{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 /* Article comparison tables */

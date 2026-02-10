@@ -13,12 +13,11 @@ In industrial metal coatings, wrong resin selection increases corrosion risk, re
 
 <figure class="article-figure">
   <picture>
-    <source srcset="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-alkyd-selection-matrix.webp" type="image/webp" />
     <img
-      src="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-alkyd-selection-matrix.jpg"
+      src="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-alkyd-selection-matrix.png"
       alt="Selection matrix for choosing alkyd resin type in industrial metal coatings"
-      width="1200"
-      height="800"
+      width="615"
+      height="788"
       decoding="async"
       fetchpriority="high"
     />
@@ -92,12 +91,11 @@ Single-layer optimization without system validation often produces early edge co
 
 <figure class="article-figure">
   <picture>
-    <source srcset="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-coating-system-stack.webp" type="image/webp" />
     <img
-      src="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-coating-system-stack.jpg"
+      src="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-coating-system-stack.png"
       alt="Industrial metal coating stack showing primer, build layer, and topcoat risk points"
-      width="1200"
-      height="800"
+      width="589"
+      height="802"
       loading="lazy"
       decoding="async"
     />
