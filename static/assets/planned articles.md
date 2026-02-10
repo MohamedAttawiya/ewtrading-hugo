@@ -1,75 +1,70 @@
 # Alkyd Insights Content Roadmap (Numbered Checklist)
 
 Use this list to track writing progress for each Insights article.
+Current focus: SEO capture for commercial and problem-aware traffic. Fundamentals are deprioritized for now.
 
 ---
 
-## A. Alkyd Fundamentals (First-time & SEO entry traffic)
+## A. SEO Capture (Current Priority)
 
-1. [1] What Are Alkyd Resins? Chemistry, Structure, and Why They’re Still Used  
-2. [1] Long Oil vs Medium Oil vs Short Oil Alkyds: Practical Differences Explained  
-3. [ ] How Oil Length Directly Affects Drying Time, Flexibility, and Hardness  
-4. [ ] How Alkyd Resins Cure: Understanding Oxidative Drying (Without the Chemistry Degree)  
-5. [ ] What Is an Urethane-Modified Alkyd and When Does It Make Sense?  
-6. [ ] Why Alkyd Coatings Are Still Dominant in Emerging Markets  
-7. [ ] Common Myths About Alkyd Resins (And What Actually Matters)  
+### A1. Selection and Application Guidance (high-conversion content)
 
----
+1. [done] How to Choose the Right Alkyd Resin for Decorative Coatings
+2. [done] Selecting Alkyd Resins for Industrial Metal Coatings
+3. [ ] Alkyd Resins for Wood Coatings: Penetration, Gloss, and Durability
+4. [ ] Choosing Between Standard Alkyds and Urethane-Modified Alkyds
+5. [ ] Which Alkyd Oil Types Matter (Soy, Linseed, Tall Oil) and Which Do Not
+6. [ ] Selecting Alkyd Resins for Hot Climate Applications (Middle East and Africa)
+7. [ ] Fast-Dry vs Long-Open-Time Alkyds: How to Decide
+8. [ ] Alkyd Resins for High-Gloss Enamels: What to Look For
 
-## B. Selection & Application Guidance (High-conversion content)
+### A2. Technical Specs and QA (trust-building SEO)
 
-8. [ ] How to Choose the Right Alkyd Resin for Decorative Coatings  
-9. [ ] Selecting Alkyd Resins for Industrial Metal Coatings  
-10. [ ] Alkyd Resins for Wood Coatings: Penetration, Gloss, and Durability  
-11. [ ] Choosing Between Standard Alkyds and Urethane-Modified Alkyds  
-12. [ ] Which Alkyd Oil Types Matter (Soy, Linseed, Tall Oil) — and Which Don’t  
-13. [ ] Selecting Alkyd Resins for Hot Climate Applications (Middle East & Africa)  
-14. [ ] Fast-Dry vs Long-Open-Time Alkyds: How to Decide  
-15. [ ] Alkyd Resins for High-Gloss Enamels: What to Look For  
+9. [ ] How to Read an Alkyd Resin Certificate of Analysis (COA)
+10. [ ] Which COA Parameters Actually Matter for Alkyd Performance
+11. [ ] Understanding Alkyd Resin Viscosity: Brookfield vs Gardner vs KU
+12. [ ] Acid Value Explained: What Buyers Get Wrong
+13. [ ] Non-Volatile Content (NV%) and What It Means for Your Formulation
+14. [ ] Batch-to-Batch Consistency: How to Evaluate Alkyd Resin Quality
+15. [ ] Typical Acceptable Specification Ranges for Alkyd Resins (Practical Guide)
 
----
+### A3. Formulation and Troubleshooting (high-intent technical queries)
 
-## C. Technical Specifications & QA (Trust-building content)
+16. [ ] Why Alkyd Paints Wrinkle and How to Prevent It
+17. [ ] Why Your Alkyd Paint Dries Too Slowly (or Too Fast)
+18. [ ] Understanding Drier Systems in Alkyd Paints (Cobalt, Manganese, Iron)
+19. [ ] Cobalt-Free Driers: What Works, What Does Not, and Trade-offs
+20. [ ] Why the Second Coat of Alkyd Sometimes Dries Faster Than the First
+21. [ ] Pigment Compatibility Problems in Alkyd Paints (Especially TiO2)
+22. [ ] Orange Peel, Cratering, and Pinholes in Alkyd Coatings: Root Causes
+23. [ ] Balancing Hardness vs Flexibility in Alkyd Formulations
 
-16. [ ] How to Read an Alkyd Resin Certificate of Analysis (COA)  
-17. [ ] Which COA Parameters Actually Matter for Alkyd Performance  
-18. [ ] Understanding Alkyd Resin Viscosity: Brookfield vs Gardner vs KU  
-19. [ ] Acid Value Explained: What Buyers Get Wrong  
-20. [ ] Non-Volatile Content (NV%) and What It Means for Your Formulation  
-21. [ ] Batch-to-Batch Consistency: How to Evaluate Alkyd Resin Quality  
-22. [ ] Typical Acceptable Specification Ranges for Alkyd Resins (Explained Practically)  
+### A4. Storage, Packaging, and Export (procurement-driven SEO)
 
----
+24. [ ] How Long Do Alkyd Resins Last? Shelf Life Explained
+25. [ ] Proper Storage Conditions for Alkyd Resins (Temperature, Time, Oxygen)
+26. [ ] Packaging Options for Alkyd Resin Exports: Drums vs IBCs vs Bulk
+27. [ ] Why Nitrogen Blanketing Matters for Alkyd Resin Shipments
+28. [ ] Export Documentation Buyers Should Request for Alkyd Resins
+29. [ ] Common Quality Risks During Long-Distance Alkyd Resin Shipping
+30. [ ] Alkyd Resin Shipping Challenges in Africa: What Buyers Should Plan For
+31. [ ] Alkyd Resin Logistics in Hot Climates: How to Reduce Degradation Risk
 
-## D. Formulation & Troubleshooting (Technical authority)
+### A5. Market and Comparison SEO (decision-stage content)
 
-23. [ ] Why Alkyd Paints Wrinkle — and How to Prevent It  
-24. [ ] Why Your Alkyd Paint Dries Too Slowly (or Too Fast)  
-25. [ ] Understanding Drier Systems in Alkyd Paints (Cobalt, Manganese, Iron)  
-26. [ ] Cobalt-Free Driers: What Works, What Doesn’t, and the Trade-offs  
-27. [ ] Why the Second Coat of Alkyd Sometimes Dries Faster Than the First  
-28. [ ] Pigment Compatibility Problems in Alkyd Paints (Especially TiO₂)  
-29. [ ] Orange Peel, Cratering, and Pinholes in Alkyd Coatings — Root Causes  
-30. [ ] Balancing Hardness vs Flexibility in Alkyd Formulations  
-
----
-
-## E. Storage, Packaging & Export (Procurement-driven SEO)
-
-31. [ ] How Long Do Alkyd Resins Last? Shelf Life Explained  
-32. [ ] Proper Storage Conditions for Alkyd Resins (Temperature, Time, Oxygen)  
-33. [ ] Packaging Options for Alkyd Resin Exports: Drums vs IBCs vs Bulk  
-34. [ ] Why Nitrogen Blanketing Matters for Alkyd Resin Shipments  
-35. [ ] Export Documentation Buyers Should Request for Alkyd Resins  
-36. [ ] Common Quality Risks During Long-Distance Alkyd Resin Shipping  
-37. [ ] Alkyd Resin Shipping Challenges in Africa: What Buyers Should Plan For  
-38. [ ] Alkyd Resin Logistics in Hot Climates: How to Reduce Degradation Risk  
+32. [ ] Alkyd vs Acrylic Resins: Real-World Performance Trade-offs
+33. [ ] Are Solvent-Based Alkyds Really Being Phased Out? Market Reality vs Hype
 
 ---
 
-## F. Market & Regulatory Reality (Strategic credibility)
+## B. Fundamentals (Lower Priority for Now)
 
-39. [ ] Alkyd vs Acrylic Resins: Real-World Performance Trade-offs  
-40. [ ] Are Solvent-Based Alkyds Really Being Phased Out? Market Reality vs Hype  
+34. [done] What Are Alkyd Resins? Chemistry, Structure, and Why They Are Still Used
+35. [done] Long Oil vs Medium Oil vs Short Oil Alkyds: Practical Differences Explained
+36. [done] How Oil Length Directly Affects Drying Time, Flexibility, and Hardness
+37. [ ] How Alkyd Resins Cure: Understanding Oxidative Drying (Without the Chemistry Degree)
+38. [ ] What Is an Urethane-Modified Alkyd and When Does It Make Sense?
+39. [ ] Why Alkyd Coatings Are Still Dominant in Emerging Markets
+40. [ ] Common Myths About Alkyd Resins (And What Actually Matters)
 
 ---
