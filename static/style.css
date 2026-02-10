@@ -1249,7 +1249,8 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
 .article-figure picture,
 .article-figure img{
   display:block;
-  width:100%;
+  width:auto;
+  max-width:100%;
   height:auto;
   margin-left:auto;
   margin-right:auto;
@@ -1268,6 +1269,14 @@ main ul.inline, main ul.no-markers { list-style: none; padding-left: 0; }
   display:block;
   margin-left:auto;
   margin-right:auto;
+  width:auto;
+  max-width:100%;
+  height:auto;
+}
+.article-body figure{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
 }
 
 /* Article comparison tables */
