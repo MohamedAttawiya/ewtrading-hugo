@@ -1,5 +1,9 @@
 (() => {
-  if (!document.body?.classList.contains("home")) return;
+  const isHome = document.body?.classList.contains("home");
+  const isPartners = Boolean(document.querySelector("main.partners-page"));
+  const insightCards = Array.from(document.querySelectorAll(".insights-cards .card"));
+  const hasInsightsCards = insightCards.length > 0;
+  if (!isHome && !isPartners && !hasInsightsCards) return;
 
   const reduceMotion =
     typeof window.matchMedia === "function" &&
@@ -50,15 +54,20 @@
   }
 
   const sections = Array.from(document.querySelectorAll("section.section"));
-  if (sections.length === 0) return;
+  const hasSections = sections.length > 0;
+  if (!hasSections && !hasInsightsCards) return;
 
   const reveal = (el) => el.classList.add("is-revealed");
 
   for (const section of sections) section.classList.add("reveal");
+  for (const [index, card] of insightCards.entries()) {
+    card.classList.add("swoosh-reveal");
+    card.style.setProperty("--swoosh-delay", `${Math.min(index * 55, 280)}ms`);
+  }
 
   // Pause expensive, continuous hero animations once the hero is off-screen.
   const hero = document.querySelector("section.hero");
-  if (hero && "IntersectionObserver" in window && !reduceMotion) {
+  if (isHome && hero && "IntersectionObserver" in window && !reduceMotion) {
     const heroObserver = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -72,6 +81,7 @@
 
   if (reduceMotion || !("IntersectionObserver" in window)) {
     for (const section of sections) reveal(section);
+    for (const card of insightCards) reveal(card);
     return;
   }
 
@@ -84,6 +94,9 @@
 
   for (const section of sections) {
     if (isNearViewport(section)) reveal(section);
+  }
+  for (const card of insightCards) {
+    if (isNearViewport(card)) reveal(card);
   }
 
   const observer = new IntersectionObserver(
@@ -99,5 +112,20 @@
 
   for (const section of sections) {
     if (!section.classList.contains("is-revealed")) observer.observe(section);
+  }
+
+  const cardsObserver = new IntersectionObserver(
+    (entries, obs) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        reveal(entry.target);
+        obs.unobserve(entry.target);
+      }
+    },
+    { root: null, threshold: 0.2, rootMargin: "0px 0px -8% 0px" },
+  );
+
+  for (const card of insightCards) {
+    if (!card.classList.contains("is-revealed")) cardsObserver.observe(card);
   }
 })();
