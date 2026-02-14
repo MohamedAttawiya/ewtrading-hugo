@@ -14,7 +14,7 @@ Most decorative coating failures are not caused by additives. They usually start
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/decorative-alkyd-selection/decorative-alkyd-resin-selection-framework.png"
+      src="/assets/articles/decorative-alkyd-selection/decorative-alkyd-resin-selection-framework.webp"
       alt="Framework for selecting alkyd resin type for decorative coatings"
       width="798"
       height="722"
@@ -107,7 +107,7 @@ Resin selection and drying package must be validated together.
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/decorative-alkyd-selection/decorative-alkyd-resin-selection-types.png"
+      src="/assets/articles/decorative-alkyd-selection/decorative-alkyd-resin-selection-types.webp"
       alt="Decorative alkyd resin selection types and application fit"
       width="716"
       height="599"
@@ -137,7 +137,7 @@ The right decorative alkyd is the one that balances appearance, handling speed, 
 A structured selection process cuts defects, shortens scale-up time, and improves customer consistency.
 
 {{< btn href="/alkyds" text="View Alkyd Resin Families" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=Decorative%20Alkyd%20Resin%20Selection" text="Request Grade Recommendation" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Request Grade Recommendation" kind="primary" >}}
 
 ## FAQ: Decorative Alkyd Resin Selection
 
@@ -163,3 +163,4 @@ A structured selection process cuts defects, shortens scale-up time, and improve
   <p>Choosing resin based only on target hardness while ignoring application method and climate. This usually creates recoat delays, wrinkling, or poor leveling.</p>
 </details>
 </section>
+

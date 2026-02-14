@@ -82,7 +82,7 @@ Use this quick rule set:
 Choose fast-dry vs long-open-time alkyds based on your actual process bottleneck: appearance defects or cycle-time constraints. Most robust systems use a balanced resin family, then adjust drier and solvent design to hit both quality and throughput targets with minimal rework.
 
 {{< btn href="/alkyds" text="Browse Alkyd Resin Families" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=Fast-Dry%20vs%20Long-Open-Time%20Alkyd%20Selection" text="Request Selection Support" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Request Selection Support" kind="primary" >}}
 
 ## FAQ: Fast-Dry vs Long-Open-Time Alkyds
 
@@ -108,3 +108,4 @@ Choose fast-dry vs long-open-time alkyds based on your actual process bottleneck
   <p>Check open time, tack-free and through-dry profile, sag resistance, hardness development, and block resistance under realistic application conditions.</p>
 </details>
 </section>
+

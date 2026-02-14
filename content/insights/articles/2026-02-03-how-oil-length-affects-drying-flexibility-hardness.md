@@ -178,7 +178,7 @@ In alkyd procurement, oil length is not a specification line item—it is the st
   <picture>
     <source srcset="/assets/articles/oil-length-performance/alkyd-resin-logistics-temperature-storage.webp" type="image/webp" />
     <img
-      src="/assets/articles/oil-length-performance/alkyd-resin-logistics-temperature-storage.png"
+      src="/assets/articles/oil-length-performance/alkyd-resin-logistics-temperature-storage.webp"
       alt="Temperature and storage considerations that affect alkyd resin performance during transit"
       width="490"
       height="513"

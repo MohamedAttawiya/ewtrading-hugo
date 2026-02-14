@@ -211,7 +211,7 @@ Most formulation issues trace back to oil length mismatch, not additive choice o
 Oil length determines how an alkyd behaves before, during, and after application. Long, medium, and short oil alkyds are purpose-built tools—choose the one that fits your curing method, film properties, and process speed.
 
 {{< btn href="/alkyds" text="View Alkyd Resin Families" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=Alkyd%20Selection%20Inquiry" text="Talk to Technical Sales" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Talk to Technical Sales" kind="primary" >}}
 
 ## FAQ: Choosing Alkyd Oil Length
 
@@ -237,4 +237,5 @@ Oil length determines how an alkyd behaves before, during, and after application
   <p>Modifiers can raise hardness or resistance at a given oil length, but they don’t replace the core role of oil length. Choose oil length first, then use modifiers to fine-tune performance.</p>
 </details>
 </section>
+
 

@@ -81,11 +81,41 @@ description: "For distributor partnerships, bulk inquiries, and alkyd resin expo
 (function () {
   const form = document.getElementById('contactForm');
   const status = document.getElementById('status');
+  const query = new URLSearchParams(window.location.search);
+  const leadContext = {
+    source: (query.get('source') || '').trim(),
+    intent: (query.get('intent') || '').trim(),
+    topic: (query.get('topic') || '').trim(),
+    grade: (query.get('grade') || '').trim()
+  };
 
   function setStatus(msg, ok) {
     status.textContent = msg;
     status.className = 'small ' + (ok ? '' : 'muted');
   }
+
+  function prefillFromContext() {
+    const bits = [];
+    if (leadContext.intent) bits.push(leadContext.intent);
+    if (leadContext.topic) bits.push(leadContext.topic);
+    if (leadContext.grade) bits.push('grade ' + leadContext.grade);
+
+    if (bits.length && !form.title.value.trim()) {
+      form.title.value = 'RFQ - ' + bits.join(' / ');
+    }
+
+    if (!form.message.value.trim() && (leadContext.source || bits.length)) {
+      const lines = ['Inquiry context:'];
+      if (leadContext.source) lines.push('- Source: ' + leadContext.source);
+      if (leadContext.intent) lines.push('- Intent: ' + leadContext.intent);
+      if (leadContext.topic) lines.push('- Topic: ' + leadContext.topic);
+      if (leadContext.grade) lines.push('- Grade: ' + leadContext.grade);
+      lines.push('', 'Requirement details:');
+      form.message.value = lines.join('\n');
+    }
+  }
+
+  prefillFromContext();
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -125,6 +155,15 @@ description: "For distributor partnerships, bulk inquiries, and alkyd resin expo
 
       if (res.ok) {
         setStatus('Thank you -- your message has been sent.', true);
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            lead_source: leadContext.source || 'contact_page',
+            lead_method: 'form_submit',
+            lead_intent: leadContext.intent || 'general',
+            lead_topic: leadContext.topic || '',
+            lead_grade: leadContext.grade || ''
+          });
+        }
         form.reset();
       } else {
         setStatus(data.error || 'Failed to send message.', false);

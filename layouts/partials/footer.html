@@ -6,10 +6,10 @@
       </p>
 
       <div class="footer-actions">
-        <a class="btn secondary footer-btn" href="mailto:rfq@ewtradingco.com?subject=RFQ%20Request%20%E2%80%94%20E%26W%20Trading%20Group">
+        <a class="btn secondary footer-btn" href="/contact/?source=footer&intent=rfq" data-track-source="footer">
           Get RFQ
         </a>
-        <a class="btn secondary footer-btn" href="mailto:sales@ewtradingco.com?subject=Sales%20Inquiry%20%E2%80%94%20E%26W%20Trading%20Group">
+        <a class="btn secondary footer-btn" href="/contact/?source=footer&intent=sales" data-track-source="footer">
           Contact Sales
         </a>
       </div>
@@ -28,9 +28,9 @@
         <div class="footer-col">
           <h4>Commercial</h4>
           <ul>
-            <li><a href="mailto:rfq@ewtradingco.com?subject=RFQ%20Request%20%E2%80%94%20E%26W%20Trading%20Group">Request Quote (RFQ)</a></li>
-            <li><a href="mailto:sales@ewtradingco.com?subject=Sales%20Inquiry%20%E2%80%94%20E%26W%20Trading%20Group">Sales Desk</a></li>
-            <li><a href="/contact/">General Contact</a></li>
+            <li><a href="/contact/?source=footer&intent=rfq" data-track-source="footer">Request Quote (RFQ)</a></li>
+            <li><a href="/contact/?source=footer&intent=sales" data-track-source="footer">Sales Desk</a></li>
+            <li><a href="/contact/?source=footer&intent=general" data-track-source="footer">General Contact</a></li>
           </ul>
         </div>
 
@@ -56,6 +56,6 @@
   </div>
 
   <div class="footer-bottom container">
-    <p class="footer-legal">© {{ now.Format "2006" }} E&W Trading Group. All rights reserved.</p>
+    <p class="footer-legal">&copy; {{ now.Format "2006" }} E&W Trading Group. All rights reserved.</p>
   </div>
 </footer>

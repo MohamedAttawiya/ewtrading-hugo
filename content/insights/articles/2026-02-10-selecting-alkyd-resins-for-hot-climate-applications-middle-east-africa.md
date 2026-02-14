@@ -14,7 +14,7 @@ A resin that performs well in moderate climates can fail in hot regions due to a
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/hot-climate-alkyd-selection/hot-climate-alkyd-selection-risk-map.png"
+      src="/assets/articles/hot-climate-alkyd-selection/hot-climate-alkyd-selection-risk-map.webp"
       alt="Risk map for selecting alkyd resins in high-temperature Middle East and Africa environments"
       width="1101"
       height="738"
@@ -100,7 +100,7 @@ This step reduces complaint risk in export-driven supply chains.
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/hot-climate-alkyd-selection/alkyd-logistics-heat-stability-checklist.png"
+      src="/assets/articles/hot-climate-alkyd-selection/alkyd-logistics-heat-stability-checklist.webp"
       alt="Checklist for alkyd resin logistics and heat stability control in export routes"
       width="498"
       height="650"
@@ -116,7 +116,7 @@ This step reduces complaint risk in export-driven supply chains.
 Selecting alkyd resins for Middle East and Africa applications requires climate-specific engineering. The right resin is one that balances open time, dry profile, and long-route stability under real temperature stress. Hot-climate reliability comes from formulation and logistics working together.
 
 {{< btn href="/alkyds" text="Explore Alkyd Resin Portfolio" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=Hot%20Climate%20Alkyd%20Selection" text="Request Hot-Climate Grade Support" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Request Hot-Climate Grade Support" kind="primary" >}}
 
 ## FAQ: Hot-Climate Alkyd Selection
 
@@ -142,3 +142,4 @@ Selecting alkyd resins for Middle East and Africa applications requires climate-
   <p>Field-simulated panel testing after heat-exposed storage is usually the highest-value gate before full commercial rollout.</p>
 </details>
 </section>
+

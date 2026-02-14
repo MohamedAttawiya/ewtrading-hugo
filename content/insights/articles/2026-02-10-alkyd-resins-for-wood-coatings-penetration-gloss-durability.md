@@ -14,7 +14,7 @@ Wood coatings fail when resin choice is based only on hardness or gloss. Wood is
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/wood-coatings-alkyd-selection/alkyd-wood-coating-penetration-vs-film-build.png"
+      src="/assets/articles/wood-coatings-alkyd-selection/alkyd-wood-coating-penetration-vs-film-build.webp"
       alt="Comparison of alkyd penetration versus film build behavior in wood coating systems"
       width="1536"
       height="1024"
@@ -97,7 +97,7 @@ Durability improves when resin flexibility, cure profile, and film build are tun
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/wood-coatings-alkyd-selection/wood-coating-durability-failure-modes.png"
+      src="/assets/articles/wood-coatings-alkyd-selection/wood-coating-durability-failure-modes.webp"
       alt="Typical durability failure modes in alkyd wood coatings and their root causes"
       width="1536"
       height="1024"
@@ -123,7 +123,7 @@ This process reduces costly rework and improves field consistency.
 For wood coatings, the best alkyd is not the hardest or fastest grade. It is the grade that provides stable penetration, reliable gloss development, and sufficient flexibility over service life. Medium and long oil systems cover most practical wood applications when paired with correct drier and solvent design.
 
 {{< btn href="/alkyds" text="Explore Alkyd Resin Families" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=Wood%20Coatings%20Alkyd%20Selection" text="Request Wood Coating Guidance" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Request Wood Coating Guidance" kind="primary" >}}
 
 ## FAQ: Alkyd Selection for Wood Coatings
 
@@ -149,3 +149,4 @@ For wood coatings, the best alkyd is not the hardest or fastest grade. It is the
   <p>Run adhesion, gloss retention, print resistance, moisture cycling, and crack resistance tests on representative wood panels and film thicknesses.</p>
 </details>
 </section>
+

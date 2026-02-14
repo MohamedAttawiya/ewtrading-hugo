@@ -149,7 +149,7 @@ Alkyd resins persist because they solve real coating problems simply. They are f
 Understanding their chemistry is not about nostalgia; it is about choosing the right tool for the job.
 
 {{< btn href="/alkyds" text="Explore Alkyd Resin Families" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=Alkyd%20Resin%20Inquiry" text="Contact Technical Sales" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Contact Technical Sales" kind="primary" >}}
 
 ## FAQ: Alkyd Resin Chemistry & Selection
 
@@ -175,3 +175,4 @@ Understanding their chemistry is not about nostalgia; it is about choosing the r
   <p>Match oil length to the application: long oil for appearance/weathering, medium for balanced general-purpose use, short oil for productivity and hardness. Then fine-tune by polyol type and modifiers.</p>
 </details>
 </section>
+

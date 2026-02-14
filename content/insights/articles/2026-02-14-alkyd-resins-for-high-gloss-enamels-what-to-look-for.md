@@ -102,7 +102,7 @@ Most gloss complaints are system-level issues, not resin chemistry alone.
 For high-gloss enamels, choose alkyd resins that balance clarity, leveling, and cure discipline. The right resin supports both visual quality and durability, but only when validated with the full formulation package and realistic process conditions.
 
 {{< btn href="/alkyds" text="Explore Alkyd Resin Families" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=High-Gloss%20Enamel%20Alkyd%20Selection" text="Request High-Gloss Guidance" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Request High-Gloss Guidance" kind="primary" >}}
 
 ## FAQ: Alkyds for High-Gloss Enamels
 
@@ -128,3 +128,4 @@ For high-gloss enamels, choose alkyd resins that balance clarity, leveling, and 
   <p>At minimum: gloss metrics, leveling quality, through-cure, hardness progression, block/print resistance, and storage stability under realistic conditions.</p>
 </details>
 </section>
+

@@ -14,7 +14,7 @@ Many buyers assume oil type alone predicts coating quality. In practice, oil typ
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/alkyd-oil-types-selection/alkyd-oil-types-performance-comparison.png"
+      src="/assets/articles/alkyd-oil-types-selection/alkyd-oil-types-performance-comparison.webp"
       alt="Performance comparison of soy, linseed, and tall oil based alkyd resin systems"
       width="984"
       height="659"
@@ -98,7 +98,7 @@ This prevents specification based on assumptions and improves repeatability.
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/alkyd-oil-types-selection/soy-linseed-tall-oil-selection-guide.png"
+      src="/assets/articles/alkyd-oil-types-selection/soy-linseed-tall-oil-selection-guide.webp"
       alt="Decision guide for selecting soy, linseed, or tall oil alkyd types by application requirements"
       width="514"
       height="613"
@@ -114,7 +114,7 @@ This prevents specification based on assumptions and improves repeatability.
 Soy, linseed, and tall oil choices can matter, but they are not standalone quality rankings. Oil type is one input in a larger system that includes oil length, resin design, drier chemistry, and curing reality. The best choice is the one that validates on your target panel tests and process conditions.
 
 {{< btn href="/alkyds" text="View Alkyd Resin Families" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=Alkyd%20Oil%20Type%20Selection" text="Request Oil-Type Comparison" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Request Oil-Type Comparison" kind="primary" >}}
 
 ## FAQ: Choosing Alkyd Oil Types
 
@@ -140,3 +140,4 @@ Soy, linseed, and tall oil choices can matter, but they are not standalone quali
   <p>Use side-by-side application testing and full specification review, then select on measured performance and total cost.</p>
 </details>
 </section>
+

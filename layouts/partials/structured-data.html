@@ -1,0 +1,40 @@
+{{- $siteName := site.Params.seo.organization_name | default (site.Title | default "E&W Trading Group") -}}
+{{- $logo := site.Params.seo.organization_logo | default "/assets/logo/monogram-primary.svg" -}}
+{{- $email := site.Params.seo.contact_email | default "" -}}
+{{- $phone := site.Params.seo.contact_phone | default "" -}}
+{{- $org := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" $siteName
+  "url" site.BaseURL
+  "logo" ($logo | absURL)
+  "email" $email
+  "telephone" $phone
+-}}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+
+{{- if .IsPage -}}
+  {{- $isInsightArticle := and (eq .Section "insights") (in .RelPermalink "/insights/articles/") -}}
+  {{- if $isInsightArticle -}}
+    {{- $article := dict
+      "@context" "https://schema.org"
+      "@type" "Article"
+      "headline" .Title
+      "description" (.Params.description | default .Params.summary | default "")
+      "mainEntityOfPage" .Permalink
+      "datePublished" (.Date.Format "2006-01-02")
+      "dateModified" (.Lastmod.Format "2006-01-02")
+      "author" (dict "@type" "Organization" "name" $siteName)
+      "publisher" (dict "@type" "Organization" "name" $siteName "logo" (dict "@type" "ImageObject" "url" ($logo | absURL)))
+    -}}
+<script type="application/ld+json">{{ $article | jsonify | safeJS }}</script>
+
+    {{- $crumbs := slice
+      (dict "@type" "ListItem" "position" 1 "name" "Home" "item" ("/" | absURL))
+      (dict "@type" "ListItem" "position" 2 "name" "Insights" "item" ("/insights/" | absURL))
+      (dict "@type" "ListItem" "position" 3 "name" .Title "item" .Permalink)
+    -}}
+    {{- $breadcrumb := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs -}}
+<script type="application/ld+json">{{ $breadcrumb | jsonify | safeJS }}</script>
+  {{- end -}}
+{{- end -}}

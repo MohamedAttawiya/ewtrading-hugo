@@ -14,7 +14,7 @@ In industrial metal coatings, wrong resin selection increases corrosion risk, re
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-alkyd-selection-matrix.png"
+      src="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-alkyd-selection-matrix.webp"
       alt="Selection matrix for choosing alkyd resin type in industrial metal coatings"
       width="615"
       height="788"
@@ -92,7 +92,7 @@ Single-layer optimization without system validation often produces early edge co
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-coating-system-stack.png"
+      src="/assets/articles/industrial-metal-alkyd-selection/industrial-metal-coating-system-stack.webp"
       alt="Industrial metal coating stack showing primer, build layer, and topcoat risk points"
       width="589"
       height="802"
@@ -134,7 +134,7 @@ For industrial metal coatings, alkyd resin selection should follow a strict orde
 Selecting this way reduces field failures, protects throughput, and improves long-term corrosion performance.
 
 {{< btn href="/alkyds" text="Browse Industrial Alkyd Grades" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=Industrial%20Metal%20Alkyd%20Selection" text="Request Technical Support" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Request Technical Support" kind="primary" >}}
 
 ## FAQ: Industrial Metal Alkyd Selection
 
@@ -160,3 +160,4 @@ Selecting this way reduces field failures, protects throughput, and improves lon
   <p>At minimum: adhesion, hardness over full cure, impact/flexibility, salt spray or humidity resistance, and solvent/chemical spot resistance under realistic film thickness.</p>
 </details>
 </section>
+

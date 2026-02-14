@@ -1,10 +1,19 @@
-baseURL = "https://example.com/"
+baseURL = "https://ewtradingco.com/"
 title = "E&W Trading Group"
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+cleanDestinationDir = true
 
 
 [params]
-  # site-wide params can be added here
+  [params.seo]
+    default_description = "Export-focused alkyd resin supply for coatings manufacturers and distributors across Africa, the Middle East, and Europe."
+    organization_name = "E&W Trading Group"
+    organization_logo = "/assets/logo/monogram-primary.svg"
+    contact_email = "sales@ewtradingco.com"
+    contact_phone = "+20 120 122 2556"
+    default_og_image = "/assets/emblem.png"
+
   [params.analytics]
     [params.analytics.ga4]
       measurement_id = "G-Y5MR71RHK3"
@@ -13,10 +22,6 @@ enableRobotsTXT = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[taxonomies]
-  category = "categories"
-  tag = "tags"
 
 [pagination]
   pagerSize = 10

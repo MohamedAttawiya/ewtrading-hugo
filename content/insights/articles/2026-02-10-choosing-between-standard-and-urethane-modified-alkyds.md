@@ -14,7 +14,7 @@ Upgrading to urethane-modified alkyds can solve real performance gaps, but unnec
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/standard-vs-urethane-alkyd/standard-vs-urethane-alkyd-performance-matrix.png"
+      src="/assets/articles/standard-vs-urethane-alkyd/standard-vs-urethane-alkyd-performance-matrix.webp"
       alt="Performance matrix comparing standard alkyds and urethane-modified alkyds"
       width="1536"
       height="1024"
@@ -88,7 +88,7 @@ This avoids over-engineered formulations and protects margin.
 <figure class="article-figure">
   <picture>
     <img
-      src="/assets/articles/standard-vs-urethane-alkyd/urethane-modified-alkyd-use-cases.png"
+      src="/assets/articles/standard-vs-urethane-alkyd/urethane-modified-alkyd-use-cases.webp"
       alt="Typical use cases where urethane-modified alkyds provide measurable value"
       width="1536"
       height="1024"
@@ -104,7 +104,7 @@ This avoids over-engineered formulations and protects margin.
 Choosing between standard and urethane-modified alkyds is a performance economics decision. Standard alkyds remain effective for many systems, while urethane-modified grades are best reserved for clear resistance and durability gaps that testing confirms.
 
 {{< btn href="/alkyds" text="View Alkyd Resin Portfolio" kind="secondary" >}}
-{{< btn href="mailto:sales@ewtradingco.com?subject=Standard%20vs%20Urethane%20Alkyd%20Selection" text="Ask for Grade Comparison" kind="primary" >}}
+{{< btn href="/contact/?source=insights&intent=technical" text="Ask for Grade Comparison" kind="primary" >}}
 
 ## FAQ: Standard vs Urethane-Modified Alkyds
 
@@ -130,3 +130,4 @@ Choosing between standard and urethane-modified alkyds is a performance economic
   <p>Use side-by-side tests for hardness build, abrasion, block resistance, adhesion, and relevant cleaner or chemical contact under real cure conditions.</p>
 </details>
 </section>
+
